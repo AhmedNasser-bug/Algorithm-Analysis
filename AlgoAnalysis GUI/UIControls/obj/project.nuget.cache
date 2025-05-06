@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "gOOcUpKlkdw=",
+  "success": true,
+  "projectFilePath": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\UIControls.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\orginal\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+    "C:\\Users\\orginal\\.nuget\\packages\\nevrondotnetvision\\24.8.8.12\\nevrondotnetvision.24.8.8.12.nupkg.sha512",
+    "C:\\Users\\orginal\\.nuget\\packages\\nevronopenvision\\24.6.3.12\\nevronopenvision.24.6.3.12.nupkg.sha512",
+    "C:\\Users\\orginal\\.nuget\\packages\\system.drawing.common\\8.0.3\\system.drawing.common.8.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

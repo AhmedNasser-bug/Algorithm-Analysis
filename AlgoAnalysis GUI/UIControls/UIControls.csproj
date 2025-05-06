@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NevronDotNetVision" Version="24.8.8.12" />
+    <PackageReference Include="NevronOpenVision" Version="24.6.3.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Logic Layer\Algorithms_Unit\Algorithms_Unit.csproj" />
+    <ProjectReference Include="..\..\Logic Layer\Analysis_Unit\Analysis_Unit.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ctrlAlgorithmSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ctrlPlotGraph.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ctrlSortingHistogram.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ctrlVisualArray.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>

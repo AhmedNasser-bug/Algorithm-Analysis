@@ -1,0 +1,583 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0-windows7.0": {
+      "Microsoft.Win32.SystemEvents/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "NevronDotNetVision/24.8.8.12": {
+        "type": "package",
+        "dependencies": {
+          "System.Drawing.Common": "7.0.0"
+        },
+        "compile": {
+          "lib/net8.0-windows7.0/Nevron.Chart.WinForm.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Chart.Wpf.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Chart.dll": {
+            "related": ".WinForm.xml;.Wpf.xml;.xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Diagram.Shapes.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Diagram.WinForm.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Diagram.dll": {
+            "related": ".Shapes.xml;.WinForm.xml;.xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.GraphicsGL.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Presentation.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.System.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.UI.WinForm.Docking.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.UI.WinForm.Skins.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/Nevron.Chart.WinForm.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Chart.Wpf.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Chart.dll": {
+            "related": ".WinForm.xml;.Wpf.xml;.xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Diagram.Shapes.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Diagram.WinForm.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Diagram.dll": {
+            "related": ".Shapes.xml;.WinForm.xml;.xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.GraphicsGL.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Presentation.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.System.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.UI.WinForm.Docking.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.UI.WinForm.Skins.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NevronOpenVision/24.6.3.12": {
+        "type": "package",
+        "dependencies": {
+          "System.Drawing.Common": "8.0.3"
+        },
+        "compile": {
+          "lib/net8.0-windows7.0/Nevron.Nov.Barcode.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.Chart.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.Diagram.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.GraphicsGL.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.Grid.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.Host.WinBase.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.Host.WinForm.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.Host.Wpf.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.Presentation.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.Schedule.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.Text.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.WinFormControls.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.WpfControls.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/Nevron.Nov.Barcode.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.Chart.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.Diagram.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.GraphicsGL.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.Grid.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.Host.WinBase.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.Host.WinForm.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.Host.Wpf.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.Presentation.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.Schedule.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.Text.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.WinFormControls.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/Nevron.Nov.WpfControls.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Drawing.Common/8.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Algorithms_Unit/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Algorithms_Unit.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Algorithms_Unit.dll": {}
+        }
+      },
+      "Analysis_Unit/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Analysis_Unit.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Analysis_Unit.dll": {}
+        }
+      },
+      "UIControls/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Algorithms_Unit": "1.0.0",
+          "Analysis_Unit": "1.0.0",
+          "NevronDotNetVision": "24.8.8.12",
+          "NevronOpenVision": "24.6.3.12"
+        },
+        "compile": {
+          "bin/placeholder/UIControls.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UIControls.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.Win32.SystemEvents/8.0.0": {
+      "sha512": "9opKRyOKMCi2xJ7Bj7kxtZ1r9vbzosMvRrdEhVhDz8j8MoBGgB+WmC94yH839NPH+BclAjtQ/pyagvi/8gDLkw==",
+      "type": "package",
+      "path": "microsoft.win32.systemevents/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Win32.SystemEvents.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Win32.SystemEvents.targets",
+        "lib/net462/Microsoft.Win32.SystemEvents.dll",
+        "lib/net462/Microsoft.Win32.SystemEvents.xml",
+        "lib/net6.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net6.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/net7.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net7.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/net8.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net8.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
+        "microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+        "microsoft.win32.systemevents.nuspec",
+        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.xml",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "NevronDotNetVision/24.8.8.12": {
+      "sha512": "9dVzDqA31J4j4orI/WXoOoNqQUfHhPMnTqdMhtXmK7SBf+8Epv2rYUzzi4UzXBDn86rcYZ6unaTgZxgsHUmPFQ==",
+      "type": "package",
+      "path": "nevrondotnetvision/24.8.8.12",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "docs/LicenseAgreement.txt",
+        "images/vision-icon-128x128.png",
+        "lib/net40/Nevron.Chart.ThinWeb.dll",
+        "lib/net40/Nevron.Chart.ThinWeb.xml",
+        "lib/net40/Nevron.Chart.WebForm.dll",
+        "lib/net40/Nevron.Chart.WebForm.xml",
+        "lib/net40/Nevron.Chart.WinForm.dll",
+        "lib/net40/Nevron.Chart.WinForm.xml",
+        "lib/net40/Nevron.Chart.Wpf.dll",
+        "lib/net40/Nevron.Chart.Wpf.xml",
+        "lib/net40/Nevron.Chart.dll",
+        "lib/net40/Nevron.Chart.xml",
+        "lib/net40/Nevron.Diagram.Shapes.dll",
+        "lib/net40/Nevron.Diagram.Shapes.xml",
+        "lib/net40/Nevron.Diagram.ThinWeb.dll",
+        "lib/net40/Nevron.Diagram.ThinWeb.xml",
+        "lib/net40/Nevron.Diagram.WebForm.dll",
+        "lib/net40/Nevron.Diagram.WebForm.xml",
+        "lib/net40/Nevron.Diagram.WinForm.dll",
+        "lib/net40/Nevron.Diagram.WinForm.xml",
+        "lib/net40/Nevron.Diagram.dll",
+        "lib/net40/Nevron.Diagram.xml",
+        "lib/net40/Nevron.GraphicsGL.dll",
+        "lib/net40/Nevron.GraphicsGL.xml",
+        "lib/net40/Nevron.Presentation.dll",
+        "lib/net40/Nevron.Presentation.xml",
+        "lib/net40/Nevron.System.dll",
+        "lib/net40/Nevron.System.xml",
+        "lib/net40/Nevron.ThinWeb.dll",
+        "lib/net40/Nevron.ThinWeb.xml",
+        "lib/net40/Nevron.UI.WebForm.Controls.dll",
+        "lib/net40/Nevron.UI.WebForm.Controls.xml",
+        "lib/net40/Nevron.UI.WinForm.Docking.dll",
+        "lib/net40/Nevron.UI.WinForm.Docking.xml",
+        "lib/net40/Nevron.UI.WinForm.Skins.dll",
+        "lib/net40/Nevron.UI.WinForm.Skins.xml",
+        "lib/net8.0-windows7.0/Nevron.Chart.WinForm.dll",
+        "lib/net8.0-windows7.0/Nevron.Chart.WinForm.xml",
+        "lib/net8.0-windows7.0/Nevron.Chart.Wpf.dll",
+        "lib/net8.0-windows7.0/Nevron.Chart.Wpf.xml",
+        "lib/net8.0-windows7.0/Nevron.Chart.dll",
+        "lib/net8.0-windows7.0/Nevron.Chart.xml",
+        "lib/net8.0-windows7.0/Nevron.Diagram.Shapes.dll",
+        "lib/net8.0-windows7.0/Nevron.Diagram.Shapes.xml",
+        "lib/net8.0-windows7.0/Nevron.Diagram.WinForm.dll",
+        "lib/net8.0-windows7.0/Nevron.Diagram.WinForm.xml",
+        "lib/net8.0-windows7.0/Nevron.Diagram.dll",
+        "lib/net8.0-windows7.0/Nevron.Diagram.xml",
+        "lib/net8.0-windows7.0/Nevron.GraphicsGL.dll",
+        "lib/net8.0-windows7.0/Nevron.GraphicsGL.xml",
+        "lib/net8.0-windows7.0/Nevron.Presentation.dll",
+        "lib/net8.0-windows7.0/Nevron.Presentation.xml",
+        "lib/net8.0-windows7.0/Nevron.System.dll",
+        "lib/net8.0-windows7.0/Nevron.System.xml",
+        "lib/net8.0-windows7.0/Nevron.UI.WinForm.Docking.dll",
+        "lib/net8.0-windows7.0/Nevron.UI.WinForm.Docking.xml",
+        "lib/net8.0-windows7.0/Nevron.UI.WinForm.Skins.dll",
+        "lib/net8.0-windows7.0/Nevron.UI.WinForm.Skins.xml",
+        "nevrondotnetvision.24.8.8.12.nupkg.sha512",
+        "nevrondotnetvision.nuspec",
+        "tools/VisualStudioToolsManifest.xml"
+      ]
+    },
+    "NevronOpenVision/24.6.3.12": {
+      "sha512": "ma4V4UpuF5jhCjBqxWTgwdnHPhAgEglE4PqZc0RmpKH7Xt5ryy67unFQDvYUn3V5KHXRfJ7SSoUl8YCBpyTA/Q==",
+      "type": "package",
+      "path": "nevronopenvision/24.6.3.12",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Nov.png",
+        "docs/LicenseAgreement.txt",
+        "docs/NevronOpenVision.md",
+        "lib/net472/Nevron.Nov.Barcode.dll",
+        "lib/net472/Nevron.Nov.Barcode.xml",
+        "lib/net472/Nevron.Nov.Chart.dll",
+        "lib/net472/Nevron.Nov.Chart.xml",
+        "lib/net472/Nevron.Nov.Diagram.dll",
+        "lib/net472/Nevron.Nov.Diagram.xml",
+        "lib/net472/Nevron.Nov.GraphicsGL.dll",
+        "lib/net472/Nevron.Nov.GraphicsGL.xml",
+        "lib/net472/Nevron.Nov.Grid.dll",
+        "lib/net472/Nevron.Nov.Grid.xml",
+        "lib/net472/Nevron.Nov.Host.WinBase.dll",
+        "lib/net472/Nevron.Nov.Host.WinBase.xml",
+        "lib/net472/Nevron.Nov.Host.WinForm.dll",
+        "lib/net472/Nevron.Nov.Host.WinForm.xml",
+        "lib/net472/Nevron.Nov.Host.Wpf.dll",
+        "lib/net472/Nevron.Nov.Host.Wpf.xml",
+        "lib/net472/Nevron.Nov.Presentation.dll",
+        "lib/net472/Nevron.Nov.Presentation.xml",
+        "lib/net472/Nevron.Nov.Schedule.dll",
+        "lib/net472/Nevron.Nov.Schedule.xml",
+        "lib/net472/Nevron.Nov.Text.dll",
+        "lib/net472/Nevron.Nov.Text.xml",
+        "lib/net472/Nevron.Nov.WinFormControls.dll",
+        "lib/net472/Nevron.Nov.WinFormControls.xml",
+        "lib/net472/Nevron.Nov.WpfControls.dll",
+        "lib/net472/Nevron.Nov.WpfControls.xml",
+        "lib/net8.0-windows7.0/Nevron.Nov.Barcode.dll",
+        "lib/net8.0-windows7.0/Nevron.Nov.Barcode.xml",
+        "lib/net8.0-windows7.0/Nevron.Nov.Chart.dll",
+        "lib/net8.0-windows7.0/Nevron.Nov.Chart.xml",
+        "lib/net8.0-windows7.0/Nevron.Nov.Diagram.dll",
+        "lib/net8.0-windows7.0/Nevron.Nov.Diagram.xml",
+        "lib/net8.0-windows7.0/Nevron.Nov.GraphicsGL.dll",
+        "lib/net8.0-windows7.0/Nevron.Nov.GraphicsGL.xml",
+        "lib/net8.0-windows7.0/Nevron.Nov.Grid.dll",
+        "lib/net8.0-windows7.0/Nevron.Nov.Grid.xml",
+        "lib/net8.0-windows7.0/Nevron.Nov.Host.WinBase.dll",
+        "lib/net8.0-windows7.0/Nevron.Nov.Host.WinBase.xml",
+        "lib/net8.0-windows7.0/Nevron.Nov.Host.WinForm.dll",
+        "lib/net8.0-windows7.0/Nevron.Nov.Host.WinForm.xml",
+        "lib/net8.0-windows7.0/Nevron.Nov.Host.Wpf.dll",
+        "lib/net8.0-windows7.0/Nevron.Nov.Host.Wpf.xml",
+        "lib/net8.0-windows7.0/Nevron.Nov.Presentation.dll",
+        "lib/net8.0-windows7.0/Nevron.Nov.Presentation.xml",
+        "lib/net8.0-windows7.0/Nevron.Nov.Schedule.dll",
+        "lib/net8.0-windows7.0/Nevron.Nov.Schedule.xml",
+        "lib/net8.0-windows7.0/Nevron.Nov.Text.dll",
+        "lib/net8.0-windows7.0/Nevron.Nov.Text.xml",
+        "lib/net8.0-windows7.0/Nevron.Nov.WinFormControls.dll",
+        "lib/net8.0-windows7.0/Nevron.Nov.WinFormControls.xml",
+        "lib/net8.0-windows7.0/Nevron.Nov.WpfControls.dll",
+        "lib/net8.0-windows7.0/Nevron.Nov.WpfControls.xml",
+        "nevronopenvision.24.6.3.12.nupkg.sha512",
+        "nevronopenvision.nuspec",
+        "tools/net5.0/VisualStudioToolsManifest.xml"
+      ]
+    },
+    "System.Drawing.Common/8.0.3": {
+      "sha512": "oDE9duAtHhxYJM2bsOlZCLBKdorU9DTV1tw7Mlc+VIT7HgwO5ddfOHk/An8C+fAS9oKdmn2PaIA5t1b484uz8g==",
+      "type": "package",
+      "path": "system.drawing.common/8.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Drawing.Common.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Drawing.Common.targets",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net462/System.Drawing.Common.dll",
+        "lib/net462/System.Drawing.Common.pdb",
+        "lib/net462/System.Drawing.Common.xml",
+        "lib/net6.0/System.Drawing.Common.dll",
+        "lib/net6.0/System.Drawing.Common.pdb",
+        "lib/net6.0/System.Drawing.Common.xml",
+        "lib/net7.0/System.Drawing.Common.dll",
+        "lib/net7.0/System.Drawing.Common.pdb",
+        "lib/net7.0/System.Drawing.Common.xml",
+        "lib/net8.0/System.Drawing.Common.dll",
+        "lib/net8.0/System.Drawing.Common.pdb",
+        "lib/net8.0/System.Drawing.Common.xml",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.pdb",
+        "lib/netstandard2.0/System.Drawing.Common.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "system.drawing.common.8.0.3.nupkg.sha512",
+        "system.drawing.common.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Algorithms_Unit/1.0.0": {
+      "type": "project",
+      "path": "../../Logic Layer/Algorithms_Unit/Algorithms_Unit.csproj",
+      "msbuildProject": "../../Logic Layer/Algorithms_Unit/Algorithms_Unit.csproj"
+    },
+    "Analysis_Unit/1.0.0": {
+      "type": "project",
+      "path": "../../Logic Layer/Analysis_Unit/Analysis_Unit.csproj",
+      "msbuildProject": "../../Logic Layer/Analysis_Unit/Analysis_Unit.csproj"
+    },
+    "UIControls/1.0.0": {
+      "type": "project",
+      "path": "../UIControls/UIControls.csproj",
+      "msbuildProject": "../UIControls/UIControls.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0-windows7.0": [
+      "Algorithms_Unit >= 1.0.0",
+      "Analysis_Unit >= 1.0.0",
+      "NevronDotNetVision >= 24.8.8.12",
+      "NevronOpenVision >= 24.6.3.12",
+      "UIControls >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\orginal\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\MainGUIcsproj.csproj",
+      "projectName": "MainGUIcsproj",
+      "projectPath": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\MainGUIcsproj.csproj",
+      "packagesPath": "C:\\Users\\orginal\\.nuget\\packages\\",
+      "outputPath": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\orginal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0-windows7.0": {
+          "targetAlias": "net9.0-windows",
+          "projectReferences": {
+            "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\UIControls.csproj": {
+              "projectPath": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\UIControls.csproj"
+            },
+            "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Algorithms_Unit.csproj": {
+              "projectPath": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Algorithms_Unit.csproj"
+            },
+            "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Analysis_Unit\\Analysis_Unit.csproj": {
+              "projectPath": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Analysis_Unit\\Analysis_Unit.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.100"
+    },
+    "frameworks": {
+      "net9.0-windows7.0": {
+        "targetAlias": "net9.0-windows",
+        "dependencies": {
+          "NevronDotNetVision": {
+            "target": "Package",
+            "version": "[24.8.8.12, )"
+          },
+          "NevronOpenVision": {
+            "target": "Package",
+            "version": "[24.6.3.12, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
