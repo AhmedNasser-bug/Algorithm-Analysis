@@ -1,0 +1,11 @@
+D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\Main_Algorithms\bin\Debug\net9.0\Main_Algorithms.deps.json
+D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\Main_Algorithms\bin\Debug\net9.0\Main_Algorithms.dll
+D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\Main_Algorithms\bin\Debug\net9.0\Main_Algorithms.pdb
+D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\Main_Algorithms\obj\Debug\net9.0\Main_Algorithms.GeneratedMSBuildEditorConfig.editorconfig
+D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\Main_Algorithms\obj\Debug\net9.0\Main_Algorithms.AssemblyInfoInputs.cache
+D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\Main_Algorithms\obj\Debug\net9.0\Main_Algorithms.AssemblyInfo.cs
+D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\Main_Algorithms\obj\Debug\net9.0\Main_Algorithms.csproj.CoreCompileInputs.cache
+D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\Main_Algorithms\obj\Debug\net9.0\Main_Algorithms.dll
+D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\Main_Algorithms\obj\Debug\net9.0\refint\Main_Algorithms.dll
+D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\Main_Algorithms\obj\Debug\net9.0\Main_Algorithms.pdb
+D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\Main_Algorithms\obj\Debug\net9.0\ref\Main_Algorithms.dll
