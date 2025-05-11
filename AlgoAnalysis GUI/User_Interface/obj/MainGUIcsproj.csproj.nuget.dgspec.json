@@ -57,13 +57,13 @@
         "net9.0-windows7.0": {
           "targetAlias": "net9.0-windows",
           "dependencies": {
-            "NevronDotNetVision": {
+            "C1.Win.C1Chart": {
               "target": "Package",
-              "version": "[24.8.8.12, )"
+              "version": "[4.8.20242.700, )"
             },
-            "NevronOpenVision": {
+            "C1.Win.FlexChart": {
               "target": "Package",
-              "version": "[24.6.3.12, )"
+              "version": "[8.0.20242.700, )"
             }
           },
           "imports": [
@@ -144,16 +144,6 @@
       "frameworks": {
         "net9.0-windows7.0": {
           "targetAlias": "net9.0-windows",
-          "dependencies": {
-            "NevronDotNetVision": {
-              "target": "Package",
-              "version": "[24.8.8.12, )"
-            },
-            "NevronOpenVision": {
-              "target": "Package",
-              "version": "[24.6.3.12, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

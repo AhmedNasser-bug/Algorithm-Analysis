@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NevronDotNetVision" Version="24.8.8.12" />
-    <PackageReference Include="NevronOpenVision" Version="24.6.3.12" />
+    <PackageReference Include="C1.Win.C1Chart" Version="4.8.20242.700" />
+    <PackageReference Include="C1.Win.FlexChart" Version="8.0.20242.700" />
   </ItemGroup>
 
   <ItemGroup>

@@ -14,7 +14,11 @@
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgNevronOpenVision Condition=" '$(PkgNevronOpenVision)' == '' ">C:\Users\orginal\.nuget\packages\nevronopenvision\24.6.3.12</PkgNevronOpenVision>
-    <PkgNevronDotNetVision Condition=" '$(PkgNevronDotNetVision)' == '' ">C:\Users\orginal\.nuget\packages\nevrondotnetvision\24.8.8.12</PkgNevronDotNetVision>
+    <PkgC1_Win Condition=" '$(PkgC1_Win)' == '' ">C:\Users\orginal\.nuget\packages\c1.win\8.0.20242.700</PkgC1_Win>
+    <PkgC1_Win_Ribbon Condition=" '$(PkgC1_Win_Ribbon)' == '' ">C:\Users\orginal\.nuget\packages\c1.win.ribbon\8.0.20242.700</PkgC1_Win_Ribbon>
+    <PkgC1_Win_Input Condition=" '$(PkgC1_Win_Input)' == '' ">C:\Users\orginal\.nuget\packages\c1.win.input\8.0.20242.700</PkgC1_Win_Input>
+    <PkgC1_Win_DX Condition=" '$(PkgC1_Win_DX)' == '' ">C:\Users\orginal\.nuget\packages\c1.win.dx\8.0.20242.700</PkgC1_Win_DX>
+    <PkgC1_Win_FlexChart Condition=" '$(PkgC1_Win_FlexChart)' == '' ">C:\Users\orginal\.nuget\packages\c1.win.flexchart\8.0.20242.700</PkgC1_Win_FlexChart>
+    <PkgC1_Win_C1Chart Condition=" '$(PkgC1_Win_C1Chart)' == '' ">C:\Users\orginal\.nuget\packages\c1.win.c1chart\4.8.20242.700</PkgC1_Win_C1Chart>
   </PropertyGroup>
 </Project>

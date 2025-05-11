@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Main_Algorithms.Datastructures
+namespace Algorithms_Unit.Datastructures
 {
     public class Heap
     {

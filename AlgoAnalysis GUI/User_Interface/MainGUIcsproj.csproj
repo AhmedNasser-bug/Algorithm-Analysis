@@ -9,23 +9,28 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Algorithm_Visualization\Greedy_Visual\" />
-    <Folder Include="Algorithm_Visualization\DynamicProgrammin_Visual\" />
-    <Folder Include="Algorithm_Visualization\Pathfinding_Visual\" />
-    <Folder Include="Algorithm_Visualization\Searching_Visual\" />
-    <Folder Include="Algorithm_Visualization\Sorting_Visual\" />
     <Folder Include="Icons\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="NevronDotNetVision" Version="24.8.8.12" />
-    <PackageReference Include="NevronOpenVision" Version="24.6.3.12" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Logic Layer\Algorithms_Unit\Algorithms_Unit.csproj" />
     <ProjectReference Include="..\..\Logic Layer\Analysis_Unit\Analysis_Unit.csproj" />
     <ProjectReference Include="..\UIControls\UIControls.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
 </Project>

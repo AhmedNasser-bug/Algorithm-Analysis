@@ -1,5 +1,6 @@
 namespace WinFormsApp1
 {
+    
     internal static class ProgramEntry
     {
         /// <summary>
@@ -11,7 +12,8 @@ namespace WinFormsApp1
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmMainMenu());
+            frmMainMenu.globalForm = new frmMainMenu();
+            Application.Run(frmMainMenu.globalForm);
         }
     }
 }

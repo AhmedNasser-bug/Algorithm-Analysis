@@ -6,173 +6,123 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v9.0": {
-      "Microsoft.Win32.SystemEvents/8.0.0": {
+      "C1.Win/8.0.20242.700": {
         "runtime": {
-          "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
-          }
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
-            "rid": "win",
-            "assetType": "runtime",
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
+          "lib/net8.0-windows7.0/C1.Win.8.dll": {
+            "assemblyVersion": "8.0.20242.700",
+            "fileVersion": "8.0.20242.700"
           }
         }
       },
-      "NevronDotNetVision/24.8.8.12": {
+      "C1.Win.C1Chart/4.8.20242.700": {
         "dependencies": {
-          "System.Drawing.Common": "8.0.3"
+          "C1.Win": "8.0.20242.700"
         },
         "runtime": {
-          "lib/net8.0-windows7.0/Nevron.Chart.WinForm.dll": {
-            "assemblyVersion": "24.8.8.12",
-            "fileVersion": "24.8.8.12"
+          "lib/net462/C1.Win.C1Chart.4.6.2.dll": {
+            "assemblyVersion": "4.6.20242.700",
+            "fileVersion": "4.6.20242.700"
           },
-          "lib/net8.0-windows7.0/Nevron.Chart.Wpf.dll": {
-            "assemblyVersion": "24.8.8.12",
-            "fileVersion": "24.8.8.12"
-          },
-          "lib/net8.0-windows7.0/Nevron.Chart.dll": {
-            "assemblyVersion": "24.8.8.12",
-            "fileVersion": "24.8.8.12"
-          },
-          "lib/net8.0-windows7.0/Nevron.Diagram.Shapes.dll": {
-            "assemblyVersion": "24.8.8.12",
-            "fileVersion": "24.8.8.12"
-          },
-          "lib/net8.0-windows7.0/Nevron.Diagram.WinForm.dll": {
-            "assemblyVersion": "24.8.8.12",
-            "fileVersion": "24.8.8.12"
-          },
-          "lib/net8.0-windows7.0/Nevron.Diagram.dll": {
-            "assemblyVersion": "24.8.8.12",
-            "fileVersion": "24.8.8.12"
-          },
-          "lib/net8.0-windows7.0/Nevron.GraphicsGL.dll": {
-            "assemblyVersion": "24.8.8.12",
-            "fileVersion": "24.8.8.12"
-          },
-          "lib/net8.0-windows7.0/Nevron.Presentation.dll": {
-            "assemblyVersion": "24.8.8.12",
-            "fileVersion": "24.8.8.12"
-          },
-          "lib/net8.0-windows7.0/Nevron.System.dll": {
-            "assemblyVersion": "24.8.8.12",
-            "fileVersion": "24.8.8.12"
-          },
-          "lib/net8.0-windows7.0/Nevron.UI.WinForm.Docking.dll": {
-            "assemblyVersion": "24.8.8.12",
-            "fileVersion": "24.8.8.12"
-          },
-          "lib/net8.0-windows7.0/Nevron.UI.WinForm.Skins.dll": {
-            "assemblyVersion": "24.8.8.12",
-            "fileVersion": "24.8.8.12"
+          "lib/net462/C1.Win.C1Chart3D.4.6.2.dll": {
+            "assemblyVersion": "4.6.20242.700",
+            "fileVersion": "4.6.20242.700"
           }
         }
       },
-      "NevronOpenVision/24.6.3.12": {
+      "C1.Win.DX/8.0.20242.700": {
         "dependencies": {
-          "System.Drawing.Common": "8.0.3"
+          "C1.Win": "8.0.20242.700"
         },
         "runtime": {
-          "lib/net8.0-windows7.0/Nevron.Nov.Barcode.dll": {
-            "assemblyVersion": "24.6.3.12",
-            "fileVersion": "24.6.3.12"
-          },
-          "lib/net8.0-windows7.0/Nevron.Nov.Chart.dll": {
-            "assemblyVersion": "24.6.3.12",
-            "fileVersion": "24.6.3.12"
-          },
-          "lib/net8.0-windows7.0/Nevron.Nov.Diagram.dll": {
-            "assemblyVersion": "24.6.3.12",
-            "fileVersion": "24.6.3.12"
-          },
-          "lib/net8.0-windows7.0/Nevron.Nov.GraphicsGL.dll": {
-            "assemblyVersion": "24.6.3.12",
-            "fileVersion": "24.6.3.12"
-          },
-          "lib/net8.0-windows7.0/Nevron.Nov.Grid.dll": {
-            "assemblyVersion": "24.6.3.12",
-            "fileVersion": "24.6.3.12"
-          },
-          "lib/net8.0-windows7.0/Nevron.Nov.Host.WinBase.dll": {
-            "assemblyVersion": "24.6.3.12",
-            "fileVersion": "24.6.3.12"
-          },
-          "lib/net8.0-windows7.0/Nevron.Nov.Host.WinForm.dll": {
-            "assemblyVersion": "24.6.3.12",
-            "fileVersion": "24.6.3.12"
-          },
-          "lib/net8.0-windows7.0/Nevron.Nov.Host.Wpf.dll": {
-            "assemblyVersion": "24.6.3.12",
-            "fileVersion": "24.6.3.12"
-          },
-          "lib/net8.0-windows7.0/Nevron.Nov.Presentation.dll": {
-            "assemblyVersion": "24.6.3.12",
-            "fileVersion": "24.6.3.12"
-          },
-          "lib/net8.0-windows7.0/Nevron.Nov.Schedule.dll": {
-            "assemblyVersion": "24.6.3.12",
-            "fileVersion": "24.6.3.12"
-          },
-          "lib/net8.0-windows7.0/Nevron.Nov.Text.dll": {
-            "assemblyVersion": "24.6.3.12",
-            "fileVersion": "24.6.3.12"
-          },
-          "lib/net8.0-windows7.0/Nevron.Nov.WinFormControls.dll": {
-            "assemblyVersion": "24.6.3.12",
-            "fileVersion": "24.6.3.12"
-          },
-          "lib/net8.0-windows7.0/Nevron.Nov.WpfControls.dll": {
-            "assemblyVersion": "24.6.3.12",
-            "fileVersion": "24.6.3.12"
+          "lib/net8.0-windows7.0/C1.Win.DX.8.dll": {
+            "assemblyVersion": "8.0.20242.700",
+            "fileVersion": "8.0.20242.700"
           }
         }
       },
-      "System.Drawing.Common/8.0.3": {
+      "C1.Win.FlexChart/8.0.20242.700": {
         "dependencies": {
-          "Microsoft.Win32.SystemEvents": "8.0.0"
+          "C1.Win.DX": "8.0.20242.700",
+          "C1.Win.Input": "8.0.20242.700",
+          "C1.Win.Ribbon": "8.0.20242.700"
         },
         "runtime": {
-          "lib/net8.0/System.Drawing.Common.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.324.11603"
+          "lib/net8.0-windows7.0/C1.Win.FlexChart.8.dll": {
+            "assemblyVersion": "8.0.20242.700",
+            "fileVersion": "8.0.20242.700"
+          },
+          "lib/net8.0-windows7.0/C1.Win.FlexChart.Toolbar.8.dll": {
+            "assemblyVersion": "8.0.20242.700",
+            "fileVersion": "8.0.20242.700"
+          }
+        }
+      },
+      "C1.Win.Input/8.0.20242.700": {
+        "dependencies": {
+          "C1.Win": "8.0.20242.700"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/C1.Win.Input.8.dll": {
+            "assemblyVersion": "8.0.20242.700",
+            "fileVersion": "8.0.20242.700"
+          }
+        }
+      },
+      "C1.Win.Ribbon/8.0.20242.700": {
+        "dependencies": {
+          "C1.Win": "8.0.20242.700"
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/C1.Win.Ribbon.8.dll": {
+            "assemblyVersion": "8.0.20242.700",
+            "fileVersion": "8.0.20242.700"
           }
         }
       }
     }
   },
   "libraries": {
-    "Microsoft.Win32.SystemEvents/8.0.0": {
+    "C1.Win/8.0.20242.700": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-9opKRyOKMCi2xJ7Bj7kxtZ1r9vbzosMvRrdEhVhDz8j8MoBGgB+WmC94yH839NPH+BclAjtQ/pyagvi/8gDLkw==",
-      "path": "microsoft.win32.systemevents/8.0.0",
-      "hashPath": "microsoft.win32.systemevents.8.0.0.nupkg.sha512"
+      "sha512": "sha512-xl0sSgkNPtmbZZBPY9sHY157MYZnYwVDEq1ey/MZDSAaKU8HsletogZIX6FgITRqPoi5EOC4cZa2Xc0RqMHqCQ==",
+      "path": "c1.win/8.0.20242.700",
+      "hashPath": "c1.win.8.0.20242.700.nupkg.sha512"
     },
-    "NevronDotNetVision/24.8.8.12": {
+    "C1.Win.C1Chart/4.8.20242.700": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-9dVzDqA31J4j4orI/WXoOoNqQUfHhPMnTqdMhtXmK7SBf+8Epv2rYUzzi4UzXBDn86rcYZ6unaTgZxgsHUmPFQ==",
-      "path": "nevrondotnetvision/24.8.8.12",
-      "hashPath": "nevrondotnetvision.24.8.8.12.nupkg.sha512"
+      "sha512": "sha512-HUCDZM8Xc3DSzdNWO1HePzyMYZadstXfPwJ7mmiaJ2ygPsl7UnqvQPMmX3unPrzV0y7GaLcubHEJq5+48XklJQ==",
+      "path": "c1.win.c1chart/4.8.20242.700",
+      "hashPath": "c1.win.c1chart.4.8.20242.700.nupkg.sha512"
     },
-    "NevronOpenVision/24.6.3.12": {
+    "C1.Win.DX/8.0.20242.700": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ma4V4UpuF5jhCjBqxWTgwdnHPhAgEglE4PqZc0RmpKH7Xt5ryy67unFQDvYUn3V5KHXRfJ7SSoUl8YCBpyTA/Q==",
-      "path": "nevronopenvision/24.6.3.12",
-      "hashPath": "nevronopenvision.24.6.3.12.nupkg.sha512"
+      "sha512": "sha512-IMbFXwxbwUKvmbRYN+il6d0bxGNJCGp6aObqDVl7FAgQ0X9jlsorScMawqXkEnMtXlPfG4w4Irr+HKwrU/s6bg==",
+      "path": "c1.win.dx/8.0.20242.700",
+      "hashPath": "c1.win.dx.8.0.20242.700.nupkg.sha512"
     },
-    "System.Drawing.Common/8.0.3": {
+    "C1.Win.FlexChart/8.0.20242.700": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-oDE9duAtHhxYJM2bsOlZCLBKdorU9DTV1tw7Mlc+VIT7HgwO5ddfOHk/An8C+fAS9oKdmn2PaIA5t1b484uz8g==",
-      "path": "system.drawing.common/8.0.3",
-      "hashPath": "system.drawing.common.8.0.3.nupkg.sha512"
+      "sha512": "sha512-f0DVEJpribLidfH5MzCVWttsr18SUwTH5X7K2lsALF/iMbRLG21qtpUumZx1O0jqH1GEA+KfKvrDsAjlkmZwiQ==",
+      "path": "c1.win.flexchart/8.0.20242.700",
+      "hashPath": "c1.win.flexchart.8.0.20242.700.nupkg.sha512"
+    },
+    "C1.Win.Input/8.0.20242.700": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8BEvzHLifQFTDL7tFjp0/O4T1P35x6ZEtEvVpqIZpEp6woi3hLZY0p1ywDXJLMW+NUt5imwUk369yHZ0SaZhKA==",
+      "path": "c1.win.input/8.0.20242.700",
+      "hashPath": "c1.win.input.8.0.20242.700.nupkg.sha512"
+    },
+    "C1.Win.Ribbon/8.0.20242.700": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3zdp+54iAZdnx0kKUsmgIoiqvfJP02cG+aLlMPwmbjvCxeJk6KLE0j3Mei5EsAmP4iKRebHKvso7AE3YVf0KLg==",
+      "path": "c1.win.ribbon/8.0.20242.700",
+      "hashPath": "c1.win.ribbon.8.0.20242.700.nupkg.sha512"
     }
   }
 }
