@@ -28,7 +28,7 @@ namespace MainGUIcsproj.Algorithm_Visualization
 
         private void btnSorting_Click(object sender, EventArgs e)
         {
-            ctrlSortingVisual sortingVisual = new ctrlSortingVisual();
+            ctrlSortingMenu sortingVisual = new ctrlSortingMenu();
             frmMainMenu.globalForm.ChangeControl(sortingVisual);
         }
 

@@ -2,129 +2,23 @@
   "version": 3,
   "targets": {
     "net9.0-windows7.0": {
-      "C1.Win/8.0.20242.700": {
+      "WinForms.DataVisualization/1.10.0": {
         "type": "package",
         "compile": {
-          "lib/net8.0-windows7.0/C1.Win.8.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0-windows7.0/C1.Win.8.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net8.0-windows7.0/C1.Win.targets": {}
-        }
-      },
-      "C1.Win.C1Chart/4.8.20242.700": {
-        "type": "package",
-        "dependencies": {
-          "C1.Win": "8.0.20242.700"
-        },
-        "compile": {
-          "lib/net462/C1.Win.C1Chart.4.6.2.dll": {
-            "related": ".xml"
+          "lib/net9.0-windows7.0/WinForms.DataVisualization.Utilities.dll": {
+            "related": ".pdb;.xml"
           },
-          "lib/net462/C1.Win.C1Chart3D.4.6.2.dll": {
-            "related": ".xml"
+          "lib/net9.0-windows7.0/WinForms.DataVisualization.dll": {
+            "related": ".pdb;.Utilities.pdb;.Utilities.xml;.xml"
           }
         },
         "runtime": {
-          "lib/net462/C1.Win.C1Chart.4.6.2.dll": {
-            "related": ".xml"
+          "lib/net9.0-windows7.0/WinForms.DataVisualization.Utilities.dll": {
+            "related": ".pdb;.xml"
           },
-          "lib/net462/C1.Win.C1Chart3D.4.6.2.dll": {
-            "related": ".xml"
+          "lib/net9.0-windows7.0/WinForms.DataVisualization.dll": {
+            "related": ".pdb;.Utilities.pdb;.Utilities.xml;.xml"
           }
-        },
-        "build": {
-          "buildTransitive/net462/C1.Win.C1Chart.targets": {}
-        }
-      },
-      "C1.Win.DX/8.0.20242.700": {
-        "type": "package",
-        "dependencies": {
-          "C1.Win": "8.0.20242.700"
-        },
-        "compile": {
-          "lib/net8.0-windows7.0/C1.Win.DX.8.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0-windows7.0/C1.Win.DX.8.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net8.0-windows7.0/C1.Win.DX.targets": {}
-        }
-      },
-      "C1.Win.FlexChart/8.0.20242.700": {
-        "type": "package",
-        "dependencies": {
-          "C1.Win.DX": "8.0.20242.700",
-          "C1.Win.Input": "8.0.20242.700",
-          "C1.Win.Ribbon": "8.0.20242.700"
-        },
-        "compile": {
-          "lib/net8.0-windows7.0/C1.Win.FlexChart.8.dll": {
-            "related": ".xml"
-          },
-          "lib/net8.0-windows7.0/C1.Win.FlexChart.Toolbar.8.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0-windows7.0/C1.Win.FlexChart.8.dll": {
-            "related": ".xml"
-          },
-          "lib/net8.0-windows7.0/C1.Win.FlexChart.Toolbar.8.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net8.0-windows7.0/C1.Win.FlexChart.targets": {}
-        }
-      },
-      "C1.Win.Input/8.0.20242.700": {
-        "type": "package",
-        "dependencies": {
-          "C1.Win": "8.0.20242.700"
-        },
-        "compile": {
-          "lib/net8.0-windows7.0/C1.Win.Input.8.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0-windows7.0/C1.Win.Input.8.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net8.0-windows7.0/C1.Win.Input.targets": {}
-        }
-      },
-      "C1.Win.Ribbon/8.0.20242.700": {
-        "type": "package",
-        "dependencies": {
-          "C1.Win": "8.0.20242.700"
-        },
-        "compile": {
-          "lib/net8.0-windows7.0/C1.Win.Ribbon.8.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0-windows7.0/C1.Win.Ribbon.8.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net8.0-windows7.0/C1.Win.Ribbon.targets": {}
         }
       },
       "Algorithms_Unit/1.0.0": {
@@ -153,8 +47,7 @@
         "dependencies": {
           "Algorithms_Unit": "1.0.0",
           "Analysis_Unit": "1.0.0",
-          "C1.Win.C1Chart": "4.8.20242.700",
-          "C1.Win.FlexChart": "8.0.20242.700"
+          "winforms.datavisualization": "1.10.0"
         },
         "compile": {
           "bin/placeholder/UIControls.dll": {}
@@ -169,182 +62,41 @@
     }
   },
   "libraries": {
-    "C1.Win/8.0.20242.700": {
-      "sha512": "xl0sSgkNPtmbZZBPY9sHY157MYZnYwVDEq1ey/MZDSAaKU8HsletogZIX6FgITRqPoi5EOC4cZa2Xc0RqMHqCQ==",
+    "WinForms.DataVisualization/1.10.0": {
+      "sha512": "QKFQUf6xnsseiRsWfIeKvbWRJWvOKOvkoec/pWxEjwYrr4Vix4xmAWmvTpJGxoeWRXOzV7Pprm5SCFqzXzBA4g==",
       "type": "package",
-      "path": "c1.win/8.0.20242.700",
-      "hasTools": true,
+      "path": "winforms.datavisualization/1.10.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "buildTransitive/net462/C1.Win.targets",
-        "buildTransitive/net48/C1.Win.targets",
-        "buildTransitive/net6.0-windows7.0/C1.Win.targets",
-        "buildTransitive/net8.0-windows7.0/C1.Win.targets",
-        "c1.win.8.0.20242.700.nupkg.sha512",
-        "c1.win.nuspec",
-        "docs/readme.md",
-        "images/NuGetIcon.png",
-        "lib/net462/C1.Win.4.6.2.dll",
-        "lib/net462/C1.Win.4.6.2.xml",
-        "lib/net48/C1.Win.4.8.dll",
-        "lib/net48/C1.Win.4.8.xml",
-        "lib/net6.0-windows7.0/C1.Win.6.dll",
-        "lib/net6.0-windows7.0/C1.Win.6.xml",
-        "lib/net6.0-windows7.0/Design/WinForms/C1.Win.6.Design.Client.dll",
-        "lib/net6.0-windows7.0/Design/WinForms/C1.Win.6.Design.Protocol.Client.dll",
-        "lib/net6.0-windows7.0/Design/WinForms/Server/C1.Win.6.Design.Protocol.Server.dll",
-        "lib/net6.0-windows7.0/Design/WinForms/Server/C1.Win.6.Design.Server.dll",
-        "lib/net8.0-windows7.0/C1.Win.8.dll",
-        "lib/net8.0-windows7.0/C1.Win.8.xml",
-        "lib/net8.0-windows7.0/Design/WinForms/C1.Win.8.Design.Client.dll",
-        "lib/net8.0-windows7.0/Design/WinForms/C1.Win.8.Design.Protocol.Client.dll",
-        "lib/net8.0-windows7.0/Design/WinForms/Server/C1.Win.8.Design.Protocol.Server.dll",
-        "lib/net8.0-windows7.0/Design/WinForms/Server/C1.Win.8.Design.Server.dll",
-        "license.txt",
-        "tools/VisualStudioToolsManifest.xml"
-      ]
-    },
-    "C1.Win.C1Chart/4.8.20242.700": {
-      "sha512": "HUCDZM8Xc3DSzdNWO1HePzyMYZadstXfPwJ7mmiaJ2ygPsl7UnqvQPMmX3unPrzV0y7GaLcubHEJq5+48XklJQ==",
-      "type": "package",
-      "path": "c1.win.c1chart/4.8.20242.700",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "buildTransitive/net462/C1.Win.C1Chart.targets",
-        "buildTransitive/net48/C1.Win.C1Chart.targets",
-        "c1.win.c1chart.4.8.20242.700.nupkg.sha512",
-        "c1.win.c1chart.nuspec",
-        "docs/readme.md",
-        "images/NuGetIcon.png",
-        "lib/net462/C1.Win.C1Chart.4.6.2.dll",
-        "lib/net462/C1.Win.C1Chart.4.6.2.xml",
-        "lib/net462/C1.Win.C1Chart3D.4.6.2.dll",
-        "lib/net462/C1.Win.C1Chart3D.4.6.2.xml",
-        "lib/net48/C1.Win.C1Chart.4.8.dll",
-        "lib/net48/C1.Win.C1Chart.4.8.xml",
-        "lib/net48/C1.Win.C1Chart3D.4.8.dll",
-        "lib/net48/C1.Win.C1Chart3D.4.8.xml",
-        "license.txt",
-        "tools/VisualStudioToolsManifest.xml"
-      ]
-    },
-    "C1.Win.DX/8.0.20242.700": {
-      "sha512": "IMbFXwxbwUKvmbRYN+il6d0bxGNJCGp6aObqDVl7FAgQ0X9jlsorScMawqXkEnMtXlPfG4w4Irr+HKwrU/s6bg==",
-      "type": "package",
-      "path": "c1.win.dx/8.0.20242.700",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "buildTransitive/net6.0-windows7.0/C1.Win.DX.targets",
-        "buildTransitive/net8.0-windows7.0/C1.Win.DX.targets",
-        "c1.win.dx.8.0.20242.700.nupkg.sha512",
-        "c1.win.dx.nuspec",
-        "docs/readme.md",
-        "images/NuGetIcon.png",
-        "lib/net6.0-windows7.0/C1.Win.DX.6.dll",
-        "lib/net6.0-windows7.0/C1.Win.DX.6.xml",
-        "lib/net8.0-windows7.0/C1.Win.DX.8.dll",
-        "lib/net8.0-windows7.0/C1.Win.DX.8.xml",
-        "license.txt",
-        "tools/VisualStudioToolsManifest.xml"
-      ]
-    },
-    "C1.Win.FlexChart/8.0.20242.700": {
-      "sha512": "f0DVEJpribLidfH5MzCVWttsr18SUwTH5X7K2lsALF/iMbRLG21qtpUumZx1O0jqH1GEA+KfKvrDsAjlkmZwiQ==",
-      "type": "package",
-      "path": "c1.win.flexchart/8.0.20242.700",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "buildTransitive/net462/C1.Win.FlexChart.targets",
-        "buildTransitive/net48/C1.Win.FlexChart.targets",
-        "buildTransitive/net6.0-windows7.0/C1.Win.FlexChart.targets",
-        "buildTransitive/net8.0-windows7.0/C1.Win.FlexChart.targets",
-        "c1.win.flexchart.8.0.20242.700.nupkg.sha512",
-        "c1.win.flexchart.nuspec",
-        "docs/readme.md",
-        "images/NuGetIcon.png",
-        "lib/net462/C1.Win.FlexChart.4.6.2.dll",
-        "lib/net462/C1.Win.FlexChart.4.6.2.xml",
-        "lib/net462/C1.Win.FlexChart.Toolbar.4.6.2.dll",
-        "lib/net462/C1.Win.FlexChart.Toolbar.4.6.2.xml",
-        "lib/net48/C1.Win.FlexChart.4.8.dll",
-        "lib/net48/C1.Win.FlexChart.4.8.xml",
-        "lib/net48/C1.Win.FlexChart.Toolbar.4.8.dll",
-        "lib/net48/C1.Win.FlexChart.Toolbar.4.8.xml",
-        "lib/net6.0-windows7.0/C1.Win.FlexChart.6.dll",
-        "lib/net6.0-windows7.0/C1.Win.FlexChart.6.xml",
-        "lib/net6.0-windows7.0/C1.Win.FlexChart.Toolbar.6.dll",
-        "lib/net6.0-windows7.0/C1.Win.FlexChart.Toolbar.6.xml",
-        "lib/net6.0-windows7.0/Design/WinForms/Server/C1.Win.FlexChart.6.Design.Server.dll",
-        "lib/net8.0-windows7.0/C1.Win.FlexChart.8.dll",
-        "lib/net8.0-windows7.0/C1.Win.FlexChart.8.xml",
-        "lib/net8.0-windows7.0/C1.Win.FlexChart.Toolbar.8.dll",
-        "lib/net8.0-windows7.0/C1.Win.FlexChart.Toolbar.8.xml",
-        "lib/net8.0-windows7.0/Design/WinForms/Server/C1.Win.FlexChart.8.Design.Server.dll",
-        "license.txt",
-        "tools/VisualStudioToolsManifest.xml"
-      ]
-    },
-    "C1.Win.Input/8.0.20242.700": {
-      "sha512": "8BEvzHLifQFTDL7tFjp0/O4T1P35x6ZEtEvVpqIZpEp6woi3hLZY0p1ywDXJLMW+NUt5imwUk369yHZ0SaZhKA==",
-      "type": "package",
-      "path": "c1.win.input/8.0.20242.700",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "buildTransitive/net6.0-windows7.0/C1.Win.Input.targets",
-        "buildTransitive/net8.0-windows7.0/C1.Win.Input.targets",
-        "c1.win.input.8.0.20242.700.nupkg.sha512",
-        "c1.win.input.nuspec",
-        "docs/readme.md",
-        "images/NuGetIcon.png",
-        "lib/net6.0-windows7.0/C1.Win.Input.6.dll",
-        "lib/net6.0-windows7.0/C1.Win.Input.6.xml",
-        "lib/net6.0-windows7.0/Design/WinForms/Server/C1.Win.Input.6.Design.Server.dll",
-        "lib/net8.0-windows7.0/C1.Win.Input.8.dll",
-        "lib/net8.0-windows7.0/C1.Win.Input.8.xml",
-        "lib/net8.0-windows7.0/Design/WinForms/Server/C1.Win.Input.8.Design.Server.dll",
-        "license.txt",
-        "tools/VisualStudioToolsManifest.xml"
-      ]
-    },
-    "C1.Win.Ribbon/8.0.20242.700": {
-      "sha512": "3zdp+54iAZdnx0kKUsmgIoiqvfJP02cG+aLlMPwmbjvCxeJk6KLE0j3Mei5EsAmP4iKRebHKvso7AE3YVf0KLg==",
-      "type": "package",
-      "path": "c1.win.ribbon/8.0.20242.700",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "buildTransitive/net462/C1.Win.Ribbon.targets",
-        "buildTransitive/net48/C1.Win.Ribbon.targets",
-        "buildTransitive/net6.0-windows7.0/C1.Win.Ribbon.targets",
-        "buildTransitive/net8.0-windows7.0/C1.Win.Ribbon.targets",
-        "c1.win.ribbon.8.0.20242.700.nupkg.sha512",
-        "c1.win.ribbon.nuspec",
-        "docs/readme.md",
-        "images/NuGetIcon.png",
-        "lib/net462/C1.Win.Ribbon.4.6.2.dll",
-        "lib/net462/C1.Win.Ribbon.4.6.2.xml",
-        "lib/net48/C1.Win.Ribbon.4.8.dll",
-        "lib/net48/C1.Win.Ribbon.4.8.xml",
-        "lib/net6.0-windows7.0/C1.Win.Ribbon.6.dll",
-        "lib/net6.0-windows7.0/C1.Win.Ribbon.6.xml",
-        "lib/net6.0-windows7.0/Design/WinForms/C1.Win.Ribbon.6.Design.Client.dll",
-        "lib/net6.0-windows7.0/Design/WinForms/Server/C1.Win.Ribbon.6.Design.Server.dll",
-        "lib/net8.0-windows7.0/C1.Win.Ribbon.8.dll",
-        "lib/net8.0-windows7.0/C1.Win.Ribbon.8.xml",
-        "lib/net8.0-windows7.0/Design/WinForms/C1.Win.Ribbon.8.Design.Client.dll",
-        "lib/net8.0-windows7.0/Design/WinForms/Server/C1.Win.Ribbon.8.Design.Server.dll",
-        "license.txt",
-        "tools/VisualStudioToolsManifest.xml"
+        "Icon.png",
+        "NuGetReadme.md",
+        "lib/net6.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Designer.ClientServerProtocol.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Designer.Server.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Utilities.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Designer.Client.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Designer.ClientServerProtocol.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Utilities.dll",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.dll",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.pdb",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.xml",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.dll",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.pdb",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.xml",
+        "lib/net9.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Designer.ClientServerProtocol.dll",
+        "lib/net9.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Designer.Server.dll",
+        "lib/net9.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Utilities.dll",
+        "lib/net9.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Designer.Client.dll",
+        "lib/net9.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Designer.ClientServerProtocol.dll",
+        "lib/net9.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Utilities.dll",
+        "lib/net9.0-windows7.0/WinForms.DataVisualization.Utilities.dll",
+        "lib/net9.0-windows7.0/WinForms.DataVisualization.Utilities.pdb",
+        "lib/net9.0-windows7.0/WinForms.DataVisualization.Utilities.xml",
+        "lib/net9.0-windows7.0/WinForms.DataVisualization.dll",
+        "lib/net9.0-windows7.0/WinForms.DataVisualization.pdb",
+        "lib/net9.0-windows7.0/WinForms.DataVisualization.xml",
+        "winforms.datavisualization.1.10.0.nupkg.sha512",
+        "winforms.datavisualization.nuspec"
       ]
     },
     "Algorithms_Unit/1.0.0": {
@@ -367,7 +119,8 @@
     "net9.0-windows7.0": [
       "Algorithms_Unit >= 1.0.0",
       "Analysis_Unit >= 1.0.0",
-      "UIControls >= 1.0.0"
+      "UIControls >= 1.0.0",
+      "WinForms.DataVisualization >= 1.10.0"
     ]
   },
   "packageFolders": {
@@ -429,6 +182,12 @@
     "frameworks": {
       "net9.0-windows7.0": {
         "targetAlias": "net9.0-windows",
+        "dependencies": {
+          "WinForms.DataVisualization": {
+            "target": "Package",
+            "version": "[1.10.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -451,17 +210,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'C1.Win.C1Chart 4.8.20242.700' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-windows7.0'. This package may not be fully compatible with your project.",
-      "libraryId": "C1.Win.C1Chart",
-      "targetGraphs": [
-        "net9.0-windows7.0"
-      ]
-    }
-  ]
+  }
 }

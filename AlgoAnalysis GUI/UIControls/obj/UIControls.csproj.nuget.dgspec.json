@@ -57,13 +57,9 @@
         "net9.0-windows7.0": {
           "targetAlias": "net9.0-windows",
           "dependencies": {
-            "C1.Win.C1Chart": {
+            "winforms.datavisualization": {
               "target": "Package",
-              "version": "[4.8.20242.700, )"
-            },
-            "C1.Win.FlexChart": {
-              "target": "Package",
-              "version": "[8.0.20242.700, )"
+              "version": "[1.10.0, )"
             }
           },
           "imports": [

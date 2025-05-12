@@ -1,26 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "SnS90v5G8TU=",
+  "dgSpecHash": "qO8vAG0xt8E=",
   "success": true,
   "projectFilePath": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\MainGUIcsproj.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\orginal\\.nuget\\packages\\c1.win\\8.0.20242.700\\c1.win.8.0.20242.700.nupkg.sha512",
-    "C:\\Users\\orginal\\.nuget\\packages\\c1.win.c1chart\\4.8.20242.700\\c1.win.c1chart.4.8.20242.700.nupkg.sha512",
-    "C:\\Users\\orginal\\.nuget\\packages\\c1.win.dx\\8.0.20242.700\\c1.win.dx.8.0.20242.700.nupkg.sha512",
-    "C:\\Users\\orginal\\.nuget\\packages\\c1.win.flexchart\\8.0.20242.700\\c1.win.flexchart.8.0.20242.700.nupkg.sha512",
-    "C:\\Users\\orginal\\.nuget\\packages\\c1.win.input\\8.0.20242.700\\c1.win.input.8.0.20242.700.nupkg.sha512",
-    "C:\\Users\\orginal\\.nuget\\packages\\c1.win.ribbon\\8.0.20242.700\\c1.win.ribbon.8.0.20242.700.nupkg.sha512"
+    "C:\\Users\\orginal\\.nuget\\packages\\winforms.datavisualization\\1.10.0\\winforms.datavisualization.1.10.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'C1.Win.C1Chart 4.8.20242.700' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0-windows7.0'. This package may not be fully compatible with your project.",
-      "libraryId": "C1.Win.C1Chart",
-      "targetGraphs": [
-        "net9.0-windows7.0"
-      ]
-    }
-  ]
+  "logs": []
 }

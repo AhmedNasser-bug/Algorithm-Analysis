@@ -9,7 +9,6 @@ D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj\Debug\net9.0-windows\WinFormsApp1.Controls.ctrlAlgorithmSelection.resources
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj\Debug\net9.0-windows\UIControls.ctrlButtonTemplate.resources
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj\Debug\net9.0-windows\WinFormsApp1.Controls.ctrlPlotGraph.resources
-D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj\Debug\net9.0-windows\MainGUIcsproj.Controls.ctrlSortingHistogram.resources
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj\Debug\net9.0-windows\MainGUIcsproj.Controls.ctrlVisualArray.resources
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj\Debug\net9.0-windows\UIControls.csproj.GenerateResource.cache
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj\Debug\net9.0-windows\UIControls.GeneratedMSBuildEditorConfig.editorconfig
@@ -22,3 +21,4 @@ D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj\Debug\net9.0-windows\refint\UIControls.dll
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj\Debug\net9.0-windows\UIControls.pdb
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj\Debug\net9.0-windows\ref\UIControls.dll
+D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj\Debug\net9.0-windows\MainGUIcsproj.Controls.ctrlSortingVisualizer.resources

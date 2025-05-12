@@ -1,0 +1,8 @@
+D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UI2\bin\Debug\UI2.dll
+D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UI2\bin\Debug\UI2.pdb
+D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UI2\obj\Debug\UI2.csproj.AssemblyReference.cache
+D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UI2\obj\Debug\UI2.csproj.GenerateResource.cache
+D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UI2\obj\Debug\UI2.csproj.CoreCompileInputs.cache
+D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UI2\obj\Debug\UI2.dll
+D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UI2\obj\Debug\UI2.pdb
+D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UI2\obj\Debug\UI2.ctrlHistogram.resources

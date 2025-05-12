@@ -1,6 +1,6 @@
 ﻿namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
 {
-    partial class ctrlSortingVisual
+    partial class ctrlSortingMenu
     {
         /// <summary> 
         /// Required designer variable.

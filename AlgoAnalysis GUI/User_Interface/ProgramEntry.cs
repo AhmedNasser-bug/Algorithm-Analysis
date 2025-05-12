@@ -1,4 +1,4 @@
-namespace WinFormsApp1
+namespace MainGUIcsproj
 {
     
     internal static class ProgramEntry

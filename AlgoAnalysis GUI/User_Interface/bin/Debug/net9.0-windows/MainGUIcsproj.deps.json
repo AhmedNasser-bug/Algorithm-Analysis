@@ -10,82 +10,22 @@
         "dependencies": {
           "Algorithms_Unit": "1.0.0",
           "Analysis_Unit": "1.0.0",
-          "UIControls": "1.0.0"
+          "UIControls": "1.0.0",
+          "WinForms.DataVisualization": "1.10.0"
         },
         "runtime": {
           "MainGUIcsproj.dll": {}
         }
       },
-      "C1.Win/8.0.20242.700": {
+      "WinForms.DataVisualization/1.10.0": {
         "runtime": {
-          "lib/net8.0-windows7.0/C1.Win.8.dll": {
-            "assemblyVersion": "8.0.20242.700",
-            "fileVersion": "8.0.20242.700"
-          }
-        }
-      },
-      "C1.Win.C1Chart/4.8.20242.700": {
-        "dependencies": {
-          "C1.Win": "8.0.20242.700"
-        },
-        "runtime": {
-          "lib/net462/C1.Win.C1Chart.4.6.2.dll": {
-            "assemblyVersion": "4.6.20242.700",
-            "fileVersion": "4.6.20242.700"
+          "lib/net9.0-windows7.0/WinForms.DataVisualization.Utilities.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.10.0.0"
           },
-          "lib/net462/C1.Win.C1Chart3D.4.6.2.dll": {
-            "assemblyVersion": "4.6.20242.700",
-            "fileVersion": "4.6.20242.700"
-          }
-        }
-      },
-      "C1.Win.DX/8.0.20242.700": {
-        "dependencies": {
-          "C1.Win": "8.0.20242.700"
-        },
-        "runtime": {
-          "lib/net8.0-windows7.0/C1.Win.DX.8.dll": {
-            "assemblyVersion": "8.0.20242.700",
-            "fileVersion": "8.0.20242.700"
-          }
-        }
-      },
-      "C1.Win.FlexChart/8.0.20242.700": {
-        "dependencies": {
-          "C1.Win.DX": "8.0.20242.700",
-          "C1.Win.Input": "8.0.20242.700",
-          "C1.Win.Ribbon": "8.0.20242.700"
-        },
-        "runtime": {
-          "lib/net8.0-windows7.0/C1.Win.FlexChart.8.dll": {
-            "assemblyVersion": "8.0.20242.700",
-            "fileVersion": "8.0.20242.700"
-          },
-          "lib/net8.0-windows7.0/C1.Win.FlexChart.Toolbar.8.dll": {
-            "assemblyVersion": "8.0.20242.700",
-            "fileVersion": "8.0.20242.700"
-          }
-        }
-      },
-      "C1.Win.Input/8.0.20242.700": {
-        "dependencies": {
-          "C1.Win": "8.0.20242.700"
-        },
-        "runtime": {
-          "lib/net8.0-windows7.0/C1.Win.Input.8.dll": {
-            "assemblyVersion": "8.0.20242.700",
-            "fileVersion": "8.0.20242.700"
-          }
-        }
-      },
-      "C1.Win.Ribbon/8.0.20242.700": {
-        "dependencies": {
-          "C1.Win": "8.0.20242.700"
-        },
-        "runtime": {
-          "lib/net8.0-windows7.0/C1.Win.Ribbon.8.dll": {
-            "assemblyVersion": "8.0.20242.700",
-            "fileVersion": "8.0.20242.700"
+          "lib/net9.0-windows7.0/WinForms.DataVisualization.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.10.0.0"
           }
         }
       },
@@ -109,8 +49,7 @@
         "dependencies": {
           "Algorithms_Unit": "1.0.0",
           "Analysis_Unit": "1.0.0",
-          "C1.Win.C1Chart": "4.8.20242.700",
-          "C1.Win.FlexChart": "8.0.20242.700"
+          "WinForms.DataVisualization": "1.10.0"
         },
         "runtime": {
           "UIControls.dll": {
@@ -127,47 +66,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "C1.Win/8.0.20242.700": {
+    "WinForms.DataVisualization/1.10.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-xl0sSgkNPtmbZZBPY9sHY157MYZnYwVDEq1ey/MZDSAaKU8HsletogZIX6FgITRqPoi5EOC4cZa2Xc0RqMHqCQ==",
-      "path": "c1.win/8.0.20242.700",
-      "hashPath": "c1.win.8.0.20242.700.nupkg.sha512"
-    },
-    "C1.Win.C1Chart/4.8.20242.700": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-HUCDZM8Xc3DSzdNWO1HePzyMYZadstXfPwJ7mmiaJ2ygPsl7UnqvQPMmX3unPrzV0y7GaLcubHEJq5+48XklJQ==",
-      "path": "c1.win.c1chart/4.8.20242.700",
-      "hashPath": "c1.win.c1chart.4.8.20242.700.nupkg.sha512"
-    },
-    "C1.Win.DX/8.0.20242.700": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-IMbFXwxbwUKvmbRYN+il6d0bxGNJCGp6aObqDVl7FAgQ0X9jlsorScMawqXkEnMtXlPfG4w4Irr+HKwrU/s6bg==",
-      "path": "c1.win.dx/8.0.20242.700",
-      "hashPath": "c1.win.dx.8.0.20242.700.nupkg.sha512"
-    },
-    "C1.Win.FlexChart/8.0.20242.700": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-f0DVEJpribLidfH5MzCVWttsr18SUwTH5X7K2lsALF/iMbRLG21qtpUumZx1O0jqH1GEA+KfKvrDsAjlkmZwiQ==",
-      "path": "c1.win.flexchart/8.0.20242.700",
-      "hashPath": "c1.win.flexchart.8.0.20242.700.nupkg.sha512"
-    },
-    "C1.Win.Input/8.0.20242.700": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-8BEvzHLifQFTDL7tFjp0/O4T1P35x6ZEtEvVpqIZpEp6woi3hLZY0p1ywDXJLMW+NUt5imwUk369yHZ0SaZhKA==",
-      "path": "c1.win.input/8.0.20242.700",
-      "hashPath": "c1.win.input.8.0.20242.700.nupkg.sha512"
-    },
-    "C1.Win.Ribbon/8.0.20242.700": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-3zdp+54iAZdnx0kKUsmgIoiqvfJP02cG+aLlMPwmbjvCxeJk6KLE0j3Mei5EsAmP4iKRebHKvso7AE3YVf0KLg==",
-      "path": "c1.win.ribbon/8.0.20242.700",
-      "hashPath": "c1.win.ribbon.8.0.20242.700.nupkg.sha512"
+      "sha512": "sha512-QKFQUf6xnsseiRsWfIeKvbWRJWvOKOvkoec/pWxEjwYrr4Vix4xmAWmvTpJGxoeWRXOzV7Pprm5SCFqzXzBA4g==",
+      "path": "winforms.datavisualization/1.10.0",
+      "hashPath": "winforms.datavisualization.1.10.0.nupkg.sha512"
     },
     "Algorithms_Unit/1.0.0": {
       "type": "project",

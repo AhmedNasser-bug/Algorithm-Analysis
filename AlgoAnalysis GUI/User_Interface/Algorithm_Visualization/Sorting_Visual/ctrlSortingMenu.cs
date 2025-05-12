@@ -11,9 +11,9 @@ using WinFormsApp1;
 
 namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
 {
-    public partial class ctrlSortingVisual : UserControl
+    public partial class ctrlSortingMenu : UserControl
     {
-        public ctrlSortingVisual()
+        public ctrlSortingMenu()
         {
             InitializeComponent();
         }

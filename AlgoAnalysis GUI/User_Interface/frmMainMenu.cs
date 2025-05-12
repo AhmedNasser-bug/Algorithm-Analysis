@@ -1,7 +1,7 @@
 using MainGUIcsproj.Algorithm_Visualization;
 using System.Diagnostics;
 
-namespace WinFormsApp1
+namespace MainGUIcsproj
 {
     public partial class frmMainMenu : Form
     {

@@ -8,8 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="C1.Win.C1Chart" Version="4.8.20242.700" />
-    <PackageReference Include="C1.Win.FlexChart" Version="8.0.20242.700" />
+    <PackageReference Include="winforms.datavisualization" Version="1.10.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,7 +23,7 @@
     <Compile Update="ctrlPlotGraph.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="ctrlSortingHistogram.cs">
+    <Compile Update="ctrlSortingVisualizer.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="ctrlVisualArray.cs">

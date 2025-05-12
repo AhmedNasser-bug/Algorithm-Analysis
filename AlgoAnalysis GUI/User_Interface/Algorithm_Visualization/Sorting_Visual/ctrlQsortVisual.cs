@@ -10,26 +10,45 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Algorithms_Unit;
+using Algorithms_Unit.Utils;
 
 namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
 {
     public partial class ctrlQsortVisual : UserControl
     {
+
+        ctrlSortingVisualizer sortingVisualizer;
+        List<Int128> values;
         public ctrlQsortVisual()
         {
             InitializeComponent();
 
             Sorting.OnSwap += Sorting_OnSwap;
-            ctrlSortingHistogram sortingHistogram = new ctrlSortingHistogram(new List<double> {1, 2, 3, 4, 5, 6, 7});
-            Controls.Add(sortingHistogram);
+            values = Input.GenerateRandomRange(1, 20);
+            sortingVisualizer = new ctrlSortingVisualizer(values);
+            sortingVisualizer.Dock = DockStyle.Left;
+            Controls.Add(sortingVisualizer);
         }
 
+        /// <summary>
+        /// Updates the animation of the chart with the swapped indices
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="sortingState"></param>
         private void Sorting_OnSwap(object sender, SortingStateDictionary sortingState)
         {
-            // UpdateHistogram();
-            MessageBox.Show("Data updated", sortingState.SwappedIndices.ToString());
+            sortingVisualizer.UpdateHistogram(sortingState.SwappedIndices.Key, sortingState.SwappedIndices.Value);
         }
 
-       
+        private void btnQuickSort_Click(object sender, EventArgs e)
+        {
+            Metrics metrics = Sorting.BubbleSort(ref values);
+        }
+
+        private void btnShuffleArray_Click(object sender, EventArgs e)
+        {
+            Sorting.Shuffle(ref values);
+            sortingVisualizer.ChangeValues(values);
+        }
     }
 }

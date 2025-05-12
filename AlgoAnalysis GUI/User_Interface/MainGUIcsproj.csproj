@@ -13,6 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="WinForms.DataVisualization" Version="1.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\Logic Layer\Algorithms_Unit\Algorithms_Unit.csproj" />
     <ProjectReference Include="..\..\Logic Layer\Analysis_Unit\Analysis_Unit.csproj" />
     <ProjectReference Include="..\UIControls\UIControls.csproj" />

@@ -1,4 +1,4 @@
-﻿namespace MainGUIcsproj.Algorithm_Visualization
+﻿namespace MainGUIcsproj
 {
     partial class ctrlMainMenu
     {
