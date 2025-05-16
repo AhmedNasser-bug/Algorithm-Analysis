@@ -1,44 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A37BAD76-B778-461B-8651-7076B0DD4ECA}|..\\UIControls\\UIControls.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\algoanalysis gui\\uicontrols\\ctrlsortingvisualizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\algoanalysis gui\\user_interface\\algorithm_visualization\\sorting_visual\\ctrlqsortvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|solutionrelative:algorithm_visualization\\sorting_visual\\ctrlqsortvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7406651-D06C-4D67-9DB1-16E1D49872ED}|..\\..\\Logic Layer\\Algorithms_Unit\\Algorithms_Unit.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\logic layer\\algorithms_unit\\utils\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\algoanalysis gui\\user_interface\\algorithm_visualization\\sorting_visual\\ctrlqsortvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|solutionrelative:algorithm_visualization\\sorting_visual\\ctrlqsortvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 180,
-          "SelectedChildIndex": 0,
+          "DockedHeight": 200,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ctrlSortingVisualizer.cs",
-              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\ctrlSortingVisualizer.cs",
-              "RelativeDocumentMoniker": "..\\UIControls\\ctrlSortingVisualizer.cs",
-              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\ctrlSortingVisualizer.cs",
-              "RelativeToolTip": "..\\UIControls\\ctrlSortingVisualizer.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAD8AAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T21:04:00.299Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:2:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
@@ -54,44 +26,16 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
-            },
+            }
+          ]
+        },
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ctrlQsortVisual.cs [Design]",
-              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Sorting_Visual\\ctrlQsortVisual.cs",
-              "RelativeDocumentMoniker": "Algorithm_Visualization\\Sorting_Visual\\ctrlQsortVisual.cs",
-              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Sorting_Visual\\ctrlQsortVisual.cs [Design]",
-              "RelativeToolTip": "Algorithm_Visualization\\Sorting_Visual\\ctrlQsortVisual.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T21:02:45.589Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ctrlQsortVisual.cs",
-              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Sorting_Visual\\ctrlQsortVisual.cs",
-              "RelativeDocumentMoniker": "Algorithm_Visualization\\Sorting_Visual\\ctrlQsortVisual.cs",
-              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Sorting_Visual\\ctrlQsortVisual.cs",
-              "RelativeToolTip": "Algorithm_Visualization\\Sorting_Visual\\ctrlQsortVisual.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAYwCcAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T20:55:06.278Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Input.cs",
-              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Utils\\Input.cs",
-              "RelativeDocumentMoniker": "..\\..\\Logic Layer\\Algorithms_Unit\\Utils\\Input.cs",
-              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Utils\\Input.cs",
-              "RelativeToolTip": "..\\..\\Logic Layer\\Algorithms_Unit\\Utils\\Input.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwC8AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T20:43:00.297Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         }

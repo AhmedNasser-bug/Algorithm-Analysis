@@ -38,6 +38,9 @@
         }
       },
       "Analysis_Unit/1.0.0": {
+        "dependencies": {
+          "Algorithms_Unit": "1.0.0"
+        },
         "runtime": {
           "Analysis_Unit.dll": {
             "assemblyVersion": "1.0.0",

@@ -10,4 +10,8 @@
     <Folder Include="Unit Tests\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Algorithms_Unit\Algorithms_Unit.csproj" />
+  </ItemGroup>
+
 </Project>

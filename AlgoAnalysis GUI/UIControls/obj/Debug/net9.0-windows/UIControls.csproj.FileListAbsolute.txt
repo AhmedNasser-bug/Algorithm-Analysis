@@ -7,7 +7,6 @@ D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\bin
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\bin\Debug\net9.0-windows\Analysis_Unit.pdb
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj\Debug\net9.0-windows\UIControls.csproj.AssemblyReference.cache
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj\Debug\net9.0-windows\WinFormsApp1.Controls.ctrlAlgorithmSelection.resources
-D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj\Debug\net9.0-windows\UIControls.ctrlButtonTemplate.resources
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj\Debug\net9.0-windows\WinFormsApp1.Controls.ctrlPlotGraph.resources
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj\Debug\net9.0-windows\MainGUIcsproj.Controls.ctrlVisualArray.resources
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj\Debug\net9.0-windows\UIControls.csproj.GenerateResource.cache

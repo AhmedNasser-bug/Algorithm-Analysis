@@ -1,4 +1,6 @@
-﻿namespace Analysis_Unit
+﻿using Algorithms_Unit;
+
+namespace Analysis_Unit
 {
     /// <summary>
     /// This class contains definitions for analyzing a function is performance
@@ -12,6 +14,16 @@
     /// </summary>
     public class Analysis
     {
-        
+        /*
+         Main formula:
+        f(m^x)
+        log_m(f(m^x))
+        d/dx log_m(f(m^x)) <- the power
+        ceil(avg(d/dx log_m(f(m^x)))) <- Upper bound
+        floor(avg(d/dx log_m(f(m^x)))) <- lower bound
+         */
+
+
+
     }
 }

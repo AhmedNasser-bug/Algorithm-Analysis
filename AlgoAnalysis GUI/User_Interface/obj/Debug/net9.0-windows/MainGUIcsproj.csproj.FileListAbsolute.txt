@@ -55,13 +55,12 @@ D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface\obj\Debug\net9.0-windows\MainGUIcsproj.Algorithm_Visualization.DynamicProgrammin_Visual.frmDynamicProgrammingVisual.resources
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface\obj\Debug\net9.0-windows\MainGUIcsproj.Algorithm_Visualization.Pathfinding_Visual.frmPathfindingVisual.resources
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface\obj\Debug\net9.0-windows\MainGUIcsproj.Algorithm_Visualization.ctrlAlgorithmVisualization.resources
-D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface\obj\Debug\net9.0-windows\MainGUIcsproj.Algorithm_Visualization.Sorting_Visual.ctrlQsortVisual.resources
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface\obj\Debug\net9.0-windows\MainGUIcsproj.Algorithm_Visualization.Searching_Visual.ctrlSearchingVisual.resources
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface\obj\Debug\net9.0-windows\MainGUIcsproj.Algorithm_Visualization.Pathfinding_Visual.ctrlPathfindingVisual.resources
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface\obj\Debug\net9.0-windows\MainGUIcsproj.Algorithm_Visualization.DynamicProgrammin_Visual.ctrlDynamicProgramming.resources
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface\obj\Debug\net9.0-windows\MainGUIcsproj.Algorithm_Visualization.Greedy_Visual.ctrlGreedyVisual.resources
-D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface\obj\Debug\net9.0-windows\MainGUIcsproj.Algorithm_Visualization.Sorting_Visual.ctrlSortingMenu.resources
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface\bin\Debug\net9.0-windows\WinForms.DataVisualization.Utilities.dll
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface\bin\Debug\net9.0-windows\WinForms.DataVisualization.dll
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface\obj\Debug\net9.0-windows\MainGUIcsproj.ctrlMainMenu.resources
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface\obj\Debug\net9.0-windows\MainGUIcsproj.frmMainMenu.resources
+D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface\obj\Debug\net9.0-windows\MainGUIcsproj.Algorithm_Visualization.Sorting_Visual.ctrlSortingMain.resources

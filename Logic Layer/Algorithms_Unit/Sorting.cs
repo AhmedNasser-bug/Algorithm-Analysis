@@ -1,4 +1,5 @@
-﻿namespace Algorithms_Unit
+﻿using static Algorithms_Unit.Utils.SortingUtils;
+namespace Algorithms_Unit
 {
     /// <summary>
     /// Contains Sorting algorithms for visualization, performance metrics and analysis
@@ -7,29 +8,17 @@
     {
         public delegate void SortingEventHandler(object sender, SortingStateDictionary sortingState);
         public static event SortingEventHandler? OnSwap;
+
         /// <summary>
         /// Call on each iteration of each algorithm with the swapped indices for the sorting algorithm
         /// </summary>
-        static void SendIndices(int idx1, int idx2)
+        internal static void SendIndices(int idx1, int idx2)
         {
-            OnSwap?.Invoke(null, new SortingStateDictionary(new KeyValuePair<int, int>(idx1, idx2)));
+            OnSwap?.Invoke(
+                null, new SortingStateDictionary(new KeyValuePair<int, int>(idx1, idx2)));
         }
-        static private void Swap(ref List<Int128> arr, int i, int j)
-        {
-            Int128 temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
-        }
-        public static void Shuffle(ref List<Int128> values)
-        {
-            Random random = new Random();
-            for (int i = 0; i < values.Count; i++)
-            {
-                int j = random.Next(i, values.Count);
-                Swap(ref values, i, j);
-            }
 
-        }
+
 
         /// <summary>
         /// BubbleSort algorithm that fires an event with the swapped indices as arguments for that event 
@@ -43,12 +32,10 @@
         /// - TotalNumbersOfSwaps
         /// - TotalRuntimeTicks
         /// </returns>
-        static public Metrics BubbleSort(ref List<Int128> arr)
+        static public Metrics BubbleSort(List<Int128> arr)
         {
             Metrics metrics = new Metrics(); // To track the performance metrics
             DateTime begin = DateTime.Now; // To track the runtime of the algorithm
-
-            
 
             for (int i = 0; i < arr.Count-1; i++)
             {
@@ -66,6 +53,7 @@
                         SendIndices(j, j+1);
                         metrics.TotalNumbersOfSwaps++;
                     }
+                    metrics.TotalNumbersOfArrayAccesses += 4; // 2 for the comparison and 2 for the swap
                 }
             }
             metrics.TotalRuntimeTicks = (DateTime.Now - begin).Ticks; // Calculate the total runtime
@@ -73,7 +61,7 @@
 
             return metrics;
         }
-        static public Metrics BubbleSort_non_animation(ref List<Int128> arr)
+        static public Metrics BubbleSort_non_animation(List<Int128> arr)
         {
             Metrics metrics = new Metrics(); // To track the performance metrics
             DateTime begin = DateTime.Now; // To track the runtime of the algorithm
@@ -104,23 +92,80 @@
             return metrics;
         }
 
-        /*
-         TODO:
-            - QuickSort
-            - HeapSort
-            - SelectionSort
-            - InsertionSort
-            - MergeSort
-         
-            Input: List of integers
-            Output: Result object (Refer to the result class) 
-            Sorting is done in place for each algorithm
-            
-            Notes:
-                -For each iteration Call the SendIndices method with the swapped indices of the list 
-                -All methods must have a clone that does not fire the event 
-         
-           
-         */
+
+        /// <summary>
+        /// QuickSort algorithm that fires an event with the swapped indices as arguments for that event
+        /// </summary>
+        /// <param name="arr">The list to be sorted</param>
+        /// <returns>
+        /// Metrics object containing the performance metrics of the algorithm:
+        /// - TotalNumbersOfIterations
+        /// - TotalNumbersOfSteps
+        /// - TotalNumbersOfComparisons
+        /// - TotalNumbersOfSwaps
+        /// - TotalRuntimeTicks
+        /// - TotalNumbersOfArrayAccesses
+        /// </returns>
+        static public Metrics QuickSort(List<Int128> arr)
+        {
+            Metrics metrics = new Metrics(); // To track the performance metrics
+            DateTime begin = DateTime.Now; // To track the runtime of the algorithm
+
+            metrics.TotalNumbersOfSteps++; // Starting the algorithm
+
+            // Call the recursive QuickSort function
+            QuickSortRecursive(arr, 0, arr.Count - 1, metrics);
+
+            metrics.TotalRuntimeTicks = (DateTime.Now - begin).Ticks; // Calculate the total runtime
+            metrics.TotalNumbersOfSteps += 2; // Computing runtime and returning
+
+            return metrics;
+        }
+        /// <summary>
+        /// Recursive helper method for QuickSort
+        /// </summary>
+        static private void QuickSortRecursive(List<Int128> arr, int low, int high, Metrics metrics)
+        {
+            metrics.TotalNumbersOfSteps++; // One step for calling the function
+
+            if (low < high)
+            {
+                metrics.TotalNumbersOfComparisons++; // for the if check
+
+                // Partition the array and get the pivot index
+                int pivotIndex = Partition(arr, low, high, metrics);
+
+                // Recursively sort elements before and after the pivot
+                QuickSortRecursive(arr, low, pivotIndex - 1, metrics);
+                QuickSortRecursive(arr, pivotIndex + 1, high, metrics);
+            }
+        }
+
+
+        // TODO: Fix this function to be stable and inplace
+        public static Metrics CountSort(List<Int128> arr) 
+        {
+            Metrics metrics = new();
+            return metrics;
+        }
+
+            /*
+             TODO:
+                - QuickSort
+                - HeapSort
+                - SelectionSort
+                - InsertionSort
+                - MergeSort
+
+                Input: List of integers
+                Output: Result object (Refer to the result class) 
+                Sorting is done in place for each algorithm
+
+                Notes:
+                    -For each iteration Call the SendIndices method with the swapped indices of the list 
+                    -All methods must have a clone that does not fire the event 
+
+
+             */
+        }
     }
-}

@@ -32,10 +32,11 @@
             // 
             // frmMainMenu
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.FromArgb(52, 62, 70);
             ClientSize = new Size(1166, 686);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "frmMainMenu";
             Text = "Algorithm Analyisis";
             WindowState = FormWindowState.Maximized;

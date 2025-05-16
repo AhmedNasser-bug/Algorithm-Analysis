@@ -48,9 +48,29 @@ namespace Algorithms_Unit.Utils
             for (Int128 i = minValue; i < maxValue; i++)array.Add(i);
 
             // Shuffle the array
-            Sorting.Shuffle(ref array);
+            SortingUtils.Shuffle(ref array);
 
             return array;
+        }
+        public static List<Int128> GenerateSortedArray(int size, int minValue, int maxValue)
+        {
+            List<Int128> array = new();
+            for (int i = minValue; i < maxValue; i++)
+            {
+                array.Add((Int128)i);
+            }
+            return array;
+        }
+        public static List<Int128> GenerateReverseSortedArray(int minValue, int maxValue)
+        {
+            List<Int128> arr = new();
+
+            for (Int128 i = maxValue; i >= minValue; i--)
+            {
+                arr.Add(i);
+            }
+
+            return arr;
         }
     }
 }

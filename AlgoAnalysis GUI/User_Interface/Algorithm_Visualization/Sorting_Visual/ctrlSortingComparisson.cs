@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UIControls
+namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
 {
-    public partial class ctrlButtonTemplate : UserControl
+    public partial class ctrlSortingComparisson : UserControl
     {
-        public ctrlButtonTemplate()
+        public ctrlSortingComparisson()
         {
             InitializeComponent();
         }

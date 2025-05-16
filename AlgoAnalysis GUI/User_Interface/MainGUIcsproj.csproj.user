@@ -22,10 +22,10 @@
     <Compile Update="Algorithm_Visualization\Searching_Visual\ctrlSearchingVisual.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Algorithm_Visualization\Sorting_Visual\ctrlSortingMenu.cs">
+    <Compile Update="Algorithm_Visualization\Sorting_Visual\ctrlSortingComparisson.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Algorithm_Visualization\Sorting_Visual\ctrlQsortVisual.cs">
+    <Compile Update="Algorithm_Visualization\Sorting_Visual\ctrlSortingMain.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="ctrlMainMenu.cs">

@@ -28,13 +28,8 @@ namespace MainGUIcsproj.Algorithm_Visualization
 
         private void btnSorting_Click(object sender, EventArgs e)
         {
-            ctrlSortingMenu sortingVisual = new ctrlSortingMenu();
-            frmMainMenu.globalForm.ChangeControl(sortingVisual);
-        }
-
-        private void ctrlAlgorithmVisualization_Load(object sender, EventArgs e)
-        {
-
+            ctrlSortingMain sortingVisual = new ctrlSortingMain();
+            frmMainMenu.globalForm?.ChangeControl(sortingVisual);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -47,25 +42,25 @@ namespace MainGUIcsproj.Algorithm_Visualization
         private void btnGreedy_Click(object sender, EventArgs e)
         {
             ctrlGreedyVisual greedyVisual = new ctrlGreedyVisual();
-            frmMainMenu.globalForm.ChangeControl(greedyVisual);
+            frmMainMenu.globalForm?.ChangeControl(greedyVisual);
         }
 
         private void btnSearching_Click(object sender, EventArgs e)
         {
             ctrlSearchingVisual searchingVisual = new ctrlSearchingVisual();
-            frmMainMenu.globalForm.ChangeControl(searchingVisual);
+            frmMainMenu.globalForm?.ChangeControl(searchingVisual);
         }
 
         private void btnDynamicProgramming_Click(object sender, EventArgs e)
         {
             ctrlDynamicProgramming visual = new ctrlDynamicProgramming();
-            frmMainMenu.globalForm.ChangeControl(visual);
+            frmMainMenu.globalForm?.ChangeControl(visual);
         }
 
         private void btnPathfinding_Click(object sender, EventArgs e)
         {
             ctrlPathfindingVisual pathfindingVisual = new ctrlPathfindingVisual();
-            frmMainMenu.globalForm.ChangeControl(pathfindingVisual);
+            frmMainMenu.globalForm?.ChangeControl(pathfindingVisual);
         }
     }
 }

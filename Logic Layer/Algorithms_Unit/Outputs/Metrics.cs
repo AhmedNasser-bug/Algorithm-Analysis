@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Algorithms_Unit
+﻿namespace Algorithms_Unit
 {
     // TODO: Implement the metrics class
     /// <summary>
@@ -22,14 +16,16 @@ namespace Algorithms_Unit
         public Int128 TotalNumbersOfComparisons { get; set; }
         public Int128 TotalNumbersOfIterations { get; set; }
         public Int128 TotalNumbersOfSteps { get; set; }
+        public Int128 TotalNumbersOfArrayAccesses { get; set; }
         public Int128 TotalRuntimeTicks { get; set; }
         public Metrics()
         {
-            TotalNumbersOfSwaps = 0;
+            TotalNumbersOfArrayAccesses = 0;
+            TotalRuntimeTicks = 0;
+            TotalNumbersOfArrayAccesses = 0;
             TotalNumbersOfComparisons = 0;
             TotalNumbersOfIterations = 0;
-            TotalNumbersOfSteps = 0;
-            TotalRuntimeTicks = 0;
+            TotalNumbersOfSwaps = 0;
         }
     }
 }

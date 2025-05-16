@@ -35,7 +35,7 @@
             // 
             // lblTitle
             // 
-            lblTitle.BackColor = Color.FromArgb(52, 62, 70);
+            lblTitle.BackColor = Color.FromArgb(34, 40, 49);
             lblTitle.Dock = DockStyle.Top;
             lblTitle.Font = new Font("SimSun-ExtB", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitle.ForeColor = Color.Transparent;
@@ -76,7 +76,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(57, 62, 70);
+            BackColor = Color.FromArgb(34, 40, 49);
             Controls.Add(lblTitle);
             Controls.Add(btnCompare);
             Controls.Add(btnVisualize);

@@ -21,3 +21,7 @@ D:\Study\Programming\Projects\Algorithm-Analysis\Logic Layer\Analysis_Unit\obj\D
 D:\Study\Programming\Projects\Algorithm-Analysis\Logic Layer\Analysis_Unit\obj\Debug\net9.0\refint\Analysis_Unit.dll
 D:\Study\Programming\Projects\Algorithm-Analysis\Logic Layer\Analysis_Unit\obj\Debug\net9.0\Analysis_Unit.pdb
 D:\Study\Programming\Projects\Algorithm-Analysis\Logic Layer\Analysis_Unit\obj\Debug\net9.0\ref\Analysis_Unit.dll
+D:\Study\Programming\Projects\Algorithm-Analysis\Logic Layer\Analysis_Unit\bin\Debug\net9.0\Algorithms_Unit.dll
+D:\Study\Programming\Projects\Algorithm-Analysis\Logic Layer\Analysis_Unit\bin\Debug\net9.0\Algorithms_Unit.pdb
+D:\Study\Programming\Projects\Algorithm-Analysis\Logic Layer\Analysis_Unit\obj\Debug\net9.0\Analysis_Unit.csproj.AssemblyReference.cache
+D:\Study\Programming\Projects\Algorithm-Analysis\Logic Layer\Analysis_Unit\obj\Debug\net9.0\Analysis.7B78A125.Up2Date

@@ -32,11 +32,13 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            btnFullScreen = new Button();
             ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
             SuspendLayout();
             // 
             // chart1
             // 
+            chart1.BackColor = Color.FromArgb(34, 40, 49);
             chartArea1.Name = "ChartArea1";
             chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
@@ -47,23 +49,40 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             chart1.Series.Add(series1);
-            chart1.Size = new Size(824, 538);
+            chart1.Size = new Size(1261, 605);
             chart1.TabIndex = 0;
             chart1.Text = "chart1";
+            // 
+            // btnFullScreen
+            // 
+            btnFullScreen.Anchor = AnchorStyles.Top;
+            btnFullScreen.BackColor = Color.FromArgb(223, 208, 184);
+            btnFullScreen.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnFullScreen.ForeColor = SystemColors.ControlText;
+            btnFullScreen.Location = new Point(928, 3);
+            btnFullScreen.Name = "btnFullScreen";
+            btnFullScreen.Size = new Size(197, 42);
+            btnFullScreen.TabIndex = 34;
+            btnFullScreen.Tag = "Stop";
+            btnFullScreen.Text = "FullScreen";
+            btnFullScreen.UseVisualStyleBackColor = false;
+            btnFullScreen.Click += btnFullScreen_Click;
             // 
             // ctrlSortingVisualizer
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(btnFullScreen);
             Controls.Add(chart1);
             Name = "ctrlSortingVisualizer";
-            Size = new Size(824, 538);
+            Size = new Size(1261, 605);
             ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        public System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        public Button btnFullScreen;
     }
 }

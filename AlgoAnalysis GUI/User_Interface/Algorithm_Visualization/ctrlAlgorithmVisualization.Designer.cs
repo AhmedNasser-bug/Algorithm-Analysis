@@ -141,7 +141,6 @@
             Controls.Add(btnSearching);
             Name = "ctrlAlgorithmVisualization";
             Size = new Size(1337, 603);
-            Load += ctrlAlgorithmVisualization_Load;
             ResumeLayout(false);
         }
 

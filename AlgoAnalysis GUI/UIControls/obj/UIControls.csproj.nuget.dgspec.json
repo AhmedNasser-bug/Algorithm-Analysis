@@ -177,7 +177,11 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Algorithms_Unit.csproj": {
+                "projectPath": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Algorithms_Unit.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

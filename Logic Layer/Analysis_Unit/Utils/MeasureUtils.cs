@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Analysis_Unit.Utils
 {
+    /// <summary>
+    ///
+    /// </summary>
     internal class MeasureUtils
     {
     }
