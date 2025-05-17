@@ -38,10 +38,6 @@
             btnInsertionSort = new Button();
             btnHeapSort = new Button();
             button2 = new Button();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            groupBox2 = new GroupBox();
-            nupAnimationSpeed = new NumericUpDown();
-            cbChartTypes = new ComboBox();
             lbl = new Label();
             lblTotalSwaps = new Label();
             lblTotalNumberOfComprs = new Label();
@@ -57,9 +53,6 @@
             nupRandomArrayRange = new NumericUpDown();
             sortingVisualizer = new Controls.ctrlSortingVisualizer();
             flpSortingAlgorithms.SuspendLayout();
-            flowLayoutPanel1.SuspendLayout();
-            groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)nupAnimationSpeed).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nupRandomArrayRange).BeginInit();
             SuspendLayout();
@@ -132,7 +125,6 @@
             btnMergeSort.Tag = "1";
             btnMergeSort.Text = "Merge Sort";
             btnMergeSort.UseVisualStyleBackColor = false;
-            btnMergeSort.Click += btnMergeSort_Click;
             // 
             // btnQuickSort
             // 
@@ -200,49 +192,6 @@
             button2.Tag = "5";
             button2.Text = "Heap Sort";
             button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
-            // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.Controls.Add(groupBox2);
-            flowLayoutPanel1.Controls.Add(cbChartTypes);
-            flowLayoutPanel1.Location = new Point(564, 552);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(256, 178);
-            flowLayoutPanel1.TabIndex = 37;
-            // 
-            // groupBox2
-            // 
-            groupBox2.Controls.Add(nupAnimationSpeed);
-            groupBox2.Font = new Font("SimSun-ExtB", 15.75F, FontStyle.Bold);
-            groupBox2.ForeColor = Color.White;
-            groupBox2.Location = new Point(3, 3);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(248, 84);
-            groupBox2.TabIndex = 36;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Animation Speed";
-            // 
-            // nupAnimationSpeed
-            // 
-            nupAnimationSpeed.Location = new Point(16, 42);
-            nupAnimationSpeed.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
-            nupAnimationSpeed.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            nupAnimationSpeed.Name = "nupAnimationSpeed";
-            nupAnimationSpeed.Size = new Size(212, 28);
-            nupAnimationSpeed.TabIndex = 0;
-            nupAnimationSpeed.Value = new decimal(new int[] { 1, 0, 0, 0 });
-            nupAnimationSpeed.ValueChanged += nupAnimationSpeed_ValueChanged;
-            // 
-            // cbChartTypes
-            // 
-            cbChartTypes.FormattingEnabled = true;
-            cbChartTypes.Location = new Point(3, 93);
-            cbChartTypes.Name = "cbChartTypes";
-            cbChartTypes.Size = new Size(248, 23);
-            cbChartTypes.TabIndex = 37;
-            cbChartTypes.Text = "Chart Type";
-            cbChartTypes.SelectedIndexChanged += cbChartTypes_SelectedIndexChanged;
             // 
             // lbl
             // 
@@ -407,6 +356,7 @@
             // 
             // sortingVisualizer
             // 
+            sortingVisualizer.BackColor = Color.FromArgb(34, 40, 49);
             sortingVisualizer.Location = new Point(3, 0);
             sortingVisualizer.Name = "sortingVisualizer";
             sortingVisualizer.Size = new Size(1327, 537);
@@ -419,7 +369,6 @@
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.FromArgb(34, 40, 49);
             Controls.Add(sortingVisualizer);
-            Controls.Add(flowLayoutPanel1);
             Controls.Add(nupRandomArrayRange);
             Controls.Add(label1);
             Controls.Add(btnBack);
@@ -431,9 +380,6 @@
             Name = "ctrlSortingMain";
             Size = new Size(1655, 968);
             flpSortingAlgorithms.ResumeLayout(false);
-            flowLayoutPanel1.ResumeLayout(false);
-            groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)nupAnimationSpeed).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)nupRandomArrayRange).EndInit();
@@ -461,11 +407,7 @@
         private Label label5;
         private GroupBox groupBox1;
         private Button btnBack;
-        private GroupBox groupBox2;
-        private FlowLayoutPanel flowLayoutPanel1;
-        private ComboBox cbChartTypes;
         private Label label1;
-        private NumericUpDown nupAnimationSpeed;
         private NumericUpDown nupRandomArrayRange;
         private Button button2;
         private Button btnAnalyzePerformance;

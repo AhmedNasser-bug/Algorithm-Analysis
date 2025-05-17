@@ -33,26 +33,6 @@ namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
             values = Input.GenerateRandomRange(1, 100);
             sortingVisualizer.ChangeValues(values);
             
-            ComboBoxInit();
-        }
-
-        private void ComboBoxInit()
-        {
-            // Initialize the combo box with the chart types
-            Type chartTypes = typeof(System.Windows.Forms.DataVisualization.Charting.SeriesChartType);
-            cbChartTypes.Items.Clear(); // Clear existing items
-
-            string[] enumNames = Enum.GetNames(chartTypes);
-
-            // Add each enum name to the combo box
-            foreach (var chartType in enumNames)
-            {
-                cbChartTypes.Items.Add(chartType);
-            }
-
-
-            cbChartTypes.DataSource = enumNames;
-            cbChartTypes.SelectedIndex = 0; // Set default selection
         }
 
         /// <summary>
@@ -95,11 +75,6 @@ namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
             sortingVisualizer.ChangeValues(values);
         }
 
-        private void cbChartTypes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            sortingVisualizer.chart1.Series[0].ChartType = (SeriesChartType)cbChartTypes.SelectedIndex;
-        }
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             ctrlAlgorithmVisualization algorithmVisualization = new ctrlAlgorithmVisualization();
@@ -122,10 +97,7 @@ namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
 
        
 
-        private void nupAnimationSpeed_ValueChanged(object sender, EventArgs e)
-        {
-            sortingVisualizer.ChangeSpeed((int)nupAnimationSpeed.Value);
-        }
+ 
         
 
 
@@ -148,9 +120,5 @@ namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
             sortingVisualizer.ChangeValues(values);
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            StartSorting(new Func<List<Int128>, Metrics>((values) => Sorting.CountSort(values)), values);
-        }
     }
 }

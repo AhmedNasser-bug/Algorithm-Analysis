@@ -64,3 +64,4 @@ D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface\obj\Debug\net9.0-windows\MainGUIcsproj.ctrlMainMenu.resources
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface\obj\Debug\net9.0-windows\MainGUIcsproj.frmMainMenu.resources
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface\obj\Debug\net9.0-windows\MainGUIcsproj.Algorithm_Visualization.Sorting_Visual.ctrlSortingMain.resources
+D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface\obj\Debug\net9.0-windows\MainGUIcsproj.Algorithm_Visualization.Sorting_Visual.ctrlSortingComparisson.resources

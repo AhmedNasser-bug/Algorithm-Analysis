@@ -43,7 +43,8 @@ namespace MainGUIcsproj.Controls
             chart1.Titles.Add(new Title("Sorting Visualization", Docking.Top,
                 new Font("Arial", 12, FontStyle.Bold), Color.White));
 
-            var series = new Series("Values");
+            var series = new Series();
+
             series.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
             series.Color = Color.Beige;
             series.BorderColor = Color.Black;
@@ -53,12 +54,32 @@ namespace MainGUIcsproj.Controls
             chart1.ChartAreas[0].AxisX.Interval = 1;
             chart1.ChartAreas[0].AxisX.LabelStyle.Enabled = false;
             chart1.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
+            chart1.Legends.Clear(); // Remove legend for cleaner look
             series.CustomProperties = "PointWidth=1";
-
-            chart1.Dock = DockStyle.Fill;
 
             chart1.Series[0] = series;
 
+            ComboBoxInit(); // Initialize the combo box with chart types
+
+        }
+
+        private void ComboBoxInit()
+        {
+            // Initialize the combo box with the chart types
+            Type chartTypes = typeof(System.Windows.Forms.DataVisualization.Charting.SeriesChartType);
+            cbChartTypes.Items.Clear(); // Clear existing items
+
+            string[] enumNames = Enum.GetNames(chartTypes);
+
+            // Add each enum name to the combo box
+            foreach (var chartType in enumNames)
+            {
+                cbChartTypes.Items.Add(chartType);
+            }
+
+
+            cbChartTypes.DataSource = enumNames;
+            cbChartTypes.SelectedIndex = 0; // Set default selection
         }
 
         /// <summary>
@@ -132,6 +153,21 @@ namespace MainGUIcsproj.Controls
             BringToFront();
             isFullScreen = true;
             btnFullScreen.Text = "Back";
+        }
+
+        private void nupAnimationSpeed_ValueChanged(object sender, EventArgs e)
+        {
+            ChangeSpeed((int)nupAnimationSpeed.Value);
+        }
+
+        private void cbChartTypes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            chart1.Series[0].ChartType = (SeriesChartType)cbChartTypes.SelectedIndex;
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

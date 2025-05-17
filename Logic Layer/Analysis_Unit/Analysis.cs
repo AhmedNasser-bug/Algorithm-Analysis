@@ -1,4 +1,5 @@
 ﻿using Algorithms_Unit;
+using Analysis_Unit.Test_Result;
 
 namespace Analysis_Unit
 {
@@ -22,6 +23,7 @@ namespace Analysis_Unit
         ceil(avg(d/dx log_m(f(m^x)))) <- Upper bound
         floor(avg(d/dx log_m(f(m^x)))) <- lower bound
          */
+        
 
 
 
