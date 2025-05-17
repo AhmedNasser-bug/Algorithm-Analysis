@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,67 +14,101 @@ namespace MainGUIcsproj.Controls
 {
     public partial class ctrlVisualArray : UserControl
     {
+
+
+        public int CurrentSize = 0;
         public ctrlVisualArray()
         {
             InitializeComponent();
-
-
-            // Configure chart appearance
-            chart1.BackColor = Color.FromArgb(34, 40, 49);
-            chart1.ChartAreas[0].BackColor = Color.FromArgb(34, 40, 49);
-
-            // Configure axes
-            chart1.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.White;
-            chart1.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White;
-            chart1.ChartAreas[0].AxisX.LineColor = Color.White;
-            chart1.ChartAreas[0].AxisY.LineColor = Color.White;
-            chart1.ChartAreas[0].AxisX.MajorGrid.LineColor = Color.FromArgb(70, 80, 90);
-            chart1.ChartAreas[0].AxisY.MajorGrid.LineColor = Color.FromArgb(70, 80, 90);
-
-            chart1.Dock = DockStyle.Fill;
+            numericUpDown1.Value = 10;
         }
 
         /// <summary>
         /// Initializes the chart with the given values
         /// </summary>
         /// <param name="values"></param>
-        public void InitializeValues(List<int> values)
-        {
-            chart1.Series.Clear();
-            chart1.Series.Add("Histogram");
-            chart1.Series["Histogram"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
-            chart1.Series["Histogram"].Color = Color.FromArgb(0, 123, 255);
-            chart1.Series["Histogram"].IsValueShownAsLabel = true;
-            chart1.Series["Histogram"].CustomProperties = "PointWidth=1"; 
-            // Set custom styling for tight spacing
-            chart1.ChartAreas[0].AxisX.Interval = 1;
-            chart1.ChartAreas[0].AxisX.LabelStyle.Enabled = false;
-            chart1.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
-            // Add data points to the histogram
-            for (int i = 0; i < values.Count; i++)
-            {
-                chart1.Series["Histogram"].Points.AddXY(i, values[i]);
-            }
-        }
+
 
         /// <summary>
         /// Updates the chart with new values
         /// </summary>
         /// <param name="values"></param>
-        public void UpdateValues(List<int> values)
+
+        public void HighlightThreeIndex(int i1, int i2, int i3, Color color1, Color color2, Color color3)
         {
-            chart1.Series["Histogram"].Points.Clear();
-            // Add data points to the histogram
-            for (int i = 0; i < values.Count; i++)
+
+            flowLayoutPanel1.Controls[i1].BackColor = color1;
+            flowLayoutPanel1.Controls[i2].BackColor = color2;
+            flowLayoutPanel1.Controls[i3].BackColor = color3;
+            Task.Delay(Convert.ToInt16(trackBar1.Value)).Wait();
+            flowLayoutPanel1.Controls[i1].BackColor = Color.White;
+            flowLayoutPanel1.Controls[i2].BackColor = Color.White;
+            flowLayoutPanel1.Controls[i3].BackColor = Color.White;
+        }
+        public void HighlightCurrentIndex(int index, Color color)
+        {
+            flowLayoutPanel1.Controls[index].BackColor = color;
+            Task.Delay(800).Wait();
+            flowLayoutPanel1.Controls[index].BackColor = Color.White;
+        }
+        private void ctrlVisualArray_Load(object sender, EventArgs e)
+        {
+
+        }
+        public string GetValue(int index)
+        {
+            return flowLayoutPanel1.Controls[index].Text;
+        }
+        private void btnGenerateArray_Click(object sender, EventArgs e)
+        {
+
+        }
+        private Random random = new Random();
+        private int GenerateRandomNumber()
+        {
+            return random.Next(1, 1001);
+        }
+        public static List<Int16> GenerateRandomArray(int size, int minValue, int maxValue)
+        {
+            Random random = new Random();
+            List<Int16> array = new List<Int16>();
+            for (int i = 0; i < size; i++)
             {
-                chart1.Series["Histogram"].Points.AddXY(i, values[i]);
+                array.Add((Int16)random.Next(minValue, maxValue));
             }
+            return array;
         }
 
-        public void SearchIndex(int i)
+        private void btnGenerateArray_Click_1(object sender, EventArgs e)
         {
-            // Color the correspontding histogram bar
-            chart1.Series["Histogram"].Points[i].Color = Color.LightGreen;
+            flowLayoutPanel1.Controls.Clear();
+            List<Int16> SortedArray = GenerateRandomArray(Convert.ToInt16(numericUpDown1.Value), 1, 1001);
+            SortedArray.Sort();
+            for (int i = 0; i < numericUpDown1.Value; i++)
+            {
+                Button btn = new Button();
+                btn.Text = SortedArray[i].ToString();
+                btn.Size = new Size(80, 80);
+                btn.UseVisualStyleBackColor = true;
+                btn.Enabled = false;
+                flowLayoutPanel1.Controls.Add(btn);
+            }
+            CurrentSize = ((int)numericUpDown1.Value);
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            lblDelayValue.Text = trackBar1.Value.ToString();
         }
     }
 }

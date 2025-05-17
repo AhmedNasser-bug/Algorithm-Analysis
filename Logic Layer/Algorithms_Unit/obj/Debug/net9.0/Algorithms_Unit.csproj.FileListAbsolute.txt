@@ -10,3 +10,15 @@ D:\Study\Programming\Projects\Algorithm-Analysis\Logic Layer\Algorithms_Unit\obj
 D:\Study\Programming\Projects\Algorithm-Analysis\Logic Layer\Algorithms_Unit\obj\Debug\net9.0\refint\Algorithms_Unit.dll
 D:\Study\Programming\Projects\Algorithm-Analysis\Logic Layer\Algorithms_Unit\obj\Debug\net9.0\Algorithms_Unit.pdb
 D:\Study\Programming\Projects\Algorithm-Analysis\Logic Layer\Algorithms_Unit\obj\Debug\net9.0\ref\Algorithms_Unit.dll
+C:\Users\HP\Source\Repos\Algorithm-Analysis\Logic Layer\Algorithms_Unit\bin\Debug\net9.0\Algorithms_Unit.deps.json
+C:\Users\HP\Source\Repos\Algorithm-Analysis\Logic Layer\Algorithms_Unit\bin\Debug\net9.0\Algorithms_Unit.dll
+C:\Users\HP\Source\Repos\Algorithm-Analysis\Logic Layer\Algorithms_Unit\bin\Debug\net9.0\Algorithms_Unit.pdb
+C:\Users\HP\Source\Repos\Algorithm-Analysis\Logic Layer\Algorithms_Unit\obj\Debug\net9.0\Algorithms_Unit.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Source\Repos\Algorithm-Analysis\Logic Layer\Algorithms_Unit\obj\Debug\net9.0\Algorithms_Unit.AssemblyInfoInputs.cache
+C:\Users\HP\Source\Repos\Algorithm-Analysis\Logic Layer\Algorithms_Unit\obj\Debug\net9.0\Algorithms_Unit.AssemblyInfo.cs
+C:\Users\HP\Source\Repos\Algorithm-Analysis\Logic Layer\Algorithms_Unit\obj\Debug\net9.0\Algorithms_Unit.csproj.CoreCompileInputs.cache
+C:\Users\HP\Source\Repos\Algorithm-Analysis\Logic Layer\Algorithms_Unit\obj\Debug\net9.0\Algorithms_Unit.sourcelink.json
+C:\Users\HP\Source\Repos\Algorithm-Analysis\Logic Layer\Algorithms_Unit\obj\Debug\net9.0\Algorithms_Unit.dll
+C:\Users\HP\Source\Repos\Algorithm-Analysis\Logic Layer\Algorithms_Unit\obj\Debug\net9.0\refint\Algorithms_Unit.dll
+C:\Users\HP\Source\Repos\Algorithm-Analysis\Logic Layer\Algorithms_Unit\obj\Debug\net9.0\Algorithms_Unit.pdb
+C:\Users\HP\Source\Repos\Algorithm-Analysis\Logic Layer\Algorithms_Unit\obj\Debug\net9.0\ref\Algorithms_Unit.dll
