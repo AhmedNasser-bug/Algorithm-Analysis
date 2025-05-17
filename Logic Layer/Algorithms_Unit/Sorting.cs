@@ -61,38 +61,6 @@ namespace Algorithms_Unit
 
             return metrics;
         }
-        static public Metrics BubbleSort_non_animation(List<Int128> arr)
-        {
-            Metrics metrics = new Metrics(); // To track the performance metrics
-            DateTime begin = DateTime.Now; // To track the runtime of the algorithm
-
-
-
-            for (int i = 0; i < arr.Count-i; i++)
-            {
-                for (int j = 0; j < arr.Count - i - 1; j++)
-                {
-                    metrics.TotalNumbersOfIterations++;
-                    metrics.TotalNumbersOfSteps++;
-
-
-                    metrics.TotalNumbersOfComparisons++;
-                    if (arr[i] > arr[i + 1])
-                    {
-                        // To send by the array to the function by refence
-                        Swap(ref arr, i, i + 1);
-                        // SendIndices(i, j); // Removed for analysis purposes
-                        metrics.TotalNumbersOfSwaps++;
-                    }
-                }
-            }
-            metrics.TotalRuntimeTicks = (DateTime.Now - begin).Ticks; // Calculate the total runtime
-            metrics.TotalNumbersOfSteps += 3;
-
-            return metrics;
-        }
-
-
         /// <summary>
         /// QuickSort algorithm that fires an event with the swapped indices as arguments for that event
         /// </summary>
@@ -142,12 +110,6 @@ namespace Algorithms_Unit
         }
 
 
-        // TODO: Fix this function to be stable and inplace
-        public static Metrics CountSort(List<Int128> arr) 
-        {
-            Metrics metrics = new();
-            return metrics;
-        }
 
             /*
              TODO:

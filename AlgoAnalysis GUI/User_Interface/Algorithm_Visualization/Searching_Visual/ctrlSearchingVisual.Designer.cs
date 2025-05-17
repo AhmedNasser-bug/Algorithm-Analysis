@@ -89,7 +89,6 @@
             btnLinearSearch.TabIndex = 27;
             btnLinearSearch.Text = "Linear Search";
             btnLinearSearch.UseVisualStyleBackColor = false;
-            btnLinearSearch.Click += btnLinearSearch_Click;
             // 
             // ctrlVisualArray1
             // 

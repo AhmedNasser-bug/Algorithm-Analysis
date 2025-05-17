@@ -9,7 +9,7 @@ namespace Algorithms_Unit
     public class SearchingStateDictionary : EventArgs
     {
         public int ProcessedIdx { get; set; }
-        public Dictionary<String, object>? ProblemSpecificArgs { get; set; }
+        public Dictionary<string, object>? ProblemSpecificArgs { get; set; }
 
         public SearchingStateDictionary(int processedIdx, Dictionary<string, object>? problemSpecificArgs)
         {

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "BegOfunXx8M=",
+  "dgSpecHash": "EJCqZTNaMV4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\Source\\Repos\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\MainGUIcsproj.csproj",
+  "projectFilePath": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\MainGUIcsproj.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\HP\\.nuget\\packages\\winforms.datavisualization\\1.10.0\\winforms.datavisualization.1.10.0.nupkg.sha512"
+    "C:\\Users\\orginal\\.nuget\\packages\\winforms.datavisualization\\1.10.0\\winforms.datavisualization.1.10.0.nupkg.sha512"
   ],
   "logs": []
 }
