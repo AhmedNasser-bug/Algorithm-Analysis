@@ -35,6 +35,7 @@
             ctrlVisualArray1 = new Controls.ctrlVisualArray();
             maskedTextBox1 = new MaskedTextBox();
             label1 = new Label();
+            btnCompare = new Button();
             SuspendLayout();
             // 
             // btnBack
@@ -69,7 +70,7 @@
             btnBinarySEarch.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnBinarySEarch.BackColor = Color.FromArgb(223, 208, 184);
             btnBinarySEarch.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBinarySEarch.Location = new Point(796, 505);
+            btnBinarySEarch.Location = new Point(748, 505);
             btnBinarySEarch.Name = "btnBinarySEarch";
             btnBinarySEarch.Size = new Size(298, 175);
             btnBinarySEarch.TabIndex = 28;
@@ -83,12 +84,13 @@
             btnLinearSearch.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnLinearSearch.BackColor = Color.FromArgb(223, 208, 184);
             btnLinearSearch.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLinearSearch.Location = new Point(465, 505);
+            btnLinearSearch.Location = new Point(365, 505);
             btnLinearSearch.Name = "btnLinearSearch";
             btnLinearSearch.Size = new Size(298, 175);
             btnLinearSearch.TabIndex = 27;
             btnLinearSearch.Text = "Linear Search";
             btnLinearSearch.UseVisualStyleBackColor = false;
+            btnLinearSearch.Click += btnLinearSearch_Click;
             // 
             // ctrlVisualArray1
             // 
@@ -117,12 +119,28 @@
             label1.Size = new Size(125, 29);
             label1.TabIndex = 32;
             label1.Text = "Target:";
+            label1.Click += label1_Click;
+            // 
+            // btnCompare
+            // 
+            btnCompare.Anchor = AnchorStyles.None;
+            btnCompare.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnCompare.BackColor = Color.FromArgb(223, 208, 184);
+            btnCompare.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCompare.Location = new Point(1131, 505);
+            btnCompare.Name = "btnCompare";
+            btnCompare.Size = new Size(298, 175);
+            btnCompare.TabIndex = 33;
+            btnCompare.Text = "Compare";
+            btnCompare.UseVisualStyleBackColor = false;
+            btnCompare.Click += btnCompare_Click;
             // 
             // ctrlSearchingVisual
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(34, 40, 49);
+            Controls.Add(btnCompare);
             Controls.Add(label1);
             Controls.Add(maskedTextBox1);
             Controls.Add(ctrlVisualArray1);
@@ -145,5 +163,6 @@
         private Controls.ctrlVisualArray ctrlVisualArray1;
         private MaskedTextBox maskedTextBox1;
         private Label label1;
+        private Button btnCompare;
     }
 }

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Algorithms_Unit.csproj": {}
+    "C:\\Users\\HP\\Source\\Repos\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Algorithms_Unit.csproj": {}
   },
   "projects": {
-    "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Algorithms_Unit.csproj": {
+    "C:\\Users\\HP\\Source\\Repos\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Algorithms_Unit.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Algorithms_Unit.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Source\\Repos\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Algorithms_Unit.csproj",
         "projectName": "Algorithms_Unit",
-        "projectPath": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Algorithms_Unit.csproj",
-        "packagesPath": "C:\\Users\\orginal\\.nuget\\packages\\",
-        "outputPath": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\obj\\",
+        "projectPath": "C:\\Users\\HP\\Source\\Repos\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Algorithms_Unit.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP\\Source\\Repos\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\orginal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

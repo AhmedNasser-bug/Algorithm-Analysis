@@ -14,6 +14,7 @@ namespace Algorithms_Unit
         public SearchingStateDictionary(int processedIdx, Dictionary<string, object>? problemSpecificArgs)
         {
             ProblemSpecificArgs = problemSpecificArgs;
+            ProcessedIdx = processedIdx;
         }
     }
 }

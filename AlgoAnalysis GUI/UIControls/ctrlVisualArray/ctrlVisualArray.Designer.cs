@@ -45,7 +45,7 @@
             flowLayoutPanel1.Dock = DockStyle.Top;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1537, 172);
+            flowLayoutPanel1.Size = new Size(1633, 172);
             flowLayoutPanel1.TabIndex = 0;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
@@ -141,7 +141,7 @@
             Controls.Add(numericUpDown1);
             Controls.Add(flowLayoutPanel1);
             Name = "ctrlVisualArray";
-            Size = new Size(1537, 371);
+            Size = new Size(1633, 371);
             Load += ctrlVisualArray_Load;
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();

@@ -27,23 +27,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\orginal\\.nuget\\packages\\": {},
+    "C:\\Users\\HP\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Analysis_Unit\\Analysis_Unit.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Source\\Repos\\Algorithm-Analysis\\Logic Layer\\Analysis_Unit\\Analysis_Unit.csproj",
       "projectName": "Analysis_Unit",
-      "projectPath": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Analysis_Unit\\Analysis_Unit.csproj",
-      "packagesPath": "C:\\Users\\orginal\\.nuget\\packages\\",
-      "outputPath": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Analysis_Unit\\obj\\",
+      "projectPath": "C:\\Users\\HP\\Source\\Repos\\Algorithm-Analysis\\Logic Layer\\Analysis_Unit\\Analysis_Unit.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HP\\Source\\Repos\\Algorithm-Analysis\\Logic Layer\\Analysis_Unit\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\orginal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -58,8 +58,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Algorithms_Unit.csproj": {
-              "projectPath": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Algorithms_Unit.csproj"
+            "C:\\Users\\HP\\Source\\Repos\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Algorithms_Unit.csproj": {
+              "projectPath": "C:\\Users\\HP\\Source\\Repos\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Algorithms_Unit.csproj"
             }
           }
         }

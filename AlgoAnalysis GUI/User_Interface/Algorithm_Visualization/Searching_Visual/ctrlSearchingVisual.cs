@@ -24,16 +24,7 @@ namespace MainGUIcsproj.Algorithm_Visualization.Searching_Visual
 
         private void onSearchIndexChange(object sender, SearchingStateDictionary searchingStateDictionary)
         {
-            if (searchingStateDictionary.ProblemSpecificArgs != null)
-            {
-                int low = Convert.ToInt16(searchingStateDictionary.ProblemSpecificArgs["Low"]);
-                int high = Convert.ToInt16(searchingStateDictionary.ProblemSpecificArgs["High"]);
-                ctrlVisualArray1.HighlightThreeIndex(searchingStateDictionary.ProcessedIdx, low, high, Color.Beige, Color.Red, Color.Green);
-            }
-            else
-            {
-                ctrlVisualArray1.HighlightCurrentIndex(searchingStateDictionary.ProcessedIdx, Color.Red);
-            }
+            ctrlVisualArray1.HighlightCurrentIndex(searchingStateDictionary.ProcessedIdx, Color.Green);
         }
 
 
@@ -45,7 +36,36 @@ namespace MainGUIcsproj.Algorithm_Visualization.Searching_Visual
 
         private void btnBinarySEarch_Click(object sender, EventArgs e)
         {
-            Searching.BinarySearch(ctrlVisualArray1.CurrentArray, Convert.ToInt16(maskedTextBox1.Text));
+            if (Searching.BinarySearch(ctrlVisualArray1.CurrentArray, Convert.ToInt16(maskedTextBox1.Text)))
+            {
+                MessageBox.Show("Target Found!");
+            }
+            else
+            {
+                MessageBox.Show("Target Not Found:-(");
+            }
+        }
+
+        private void btnCompare_Click(object sender, EventArgs e)
+        {
+            frmMainMenu.globalForm.ChangeControl(new ctrlCompareVisual());
+        }
+
+        private void btnLinearSearch_Click(object sender, EventArgs e)
+        {
+            if (Searching.LinearSearch(ctrlVisualArray1.CurrentArray, Convert.ToInt16(maskedTextBox1.Text)))
+            {
+                MessageBox.Show("Target Found!");
+            }
+            else
+            {
+                MessageBox.Show("Target Not Found:-(");
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

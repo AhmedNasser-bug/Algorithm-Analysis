@@ -19,6 +19,9 @@
     <Compile Update="Algorithm_Visualization\Pathfinding_Visual\ctrlPathfindingVisual.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Algorithm_Visualization\Searching_Visual\ctrlCompareVisual.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Algorithm_Visualization\Searching_Visual\ctrlSearchingVisual.cs">
       <SubType>UserControl</SubType>
     </Compile>

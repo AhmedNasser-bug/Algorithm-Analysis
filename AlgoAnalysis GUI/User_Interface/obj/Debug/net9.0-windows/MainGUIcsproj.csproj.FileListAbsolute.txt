@@ -105,3 +105,4 @@ C:\Users\HP\Source\Repos\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface\obj\
 C:\Users\HP\Source\Repos\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface\obj\Debug\net9.0-windows\MainGUIcsproj.pdb
 C:\Users\HP\Source\Repos\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface\obj\Debug\net9.0-windows\MainGUIcsproj.genruntimeconfig.cache
 C:\Users\HP\Source\Repos\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface\obj\Debug\net9.0-windows\ref\MainGUIcsproj.dll
+C:\Users\HP\Source\Repos\Algorithm-Analysis\AlgoAnalysis GUI\User_Interface\obj\Debug\net9.0-windows\MainGUIcsproj.Algorithm_Visualization.Searching_Visual.ctrlCompareVisual.resources
