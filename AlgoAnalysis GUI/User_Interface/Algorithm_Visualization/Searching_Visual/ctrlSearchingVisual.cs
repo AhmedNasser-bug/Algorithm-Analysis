@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic.Logging;
+﻿using Algorithms_Unit;
+using Microsoft.VisualBasic.Logging;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,70 +18,34 @@ namespace MainGUIcsproj.Algorithm_Visualization.Searching_Visual
         public ctrlSearchingVisual()
         {
             InitializeComponent();
+            Searching.OnSearchIndexChange += onSearchIndexChange;
+
         }
+
+        private void onSearchIndexChange(object sender, SearchingStateDictionary searchingStateDictionary)
+        {
+            if (searchingStateDictionary.ProblemSpecificArgs != null)
+            {
+                int low = Convert.ToInt16(searchingStateDictionary.ProblemSpecificArgs["Low"]);
+                int high = Convert.ToInt16(searchingStateDictionary.ProblemSpecificArgs["High"]);
+                ctrlVisualArray1.HighlightThreeIndex(searchingStateDictionary.ProcessedIdx, low, high, Color.Beige, Color.Red, Color.Green);
+            }
+            else
+            {
+                ctrlVisualArray1.HighlightCurrentIndex(searchingStateDictionary.ProcessedIdx, Color.Red);
+            }
+        }
+
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             ctrlAlgorithmVisualization algorithmVisualization = new ctrlAlgorithmVisualization();
             frmMainMenu.globalForm?.ChangeControl(algorithmVisualization);
         }
-        private bool CheckTarget(int index)
-        {
-            if (maskedTextBox1.Text == ctrlVisualArray1.GetValue(index))
-                return true;
-            return false;
-        }
-
-        private void btnLinearSearch_Click(object sender, EventArgs e)
-        {
-
-            for (int i = 0; i < ctrlVisualArray1.CurrentSize; i++)
-            {
-                if (!CheckTarget(i))
-                {
-                    ctrlVisualArray1.HighlightCurrentIndex(i, Color.Red);
-                }
-                else
-                {
-                    ctrlVisualArray1.HighlightCurrentIndex(i, Color.Green);
-                    MessageBox.Show("Target Found!");
-                    return;
-                }
-            }
-            MessageBox.Show("Target Not Found :-(");
-            return;
-        }
 
         private void btnBinarySEarch_Click(object sender, EventArgs e)
         {
-            int low = 0;
-            int high = ctrlVisualArray1.CurrentSize - 1;
-            int mid = low + (high - low) / 2;
-            ctrlVisualArray1.HighlightThreeIndex(low, high, mid, Color.Beige, Color.Red, Color.Green);
-            while (high >= low)
-            {
-                if (Convert.ToInt16(ctrlVisualArray1.GetValue(mid)) > Convert.ToInt16(maskedTextBox1.Text))
-                {
-                    Task.Delay(400).Wait();
-                    high = mid - 1;
-                    mid = low + (high - low) / 2;
-                    ctrlVisualArray1.HighlightThreeIndex(low, high, mid, Color.Beige, Color.Red, Color.Green);
-                }
-                else if (Convert.ToInt16(ctrlVisualArray1.GetValue(mid)) < Convert.ToInt16(maskedTextBox1.Text))
-                {
-                    Task.Delay(400).Wait();
-                    low = mid + 1;
-                    mid = low + (high - low) / 2;
-                    ctrlVisualArray1.HighlightThreeIndex(low, high, mid, Color.Beige, Color.Red, Color.Green);
-                }
-                else if (Convert.ToInt16(ctrlVisualArray1.GetValue(mid)) == Convert.ToInt16(maskedTextBox1.Text))
-                {
-                    MessageBox.Show("Target Found!");
-                    return;
-                }
-            }
-            MessageBox.Show("Target Not Found :-(");
-            return;
+            Searching.BinarySearch(ctrlVisualArray1.CurrentArray, Convert.ToInt16(maskedTextBox1.Text));
         }
     }
 }

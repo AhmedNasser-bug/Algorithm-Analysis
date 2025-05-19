@@ -17,6 +17,7 @@ namespace MainGUIcsproj.Controls
 
 
         public int CurrentSize = 0;
+        public List<Int16> CurrentArray;
         public ctrlVisualArray()
         {
             InitializeComponent();
@@ -94,6 +95,7 @@ namespace MainGUIcsproj.Controls
                 flowLayoutPanel1.Controls.Add(btn);
             }
             CurrentSize = ((int)numericUpDown1.Value);
+            CurrentArray = SortedArray;
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
