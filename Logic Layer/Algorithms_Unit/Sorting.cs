@@ -61,6 +61,8 @@ namespace Algorithms_Unit
 
             return metrics;
         }
+
+
         /// <summary>
         /// QuickSort algorithm that fires an event with the swapped indices as arguments for that event
         /// </summary>
@@ -74,7 +76,7 @@ namespace Algorithms_Unit
         /// - TotalRuntimeTicks
         /// - TotalNumbersOfArrayAccesses
         /// </returns>
-        static public Metrics QuickSort(List<Int128> arr)
+        public Metrics QuickSort(List<Int128> arr)
         {
             Metrics metrics = new Metrics(); // To track the performance metrics
             DateTime begin = DateTime.Now; // To track the runtime of the algorithm
@@ -92,7 +94,7 @@ namespace Algorithms_Unit
         /// <summary>
         /// Recursive helper method for QuickSort
         /// </summary>
-        static private void QuickSortRecursive(List<Int128> arr, int low, int high, Metrics metrics)
+        private void QuickSortRecursive(List<Int128> arr, int low, int high, Metrics metrics)
         {
             metrics.TotalNumbersOfSteps++; // One step for calling the function
 

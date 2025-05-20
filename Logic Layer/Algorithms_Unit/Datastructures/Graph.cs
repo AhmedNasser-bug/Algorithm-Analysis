@@ -1,30 +1,67 @@
-﻿using System;
+﻿using Algorithms_Unit.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Algorithms_Unit.Datastructures
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
+    public enum GraphTypes { Cyclic, Acyclic, Axis }
 
     /// <summary>
     /// Represents a node in a graph with a string value
     /// </summary>
     public class Node
     {
-        public string Value { get; set; }
+        public (int x, int y) Value { get; set; }
+        public HashSet<Node> Neighbors { get; set; } = []; // For storing neighbors of the node
 
-        public Node(string value)
+        public Node((int x, int y) value)
         {
             Value = value;
         }
 
+        public void AddEdge(Node node)
+        {
+            if (node == null)
+                throw new ArgumentNullException(nameof(node));
+            Neighbors.Add(node);
+            if(!node.Neighbors.Contains(this))node.AddEdge(this);
+        }
+
+        public bool makesCycle(Node potentialNode)
+        {
+            HashSet<Node> visited = [this];
+            Stack<Node> nodes = [];
+
+
+            nodes.Push(this);
+
+            while(nodes.Count > 0)
+            {
+                Node current = nodes.Pop();
+
+                foreach(Node nei in current.Neighbors)
+                {
+                    if (nei.Equals(potentialNode))
+                    {
+                        return true;
+                    }
+                    nodes.Push(nei);
+                    visited.Add(nei);
+                }
+            }
+
+            return false;
+
+        }
+
         public override string ToString()
         {
-            return Value;
+            return $"({Value.x}, {Value.y})";
         }
 
         public override bool Equals(object obj)
@@ -39,25 +76,30 @@ namespace Algorithms_Unit.Datastructures
             return Value.GetHashCode();
         }
     }
+    
+
+
+
 
     /// <summary>
     /// Represents a weighted graph using an adjacency matrix
     /// </summary>
     public class Graph
     {
-        private double[,] adjacencyMatrix;
-        private Dictionary<string, int> nodeToIndex;
-        private List<Node> nodes;
-        public Node Root { get; private set; }
+        public List<Node> nodes;
+        public Node? Root { get; private set; }
+        public int MaxXY { get; private set; }
+        public GraphTypes GraphType { get; private set; }
 
         // Constant to represent infinity (no connection)
         private const double INFINITY = double.PositiveInfinity;
-
-        public Graph()
+        private HashSet<Node> currentVertices;
+        public Graph(GraphTypes type)
         {
-            adjacencyMatrix = new double[0, 0];
-            nodeToIndex = new Dictionary<string, int>();
             nodes = new List<Node>();
+            GraphType = type;
+            currentVertices = [];
+
         }
 
         /// <summary>
@@ -66,72 +108,54 @@ namespace Algorithms_Unit.Datastructures
         /// <param name="newNode">The new node to add</param>
         /// <param name="existingNode">The existing node to connect to</param>
         /// <param name="edgeCost">The cost of the edge between the nodes</param>
-        public void AddNode(Node newNode, Node existingNode = null, double edgeCost = 1.0)
+        public void AddNode(Node newNode, Node? neighbor = null)
         {
-            // Check if node already exists
-            if (nodeToIndex.ContainsKey(newNode.Value))
-            {
-                throw new ArgumentException($"Node with value '{newNode.Value}' already exists in the graph");
-            }
-
-            // For the first node (no existing node to connect to)
-            if (existingNode == null)
-            {
-                if (nodes.Count > 0)
-                {
-                    throw new ArgumentException("Existing node must be provided when adding to a non-empty graph");
-                }
-
-                // This is the first node - set as root
-                ResizeMatrix(1);
-                nodeToIndex[newNode.Value] = 0;
-                nodes.Add(newNode);
-                Root = newNode;
-                return;
-            }
-
-            // Validate existing node
-            if (!nodeToIndex.ContainsKey(existingNode.Value))
-            {
-                throw new ArgumentException($"Existing node '{existingNode.Value}' not found in the graph");
-            }
-
-            // Add the new node - resize matrix
-            int newIndex = nodes.Count;
-            int existingIndex = nodeToIndex[existingNode.Value];
-
-            ResizeMatrix(nodes.Count + 1);
-
-            // Add the node to collections
-            nodeToIndex[newNode.Value] = newIndex;
-            nodes.Add(newNode);
-
-            // Set up the bidirectional edge
-            adjacencyMatrix[newIndex, existingIndex] = edgeCost;
-            adjacencyMatrix[existingIndex, newIndex] = edgeCost;
-
+            
+            
             // If this is the first node we're adding, set it as the root
             if (Root == null)
             {
                 Root = newNode;
             }
-        }
 
-        /// <summary>
-        /// Adds an edge between two existing nodes in the graph
-        /// </summary>
-        public void AddEdge(Node node1, Node node2, double edgeCost)
-        {
-            if (!nodeToIndex.ContainsKey(node1.Value) || !nodeToIndex.ContainsKey(node2.Value))
+            switch (GraphType)
             {
-                throw new ArgumentException("Both nodes must exist in the graph");
+                case GraphTypes.Cyclic:
+                    if (neighbor != null)
+                    {
+                        newNode.AddEdge(neighbor);
+                    }
+                    break;
+                case GraphTypes.Acyclic:
+                    if (neighbor != null)
+                    {
+                        if (newNode.makesCycle(neighbor))
+                        {
+                            throw new InvalidOperationException($"The new Edge between {newNode.ToString()} and {neighbor.ToString()} makes a cycle in an Acyclic Graph");
+                        };
+                        newNode.AddEdge(neighbor);
+                    }
+                    break;
+                default:
+                    break;
             }
 
-            int index1 = nodeToIndex[node1.Value];
-            int index2 = nodeToIndex[node2.Value];
+            if (neighbor != null && !currentVertices.Contains(neighbor)) 
+            { 
+                nodes.Add(neighbor);
+                currentVertices.Add(neighbor);
 
-            adjacencyMatrix[index1, index2] = edgeCost;
-            adjacencyMatrix[index2, index1] = edgeCost; // For undirected graph
+                MaxXY = Math.Max(MaxXY, neighbor.Value.y);
+                MaxXY = Math.Max(MaxXY, neighbor.Value.x);
+            }
+            if (!currentVertices.Contains(newNode)) 
+            {
+                nodes.Add(newNode);
+                currentVertices.Add(newNode);
+
+                MaxXY = Math.Max(MaxXY, newNode.Value.y);
+                MaxXY = Math.Max(MaxXY, newNode.Value.x);
+            }
         }
 
         /// <summary>
@@ -140,15 +164,12 @@ namespace Algorithms_Unit.Datastructures
         /// <returns>The edge cost, or infinity if no edge exists</returns>
         public double GetEdgeCost(Node node1, Node node2)
         {
-            if (!nodeToIndex.ContainsKey(node1.Value) || !nodeToIndex.ContainsKey(node2.Value))
+            if (!node1.Neighbors.Contains(node2) && GraphType != GraphTypes.Axis)
             {
                 return INFINITY;
             }
 
-            int index1 = nodeToIndex[node1.Value];
-            int index2 = nodeToIndex[node2.Value];
-
-            return adjacencyMatrix[index1, index2];
+            return Math.Sqrt(Math.Pow(node1.Value.x - node2.Value.x, 2) + Math.Pow(node2.Value.y + node1.Value.y, 2));
         }
 
         /// <summary>
@@ -156,7 +177,7 @@ namespace Algorithms_Unit.Datastructures
         /// </summary>
         public Dictionary<Node, List<(Node, double)>> GetAdjacencyList()
         {
-            var adjacencyList = new Dictionary<Node, List<(Node, double)>>();
+            var adjacencyList = new Dictionary<Node, List<(Node, double)>>(); // For each node , store the node's neighbors and their costs
 
             // Initialize empty lists for each node
             foreach (var node in nodes)
@@ -167,11 +188,11 @@ namespace Algorithms_Unit.Datastructures
             // Populate the adjacency list
             for (int i = 0; i < nodes.Count; i++)
             {
-                for (int j = 0; j < nodes.Count; j++)
+                for (int j = i+1; j < nodes.Count; j++)
                 {
-                    if (i != j && adjacencyMatrix[i, j] != INFINITY)
+                    if (nodes[i].Neighbors.Contains(nodes[j]))
                     {
-                        adjacencyList[nodes[i]].Add((nodes[j], adjacencyMatrix[i, j]));
+                        adjacencyList[nodes[i]].Add((nodes[j], GetEdgeCost(nodes[i], nodes[j])));
                     }
                 }
             }
@@ -179,83 +200,7 @@ namespace Algorithms_Unit.Datastructures
             return adjacencyList;
         }
 
-        /// <summary>
-        /// Generates a random graph with the specified number of nodes
-        /// </summary>
-        public static Graph GenerateRandomGraph(int nodeCount, double density = 0.5,
-                                              double minCost = 1.0, double maxCost = 10.0)
-        {
-            if (nodeCount <= 0)
-                throw new ArgumentException("Node count must be positive");
-
-            var random = new Random();
-            var graph = new Graph();
-
-            // Create nodes with random values
-            var firstNode = new Node($"Node_{random.Next(1000)}");
-            graph.AddNode(firstNode);
-
-            // Add remaining nodes, connecting each to a random existing node
-            for (int i = 1; i < nodeCount; i++)
-            {
-                var newNode = new Node($"Node_{random.Next(1000)}");
-                var existingNode = graph.nodes[random.Next(graph.nodes.Count)];
-                double cost = random.NextDouble() * (maxCost - minCost) + minCost;
-
-                graph.AddNode(newNode, existingNode, cost);
-            }
-
-            // Add random additional edges based on density
-            for (int i = 0; i < nodeCount; i++)
-            {
-                for (int j = i + 1; j < nodeCount; j++)
-                {
-                    // Skip if there's already an edge
-                    if (graph.adjacencyMatrix[i, j] != INFINITY)
-                        continue;
-
-                    // Add edge with probability based on density
-                    if (random.NextDouble() < density)
-                    {
-                        double cost = random.NextDouble() * (maxCost - minCost) + minCost;
-                        graph.adjacencyMatrix[i, j] = cost;
-                        graph.adjacencyMatrix[j, i] = cost;
-                    }
-                }
-            }
-
-            return graph;
-        }
-
-        /// <summary>
-        /// Resizes the adjacency matrix to accommodate more nodes
-        /// </summary>
-        private void ResizeMatrix(int newSize)
-        {
-            var newMatrix = new double[newSize, newSize];
-
-            // Initialize with INFINITY
-            for (int i = 0; i < newSize; i++)
-            {
-                for (int j = 0; j < newSize; j++)
-                {
-                    newMatrix[i, j] = INFINITY;
-                }
-                // No cost to self
-                newMatrix[i, i] = 0;
-            }
-
-            // Copy existing values
-            int oldSize = adjacencyMatrix.GetLength(0);
-            for (int i = 0; i < oldSize; i++)
-            {
-                for (int j = 0; j < oldSize; j++)
-                {
-                    newMatrix[i, j] = adjacencyMatrix[i, j];
-                }
-            }
-
-            adjacencyMatrix = newMatrix;
-        }
     }
+
+
 }

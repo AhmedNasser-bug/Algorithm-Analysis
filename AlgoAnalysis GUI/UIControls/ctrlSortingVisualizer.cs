@@ -20,9 +20,13 @@ namespace MainGUIcsproj.Controls
 
     public partial class ctrlSortingVisualizer : UserControl
     {
+        #region Props
         public const Double BASE_ANIMATION_SPEED = 10000;
         public TimeSpan AnimationSpeed = new TimeSpan(10000);// milliseconds
+        bool isFullScreen = false;
+        #endregion
 
+        #region Initialization
         public ctrlSortingVisualizer()
         {
             InitializeComponent();
@@ -81,7 +85,9 @@ namespace MainGUIcsproj.Controls
             cbChartTypes.DataSource = enumNames;
             cbChartTypes.SelectedIndex = 0; // Set default selection
         }
+        #endregion
 
+        #region public Functions
         /// <summary>
         /// Updates the chart with new values
         /// </summary>
@@ -134,8 +140,30 @@ namespace MainGUIcsproj.Controls
             AnimationSpeed = new TimeSpan((long)BASE_ANIMATION_SPEED / Factor);
         }
 
-        bool isFullScreen = false;
-        private void btnFullScreen_Click(object sender, EventArgs e)
+        public void HideExtraControls()
+        {
+            btnFullScreen.Visible = false;
+            cbChartTypes.Visible = false;
+            nupAnimationSpeed.Visible = false; 
+        }
+
+        public void ShowExtraControls()
+        {
+            btnFullScreen.Visible = true;
+            cbChartTypes.Visible = true;
+            nupAnimationSpeed.Visible = true;
+        }
+
+        public void ChangeChartType(SeriesChartType seriesChartType)
+        {
+            cbChartTypes.SelectedIndex = (int)seriesChartType;
+            chart1.Series[0].ChartType = seriesChartType;
+        }
+
+        /// <summary>
+        /// Changes the control Dock to Fill on the parent container
+        /// </summary>
+        public void FullScreen()
         {
             if (isFullScreen)
             {
@@ -153,6 +181,12 @@ namespace MainGUIcsproj.Controls
             BringToFront();
             isFullScreen = true;
             btnFullScreen.Text = "Back";
+        }
+        #endregion
+
+        private void btnFullScreen_Click(object sender, EventArgs e)
+        {
+            FullScreen();
         }
 
         private void nupAnimationSpeed_ValueChanged(object sender, EventArgs e)

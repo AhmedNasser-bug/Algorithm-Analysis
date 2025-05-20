@@ -1,4 +1,5 @@
 ﻿
+using Algorithms_Unit.Datastructures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,16 +10,40 @@ namespace Algorithms_Unit
 {
     public class Pathfinding
     {
-        public delegate void PathfindingIterationHandler(object sender, PathfindingStateDictionary e);
-        public static event PathfindingIterationHandler? PathfindingIteration;
+        public delegate void GraphNodeVisitHandler(Node ProcessedNode, PathfindingStateDictionary e);
+        public delegate void GraphEdgeVisitHandler(Node edgeNode1, Node edgeNode2);
+        public static event GraphNodeVisitHandler? OnNodeVisited;
+        public static event GraphEdgeVisitHandler? OnEdgeVisited;
 
 
         /// <summary>
         /// Call on each iteration of each algorithm with the exact state of all tracked variables
         /// </summary>
-        public static void OnPathfindingIteration(char ProcessedNode, Dictionary<String, object>? ProblemSpecificArgs)
+        public static void SendNode(Node ProcessedNode, Dictionary<String, object>? ProblemSpecificArgs)
         {
-            PathfindingIteration?.Invoke(null, new PathfindingStateDictionary(ProcessedNode, ProblemSpecificArgs));
+            OnNodeVisited?.Invoke(ProcessedNode, new PathfindingStateDictionary(ProcessedNode, ProblemSpecificArgs));
+        }
+        public static void SendEdge(Node edgeNode1, Node edgeNode2)
+        {
+            OnEdgeVisited?.Invoke(edgeNode1, edgeNode2);
+        }
+
+        public static void BFS(Graph graph)
+        {
+            // Node highlight test
+            foreach (Node node in graph.nodes)
+            {
+                SendNode(node, null);
+            }
+
+            foreach(Node node in graph.nodes)
+            {
+                foreach (Node nei in node.Neighbors)
+                {
+                    SendEdge(node, nei);
+                }
+                
+            }
         }
 
         /*
@@ -39,5 +64,8 @@ namespace Algorithms_Unit
          
 
          */
+        //public static Metrics DijkstraHeap(Graph graph, Node start, Node end);
+        //public static Metrics BellmanFord(Graph graph, Node start, Node end);
+        // public static Metrics FloydWarshal(graph);
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Algorithms_Unit.Datastructures;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -29,6 +30,12 @@ namespace Algorithms_Unit.Utils
             - GenerateGraphFromAdjacencyList: Generates a graph from an adjacency list.
          */
 
+        public static int GenerateRandomInt(int min, int max)
+        {
+            Random rnd = new();
+            return rnd.Next(min, max);
+        }
+
         public static List<Int128> GenerateRandomArray(int size, int minValue, int maxValue)
         {
             Random random = new Random();
@@ -39,6 +46,7 @@ namespace Algorithms_Unit.Utils
             }
             return array;
         }
+
         public static List<Int128> GenerateRandomRange(int minValue, int maxValue)
         {
             Random random = new Random();
@@ -52,6 +60,7 @@ namespace Algorithms_Unit.Utils
 
             return array;
         }
+
         public static List<Int128> GenerateSortedArray(int size, int minValue, int maxValue)
         {
             List<Int128> array = new();
@@ -61,6 +70,7 @@ namespace Algorithms_Unit.Utils
             }
             return array;
         }
+
         public static List<Int128> GenerateReverseSortedArray(int minValue, int maxValue)
         {
             List<Int128> arr = new();
@@ -71,6 +81,36 @@ namespace Algorithms_Unit.Utils
             }
 
             return arr;
+        }
+
+        public static Graph GenerateRandomGraph(int vertices, int edges, ushort min = 1, ushort max = 50, GraphTypes graphType = GraphTypes.Cyclic)
+        {
+            Graph graph = new(graphType);
+
+
+            // Generate vertices
+            for (int i = 0; i < vertices; i++)
+            {
+                Node newNode = new Node((Input.GenerateRandomInt(min, max), Input.GenerateRandomInt(min, max)));
+                graph.AddNode(newNode);
+            }
+
+            // Connect graph
+            for (int i = 1; i < graph.nodes.Count; i++)
+            {
+                Node prevNode = graph.nodes[i - 1];
+
+                graph.nodes[i].AddEdge(prevNode);
+            }
+
+
+            // Generate edges
+            for (int i = 0; i < edges; i++)
+            {
+                graph.nodes[i % graph.nodes.Count].AddEdge(graph.nodes[Input.GenerateRandomInt(0, graph.nodes.Count)]);
+            }
+
+            return graph;
         }
     }
 }

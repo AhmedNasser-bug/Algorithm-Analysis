@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MainGUIcsproj.Algorithm_Visualization.Pathfinding_Visual
+namespace UIControls
 {
-    public partial class frmPathfindingVisual : Form
+    public partial class ctrlGraphInput : UserControl
     {
-        public frmPathfindingVisual()
+        public ctrlGraphInput()
         {
             InitializeComponent();
         }
