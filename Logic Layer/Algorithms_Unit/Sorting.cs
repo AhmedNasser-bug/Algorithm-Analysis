@@ -76,7 +76,7 @@ namespace Algorithms_Unit
         /// - TotalRuntimeTicks
         /// - TotalNumbersOfArrayAccesses
         /// </returns>
-        public Metrics QuickSort(List<Int128> arr)
+        public static Metrics QuickSort(List<Int128> arr)
         {
             Metrics metrics = new Metrics(); // To track the performance metrics
             DateTime begin = DateTime.Now; // To track the runtime of the algorithm
@@ -94,7 +94,7 @@ namespace Algorithms_Unit
         /// <summary>
         /// Recursive helper method for QuickSort
         /// </summary>
-        private void QuickSortRecursive(List<Int128> arr, int low, int high, Metrics metrics)
+        private static void QuickSortRecursive(List<Int128> arr, int low, int high, Metrics metrics)
         {
             metrics.TotalNumbersOfSteps++; // One step for calling the function
 

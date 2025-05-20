@@ -50,10 +50,6 @@ namespace Algorithms_Unit
             return false;
         }
         
-<<<<<<< Updated upstream
-
-        public static bool BinarySearch(List<Int16> values, Int128 target)
-=======
         public static bool BinarySearch(List<Int128> values, Int128 target)
         {
 
@@ -92,7 +88,6 @@ namespace Algorithms_Unit
         }
 
         public static bool BinarySearch(List<Int16> values, Int16 target)
->>>>>>> Stashed changes
         {
             int low = 0;
             int high = values.Count - 1;

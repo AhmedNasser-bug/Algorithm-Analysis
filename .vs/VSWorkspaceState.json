@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\AlgoAnalysis GUI",
+    "\\AlgoAnalysis GUI\\UIControls",
+    "\\AlgoAnalysis GUI\\UIControls\\ctrlVisualArray",
+    "\\Logic Layer\\Algorithms_Unit",
+    "\\Logic Layer\\Analysis_Unit"
   ],
-  "SelectedNode": "\\slnAnalysisSystem.sln",
+  "SelectedNode": "\\AlgoAnalysis GUI\\UIControls\\ctrlGraphVisualizer.Designer.cs",
   "PreviewInSolutionExplorer": false
 }
