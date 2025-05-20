@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            lblTotalNumberOfSteps = new Label();
+            label4 = new Label();
             btnCompare = new Button();
             btnAnalyzePerformance = new Button();
             label2 = new Label();
@@ -39,8 +41,6 @@
             lblArrayAccesses = new Label();
             lblTotalNumberOfComprs = new Label();
             label3 = new Label();
-            lblTotalNumberOfSteps = new Label();
-            label4 = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -64,10 +64,32 @@
             groupBox1.ForeColor = Color.White;
             groupBox1.Location = new Point(0, 0);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(768, 383);
+            groupBox1.Size = new Size(585, 215);
             groupBox1.TabIndex = 32;
             groupBox1.TabStop = false;
             groupBox1.Text = "Metrics";
+            // 
+            // lblTotalNumberOfSteps
+            // 
+            lblTotalNumberOfSteps.AutoSize = true;
+            lblTotalNumberOfSteps.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold);
+            lblTotalNumberOfSteps.ForeColor = Color.White;
+            lblTotalNumberOfSteps.Location = new Point(297, 107);
+            lblTotalNumberOfSteps.Name = "lblTotalNumberOfSteps";
+            lblTotalNumberOfSteps.Size = new Size(61, 29);
+            lblTotalNumberOfSteps.TabIndex = 41;
+            lblTotalNumberOfSteps.Text = "###";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(6, 107);
+            label4.Name = "label4";
+            label4.Size = new Size(285, 29);
+            label4.TabIndex = 40;
+            label4.Text = "Total # of Steps:";
             // 
             // btnCompare
             // 
@@ -75,7 +97,7 @@
             btnCompare.BackColor = Color.FromArgb(223, 208, 184);
             btnCompare.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCompare.ForeColor = SystemColors.ControlText;
-            btnCompare.Location = new Point(256, 428);
+            btnCompare.Location = new Point(256, 260);
             btnCompare.Name = "btnCompare";
             btnCompare.Size = new Size(237, 92);
             btnCompare.TabIndex = 39;
@@ -89,7 +111,7 @@
             btnAnalyzePerformance.BackColor = Color.FromArgb(223, 208, 184);
             btnAnalyzePerformance.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAnalyzePerformance.ForeColor = SystemColors.ControlText;
-            btnAnalyzePerformance.Location = new Point(6, 428);
+            btnAnalyzePerformance.Location = new Point(6, 260);
             btnAnalyzePerformance.Name = "btnAnalyzePerformance";
             btnAnalyzePerformance.Size = new Size(237, 92);
             btnAnalyzePerformance.TabIndex = 38;
@@ -185,35 +207,13 @@
             label3.TabIndex = 27;
             label3.Text = "Total # of Array Accesses:";
             // 
-            // lblTotalNumberOfSteps
-            // 
-            lblTotalNumberOfSteps.AutoSize = true;
-            lblTotalNumberOfSteps.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold);
-            lblTotalNumberOfSteps.ForeColor = Color.White;
-            lblTotalNumberOfSteps.Location = new Point(297, 107);
-            lblTotalNumberOfSteps.Name = "lblTotalNumberOfSteps";
-            lblTotalNumberOfSteps.Size = new Size(61, 29);
-            lblTotalNumberOfSteps.TabIndex = 41;
-            lblTotalNumberOfSteps.Text = "###";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(6, 107);
-            label4.Name = "label4";
-            label4.Size = new Size(285, 29);
-            label4.TabIndex = 40;
-            label4.Text = "Total # of Steps:";
-            // 
             // ctrlMetricsBox
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(groupBox1);
             Name = "ctrlMetricsBox";
-            Size = new Size(768, 383);
+            Size = new Size(585, 215);
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);

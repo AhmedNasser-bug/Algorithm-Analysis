@@ -3,24 +3,18 @@
   "WorkspaceRootPath": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B7406651-D06C-4D67-9DB1-16E1D49872ED}|..\\..\\Logic Layer\\Algorithms_Unit\\Algorithms_Unit.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\logic layer\\algorithms_unit\\outputs\\dynamicprogrammingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A37BAD76-B778-461B-8651-7076B0DD4ECA}|..\\UIControls\\UIControls.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\algoanalysis gui\\uicontrols\\ctrldpvisualization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7406651-D06C-4D67-9DB1-16E1D49872ED}|..\\..\\Logic Layer\\Algorithms_Unit\\Algorithms_Unit.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\logic layer\\algorithms_unit\\outputs\\greedystate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\algoanalysis gui\\user_interface\\algorithm_visualization\\dynamicprogrammin_visual\\ctrldynamicprogramming.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|solutionrelative:algorithm_visualization\\dynamicprogrammin_visual\\ctrldynamicprogramming.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\algoanalysis gui\\user_interface\\algorithm_visualization\\sorting_visual\\ctrlsortingmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|solutionrelative:algorithm_visualization\\sorting_visual\\ctrlsortingmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\algoanalysis gui\\user_interface\\algorithm_visualization\\dynamicprogrammin_visual\\ctrldynamicprogramming.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|solutionrelative:algorithm_visualization\\dynamicprogrammin_visual\\ctrldynamicprogramming.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7406651-D06C-4D67-9DB1-16E1D49872ED}|..\\..\\Logic Layer\\Algorithms_Unit\\Algorithms_Unit.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\logic layer\\algorithms_unit\\searching.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\algoanalysis gui\\user_interface\\algorithm_visualization\\sorting_visual\\ctrlsortingcomparisson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|solutionrelative:algorithm_visualization\\sorting_visual\\ctrlsortingcomparisson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7406651-D06C-4D67-9DB1-16E1D49872ED}|..\\..\\Logic Layer\\Algorithms_Unit\\Algorithms_Unit.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\logic layer\\algorithms_unit\\sorting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A37BAD76-B778-461B-8651-7076B0DD4ECA}|..\\UIControls\\UIControls.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\algoanalysis gui\\uicontrols\\ctrldpvisualization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,60 +24,8 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DynamicProgrammingState.cs",
-              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Outputs\\DynamicProgrammingState.cs",
-              "RelativeDocumentMoniker": "..\\..\\Logic Layer\\Algorithms_Unit\\Outputs\\DynamicProgrammingState.cs",
-              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Outputs\\DynamicProgrammingState.cs",
-              "RelativeToolTip": "..\\..\\Logic Layer\\Algorithms_Unit\\Outputs\\DynamicProgrammingState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T17:39:52.261Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GreedyState.cs",
-              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Outputs\\GreedyState.cs",
-              "RelativeDocumentMoniker": "..\\..\\Logic Layer\\Algorithms_Unit\\Outputs\\GreedyState.cs",
-              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Outputs\\GreedyState.cs",
-              "RelativeToolTip": "..\\..\\Logic Layer\\Algorithms_Unit\\Outputs\\GreedyState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T17:39:49.332Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ctrlSortingMain.cs",
-              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Sorting_Visual\\ctrlSortingMain.cs",
-              "RelativeDocumentMoniker": "Algorithm_Visualization\\Sorting_Visual\\ctrlSortingMain.cs",
-              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Sorting_Visual\\ctrlSortingMain.cs",
-              "RelativeToolTip": "Algorithm_Visualization\\Sorting_Visual\\ctrlSortingMain.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAD0AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T17:20:24.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Sorting.cs",
-              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Sorting.cs",
-              "RelativeDocumentMoniker": "..\\..\\Logic Layer\\Algorithms_Unit\\Sorting.cs",
-              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Sorting.cs",
-              "RelativeToolTip": "..\\..\\Logic Layer\\Algorithms_Unit\\Sorting.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAqwGUAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T17:18:56.693Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:2:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
@@ -98,29 +40,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ctrlSortingComparisson.cs",
-              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Sorting_Visual\\ctrlSortingComparisson.cs",
-              "RelativeDocumentMoniker": "Algorithm_Visualization\\Sorting_Visual\\ctrlSortingComparisson.cs",
-              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Sorting_Visual\\ctrlSortingComparisson.cs",
-              "RelativeToolTip": "Algorithm_Visualization\\Sorting_Visual\\ctrlSortingComparisson.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAADwvz0AAAAjAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ctrlDpVisualization.cs",
+              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\ctrlDpVisualization.cs",
+              "RelativeDocumentMoniker": "..\\UIControls\\ctrlDpVisualization.cs",
+              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\ctrlDpVisualization.cs",
+              "RelativeToolTip": "..\\UIControls\\ctrlDpVisualization.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAD4vxsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T17:16:07.392Z",
+              "WhenOpened": "2025-05-20T22:55:39.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ctrlDynamicProgramming.cs [Design]",
+              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\DynamicProgrammin_Visual\\ctrlDynamicProgramming.cs",
+              "RelativeDocumentMoniker": "Algorithm_Visualization\\DynamicProgrammin_Visual\\ctrlDynamicProgramming.cs",
+              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\DynamicProgrammin_Visual\\ctrlDynamicProgramming.cs [Design]",
+              "RelativeToolTip": "Algorithm_Visualization\\DynamicProgrammin_Visual\\ctrlDynamicProgramming.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T22:49:20.816Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ctrlDynamicProgramming.cs",
+              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\DynamicProgrammin_Visual\\ctrlDynamicProgramming.cs",
+              "RelativeDocumentMoniker": "Algorithm_Visualization\\DynamicProgrammin_Visual\\ctrlDynamicProgramming.cs",
+              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\DynamicProgrammin_Visual\\ctrlDynamicProgramming.cs",
+              "RelativeToolTip": "Algorithm_Visualization\\DynamicProgrammin_Visual\\ctrlDynamicProgramming.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAADwvzwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T22:45:43.507Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Searching.cs",
-              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Searching.cs",
-              "RelativeDocumentMoniker": "..\\..\\Logic Layer\\Algorithms_Unit\\Searching.cs",
-              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\Logic Layer\\Algorithms_Unit\\Searching.cs",
-              "RelativeToolTip": "..\\..\\Logic Layer\\Algorithms_Unit\\Searching.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowEYAAAAAAAAAAAAAAA==",
+              "Title": "ctrlDpVisualization.cs [Design]",
+              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\ctrlDpVisualization.cs",
+              "RelativeDocumentMoniker": "..\\UIControls\\ctrlDpVisualization.cs",
+              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\ctrlDpVisualization.cs [Design]",
+              "RelativeToolTip": "..\\UIControls\\ctrlDpVisualization.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T17:15:01.585Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T22:34:43.885Z",
+              "EditorCaption": " [Design]"
             }
           ]
         },

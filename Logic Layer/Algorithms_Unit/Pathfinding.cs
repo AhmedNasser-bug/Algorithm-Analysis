@@ -1,5 +1,4 @@
-﻿
-using Algorithms_Unit.Datastructures;
+﻿using Algorithms_Unit.Datastructures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +9,8 @@ namespace Algorithms_Unit
 {
     public class Pathfinding
     {
-        public delegate void GraphNodeVisitHandler(Node ProcessedNode, PathfindingStateDictionary e);
-        public delegate void GraphEdgeVisitHandler(Node edgeNode1, Node edgeNode2);
+        public delegate void GraphNodeVisitHandler(object sender, Node ProcessedNode, PathfindingStateDictionary e);
+        public delegate void GraphEdgeVisitHandler(object sender, Node edgeNode1, Node edgeNode2);
         public static event GraphNodeVisitHandler? OnNodeVisited;
         public static event GraphEdgeVisitHandler? OnEdgeVisited;
 
@@ -19,30 +18,31 @@ namespace Algorithms_Unit
         /// <summary>
         /// Call on each iteration of each algorithm with the exact state of all tracked variables
         /// </summary>
-        public static void SendNode(Node ProcessedNode, Dictionary<String, object>? ProblemSpecificArgs)
+        public static void SendNode(Node ProcessedNode, Dictionary<String, object>? ProblemSpecificArgs, object sender = null)
         {
-            OnNodeVisited?.Invoke(ProcessedNode, new PathfindingStateDictionary(ProcessedNode, ProblemSpecificArgs));
-        }
-        public static void SendEdge(Node edgeNode1, Node edgeNode2)
-        {
-            OnEdgeVisited?.Invoke(edgeNode1, edgeNode2);
+            OnNodeVisited?.Invoke(sender, ProcessedNode, new PathfindingStateDictionary(ProcessedNode, ProblemSpecificArgs));
         }
 
-        public static void BFS(Graph graph)
+        public static void SendEdge(Node edgeNode1, Node edgeNode2, object sender = null)
+        {
+            OnEdgeVisited?.Invoke(sender, edgeNode1, edgeNode2);
+        }
+
+        public static void BFS(Graph graph, object sender = null)
         {
             // Node highlight test
             foreach (Node node in graph.nodes)
             {
-                SendNode(node, null);
+                SendNode(node, null, sender);
             }
 
-            foreach(Node node in graph.nodes)
+            foreach (Node node in graph.nodes)
             {
                 foreach (Node nei in node.Neighbors)
                 {
-                    SendEdge(node, nei);
+                    SendEdge(node, nei, sender);
                 }
-                
+
             }
         }
 
@@ -64,8 +64,8 @@ namespace Algorithms_Unit
          
 
          */
-        //public static Metrics DijkstraHeap(Graph graph, Node start, Node end);
-        //public static Metrics BellmanFord(Graph graph, Node start, Node end);
-        // public static Metrics FloydWarshal(graph);
+        //public static Metrics DijkstraHeap(Graph graph, Node start, Node end, object sender = null);
+        //public static Metrics BellmanFord(Graph graph, Node start, Node end, object sender = null);
+        //public static Metrics FloydWarshal(graph, object sender = null);
     }
 }

@@ -11,6 +11,7 @@ namespace Algorithms_Unit
     {
         public delegate void GreedyStateChangeHandler(object sender, GreedyStateDictionary e);
         public static event GreedyStateChangeHandler? OnGreedyStateChange;
+
         /// <summary>
         /// Call on each iteration of each algorithm with the exact state of all tracked variables
         /// </summary>

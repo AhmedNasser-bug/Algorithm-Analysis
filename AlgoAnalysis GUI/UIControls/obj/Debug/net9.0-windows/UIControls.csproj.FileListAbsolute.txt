@@ -24,3 +24,4 @@ D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj\Debug\net9.0-windows\refint\UIControls.dll
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj\Debug\net9.0-windows\UIControls.pdb
 D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj\Debug\net9.0-windows\ref\UIControls.dll
+D:\Study\Programming\Projects\Algorithm-Analysis\AlgoAnalysis GUI\UIControls\obj\Debug\net9.0-windows\UIControls.ctrlDpVisualization.resources
