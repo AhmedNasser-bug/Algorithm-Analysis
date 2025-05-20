@@ -17,6 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="ctrlAlgorithmSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="ctrlPlotGraph.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -33,10 +33,5 @@ namespace Algorithms_Unit
             -Each function should call OnGreedyStateChange() with the processed index as an argument
          
          */
-        //public static Metrics CoinChange(List<int> coins, int amount);
-        //public static Metrics ActivitySelection(List<Activity> activities);
-        //public static Metrics HuffmanCoding(List<Char> characters, List<int> frequencies);
-        //public static Metrics Kruskal(List<Edge> edges, int numberOfVertices);
-
     }
 }

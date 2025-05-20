@@ -1,32 +1,19 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\",
+  "WorkspaceRootPath": "C:\\Users\\HP\\source\\repos\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A37BAD76-B778-461B-8651-7076B0DD4ECA}|..\\UIControls\\UIControls.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\algoanalysis gui\\uicontrols\\ctrlgraphvisualizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A37BAD76-B778-461B-8651-7076B0DD4ECA}|..\\UIControls\\UIControls.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\algoanalysis gui\\uicontrols\\ctrlmetricsbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A37BAD76-B778-461B-8651-7076B0DD4ECA}|..\\UIControls\\UIControls.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\algoanalysis gui\\uicontrols\\ctrlgraphinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\algoanalysis gui\\user_interface\\algorithm_visualization\\searching_visual\\ctrlcomparevisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|c:\\users\\hp\\source\\repos\\algorithm-analysis\\algoanalysis gui\\user_interface\\algorithm_visualization\\searching_visual\\ctrlcomparevisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|solutionrelative:algorithm_visualization\\searching_visual\\ctrlcomparevisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A37BAD76-B778-461B-8651-7076B0DD4ECA}|..\\UIControls\\UIControls.csproj|D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\uicontrols\\ctrlvisualarray\\ctrlpurearray.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A37BAD76-B778-461B-8651-7076B0DD4ECA}|..\\UIControls\\UIControls.csproj|c:\\users\\hp\\source\\repos\\algorithm-analysis\\algoanalysis gui\\uicontrols\\ctrlvisualarray\\ctrlpurearray.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A37BAD76-B778-461B-8651-7076B0DD4ECA}|..\\UIControls\\UIControls.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\algoanalysis gui\\uicontrols\\ctrlvisualarray\\ctrlpurearray.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A37BAD76-B778-461B-8651-7076B0DD4ECA}|..\\UIControls\\UIControls.csproj|c:\\users\\hp\\source\\repos\\algorithm-analysis\\algoanalysis gui\\uicontrols\\ctrlvisualarray\\ctrlpurearray.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\algoanalysis gui\\user_interface\\algorithm_visualization\\searching_visual\\ctrlcomparevisual.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|solutionrelative:algorithm_visualization\\searching_visual\\ctrlcomparevisual.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\algorithm_visualization\\searching_visual\\ctrlcomparevisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|c:\\users\\hp\\source\\repos\\algorithm-analysis\\algoanalysis gui\\user_interface\\algorithm_visualization\\searching_visual\\ctrlcomparevisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|solutionrelative:algorithm_visualization\\searching_visual\\ctrlcomparevisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -37,7 +24,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -57,100 +44,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ctrlGraphVisualizer.cs",
-              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\ctrlGraphVisualizer.cs",
-              "RelativeDocumentMoniker": "..\\UIControls\\ctrlGraphVisualizer.cs",
-              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\ctrlGraphVisualizer.cs",
-              "RelativeToolTip": "..\\UIControls\\ctrlGraphVisualizer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ctrlPureArray.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\ctrlVisualArray\\ctrlPureArray.cs",
+              "RelativeDocumentMoniker": "..\\UIControls\\ctrlVisualArray\\ctrlPureArray.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\ctrlVisualArray\\ctrlPureArray.cs*",
+              "RelativeToolTip": "..\\UIControls\\ctrlVisualArray\\ctrlPureArray.cs*",
+              "ViewState": "AgIAACAAAAAAAAAAAAAYwDAAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T14:58:38.989Z",
+              "WhenOpened": "2025-05-19T19:42:43.097Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ctrlMetricsBox.cs",
-              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\ctrlMetricsBox.cs",
-              "RelativeDocumentMoniker": "..\\UIControls\\ctrlMetricsBox.cs",
-              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\ctrlMetricsBox.cs",
-              "RelativeToolTip": "..\\UIControls\\ctrlMetricsBox.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T14:58:34.285Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ctrlGraphInput.cs",
-              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\ctrlGraphInput.cs",
-              "RelativeDocumentMoniker": "..\\UIControls\\ctrlGraphInput.cs",
-              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\ctrlGraphInput.cs",
-              "RelativeToolTip": "..\\UIControls\\ctrlGraphInput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T14:58:26.401Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ctrlCompareVisual.Designer.cs",
-              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Searching_Visual\\ctrlCompareVisual.Designer.cs",
-              "RelativeDocumentMoniker": "Algorithm_Visualization\\Searching_Visual\\ctrlCompareVisual.Designer.cs",
-              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Searching_Visual\\ctrlCompareVisual.Designer.cs",
-              "RelativeToolTip": "Algorithm_Visualization\\Searching_Visual\\ctrlCompareVisual.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMsAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T14:57:58.661Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ctrlPureArray.cs",
-              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\ctrlVisualArray\\ctrlPureArray.cs",
-              "RelativeDocumentMoniker": "..\\UIControls\\ctrlVisualArray\\ctrlPureArray.cs",
-              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\ctrlVisualArray\\ctrlPureArray.cs",
-              "RelativeToolTip": "..\\UIControls\\ctrlVisualArray\\ctrlPureArray.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAYwDAAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T14:57:58.714Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "ctrlPureArray.cs [Design]",
-              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\ctrlVisualArray\\ctrlPureArray.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\ctrlVisualArray\\ctrlPureArray.cs",
               "RelativeDocumentMoniker": "..\\UIControls\\ctrlVisualArray\\ctrlPureArray.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\ctrlVisualArray\\ctrlPureArray.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-20T14:57:59.375Z"
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\ctrlVisualArray\\ctrlPureArray.cs [Design]*",
+              "RelativeToolTip": "..\\UIControls\\ctrlVisualArray\\ctrlPureArray.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T19:42:40.759Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ctrlCompareVisual.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Searching_Visual\\ctrlCompareVisual.cs",
+              "RelativeDocumentMoniker": "Algorithm_Visualization\\Searching_Visual\\ctrlCompareVisual.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Searching_Visual\\ctrlCompareVisual.cs*",
+              "RelativeToolTip": "Algorithm_Visualization\\Searching_Visual\\ctrlCompareVisual.cs*",
+              "ViewState": "AgIAACcAAAAAAAAAAAAuwDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T19:40:24.702Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ctrlCompareVisual.cs",
-              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Searching_Visual\\ctrlCompareVisual.cs",
-              "RelativeDocumentMoniker": "Algorithm_Visualization\\Searching_Visual\\ctrlCompareVisual.cs",
-              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Searching_Visual\\ctrlCompareVisual.cs",
-              "RelativeToolTip": "Algorithm_Visualization\\Searching_Visual\\ctrlCompareVisual.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAuwCEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T14:57:59.376Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "ctrlCompareVisual.cs [Design]",
-              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Searching_Visual\\ctrlCompareVisual.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Searching_Visual\\ctrlCompareVisual.cs",
               "RelativeDocumentMoniker": "Algorithm_Visualization\\Searching_Visual\\ctrlCompareVisual.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Searching_Visual\\ctrlCompareVisual.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-20T14:57:59.394Z"
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Searching_Visual\\ctrlCompareVisual.cs [Design]*",
+              "RelativeToolTip": "Algorithm_Visualization\\Searching_Visual\\ctrlCompareVisual.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T18:56:52.235Z",
+              "EditorCaption": " [Design]"
             }
           ]
         },

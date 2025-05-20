@@ -32,7 +32,7 @@ namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
             // Initialize Graph
             values = Input.GenerateRandomRange(1, 100);
             sortingVisualizer.ChangeValues(values);
-
+            
         }
 
         /// <summary>
@@ -95,10 +95,14 @@ namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
         }
 
 
+       
+
+ 
+        
 
 
 
-        // =============================================================== BUTTON EVENTS
+
 
         private void btnBubbleSort_Click(object sender, EventArgs e)
         {
@@ -116,14 +120,5 @@ namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
             sortingVisualizer.ChangeValues(values);
         }
 
-        private void ctrlSortingMain_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCompare_Click(object sender, EventArgs e)
-        {
-            frmMainMenu.globalForm.ChangeControl(new ctrlSortingComparisson());
-        }
     }
 }

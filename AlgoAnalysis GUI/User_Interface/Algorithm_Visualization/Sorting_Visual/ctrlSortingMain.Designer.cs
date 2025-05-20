@@ -47,7 +47,6 @@
             lblTotalRuntime = new Label();
             label5 = new Label();
             groupBox1 = new GroupBox();
-            btnCompare = new Button();
             btnAnalyzePerformance = new Button();
             btnBack = new Button();
             label1 = new Label();
@@ -285,7 +284,6 @@
             // groupBox1
             // 
             groupBox1.Anchor = AnchorStyles.Left;
-            groupBox1.Controls.Add(btnCompare);
             groupBox1.Controls.Add(btnAnalyzePerformance);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(lblTotalRuntime);
@@ -299,25 +297,10 @@
             groupBox1.ForeColor = Color.White;
             groupBox1.Location = new Point(3, 543);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(553, 243);
+            groupBox1.Size = new Size(555, 243);
             groupBox1.TabIndex = 31;
             groupBox1.TabStop = false;
             groupBox1.Text = "Metrics";
-            // 
-            // btnCompare
-            // 
-            btnCompare.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnCompare.BackColor = Color.FromArgb(223, 208, 184);
-            btnCompare.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCompare.ForeColor = SystemColors.ControlText;
-            btnCompare.Location = new Point(256, 145);
-            btnCompare.Name = "btnCompare";
-            btnCompare.Size = new Size(237, 92);
-            btnCompare.TabIndex = 39;
-            btnCompare.Tag = "Back";
-            btnCompare.Text = "Compare Algorithm";
-            btnCompare.UseVisualStyleBackColor = false;
-            btnCompare.Click += btnCompare_Click;
             // 
             // btnAnalyzePerformance
             // 
@@ -396,7 +379,6 @@
             Controls.Add(btnShuffleArray);
             Name = "ctrlSortingMain";
             Size = new Size(1655, 968);
-            Load += ctrlSortingMain_Load;
             flpSortingAlgorithms.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
@@ -430,6 +412,5 @@
         private Button button2;
         private Button btnAnalyzePerformance;
         private Controls.ctrlSortingVisualizer sortingVisualizer;
-        private Button btnCompare;
     }
 }

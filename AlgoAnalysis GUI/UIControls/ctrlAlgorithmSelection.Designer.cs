@@ -1,6 +1,6 @@
-﻿namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
+﻿namespace WinFormsApp1.Controls
 {
-    partial class ctrlSortingComparisson
+    partial class ctrlAlgorithmSelection
     {
         /// <summary> 
         /// Required designer variable.

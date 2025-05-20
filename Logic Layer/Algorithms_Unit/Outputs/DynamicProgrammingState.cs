@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Algorithms_Unit
 {
-    public class DynamicProgrammingStateDictionary : EventArgs
+    public class DynamicProgrammingStateDictionary<KeyT, ValueT> : EventArgs
     {
-        public (object SubProblem, object Answer)  MemoPair { get; set; }
+        public KeyValuePair<KeyT, ValueT> MemoPair { get; set; }
         public int ProcessedIdx { get; set; }
         public Dictionary<String, object>? ProblemSpecificArgs { get; set; }
 
-        public DynamicProgrammingStateDictionary((object SubProblem, object Answer) memoPair, int processedIdx, Dictionary<String, object>? problemSpecificArgs)
+        public DynamicProgrammingStateDictionary(KeyValuePair<KeyT, ValueT> memoPair, int processedIdx, Dictionary<String, object>? problemSpecificArgs)
         {
             MemoPair = memoPair;
             ProcessedIdx = processedIdx;

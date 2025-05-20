@@ -50,49 +50,8 @@ namespace Algorithms_Unit
             return false;
         }
         
-<<<<<<< Updated upstream
 
         public static bool BinarySearch(List<Int16> values, Int128 target)
-=======
-        public static bool BinarySearch(List<Int128> values, Int128 target)
-        {
-
-            int low = 0;
-            int high = values.Count - 1;
-            int mid = low + (high - low) / 2;
-            while (high >= low)
-            {
-
-                // Highlight the current index
-                Dictionary<string, object> bounds = new Dictionary<string, object>
-                {
-                    { "Low", low },
-                    { "High", high }
-                };
-                OnSearchChange(mid, bounds);
-
-
-
-                if (values[mid] > target)
-                {
-                    high = mid - 1;
-                    mid = low + (high - low) / 2;
-                }
-                else if (values[mid] < target)
-                {
-                    low = mid + 1;
-                    mid = low + (high - low) / 2;
-                }
-                else if (values[mid] == target)
-                
-                    return true;
-                }
-        
-            return false;
-        }
-
-        public static bool BinarySearch(List<Int16> values, Int16 target)
->>>>>>> Stashed changes
         {
             int low = 0;
             int high = values.Count - 1;

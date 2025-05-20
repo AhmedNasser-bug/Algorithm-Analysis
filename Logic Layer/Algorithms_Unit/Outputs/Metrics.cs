@@ -1,8 +1,6 @@
 ﻿namespace Algorithms_Unit
 {
-    public delegate void SendIndexEventHandler(int idx);
-    public delegate void SendIndicesEventHandler(params List<int> indices);
-    public delegate void SendNoteEventHandler(int idx);
+    // TODO: Implement the metrics class
     /// <summary>
     /// This class is the return value of all algorithms written in this project
     /// Main props
