@@ -16,26 +16,27 @@ namespace Algorithms_Unit.Utils
     /// </summary>
     public class SortingUtils
     {
-        public static void Swap<T>(ref T arr, int i, int j) where T: IList<Int128>
+        public static void Swap<T>(ref T arr, int i, int j, object sender = null) where T : IList<Int128>
         {
             Int128 temp = arr[i];
             arr[i] = arr[j];
             arr[j] = temp;
         }
-        public static void Shuffle(ref List<Int128> values)
+
+        public static void Shuffle(ref List<Int128> values, object sender = null)
         {
             Random random = new Random();
             for (int i = 0; i < values.Count; i++)
             {
                 int j = random.Next(i, values.Count);
-                Swap(ref values, i, j);
+                Swap(ref values, i, j, sender);
             }
-
         }
+
         /// <summary>
         /// Partition the array and return the pivot index
         /// </summary>
-        internal static int Partition(List<Int128> arr, int low, int high, Metrics metrics)
+        internal static int Partition(List<Int128> arr, int low, int high, Metrics metrics, object sender = null)
         {
             metrics.TotalNumbersOfSteps++; // One step for function call
 
@@ -61,8 +62,8 @@ namespace Algorithms_Unit.Utils
                     i++; // Increment index of smaller element
 
                     // Swap elements
-                    Swap(ref arr, i, j);
-                    Sorting.SendIndices(i, j); // Fire event with swapped indices
+                    Swap(ref arr, i, j, sender);
+                    Sorting.SendIndices(i, j, sender); // Fire event with swapped indices
                     metrics.TotalNumbersOfSwaps++;
                     metrics.TotalNumbersOfArrayAccesses += 2; // 2 for the swap
                 }
@@ -70,8 +71,8 @@ namespace Algorithms_Unit.Utils
 
             // Swap the pivot element with the element at (i+1)
             // This puts the pivot in its correct sorted position
-            Swap(ref arr, i + 1, high);
-            Sorting.SendIndices(i + 1, high); // Fire event for the swap
+            Swap(ref arr, i + 1, high, sender);
+            Sorting.SendIndices(i + 1, high, sender); // Fire event for the swap
             metrics.TotalNumbersOfSwaps++;
             metrics.TotalNumbersOfArrayAccesses += 2; // 2 for the swap
 
@@ -80,7 +81,8 @@ namespace Algorithms_Unit.Utils
             // Return the position of the pivot
             return i + 1;
         }
-        internal static void Merge(List<Int128> arr, List<Int128> temp, int left, int mid, int right, Metrics metrics)
+
+        internal static void Merge(List<Int128> arr, List<Int128> temp, int left, int mid, int right, Metrics metrics, object sender = null)
         {
             metrics.TotalNumbersOfSteps++; // One step for function call
 
@@ -116,7 +118,7 @@ namespace Algorithms_Unit.Utils
                     metrics.TotalNumbersOfArrayAccesses += 2; // 1 read + 1 write
 
                     // Fire event to visualize the "movement" of element
-                    Sorting.SendIndices(i, k);
+                    Sorting.SendIndices(i, k, sender);
                     metrics.TotalNumbersOfSwaps++; // Count as a "swap" for metrics
 
                     i++;
@@ -127,7 +129,7 @@ namespace Algorithms_Unit.Utils
                     metrics.TotalNumbersOfArrayAccesses += 2; // 1 read + 1 write
 
                     // Fire event to visualize the "movement" of element
-                    Sorting.SendIndices(j, k);
+                    Sorting.SendIndices(j, k, sender);
                     metrics.TotalNumbersOfSwaps++; // Count as a "swap" for metrics
 
                     j++;
@@ -145,7 +147,7 @@ namespace Algorithms_Unit.Utils
                 metrics.TotalNumbersOfArrayAccesses += 2; // 1 read + 1 write
 
                 // Fire event for visualization
-                Sorting.SendIndices(i, k);
+                Sorting.SendIndices(i, k, sender);
                 metrics.TotalNumbersOfSwaps++;
 
                 i++;
@@ -162,7 +164,7 @@ namespace Algorithms_Unit.Utils
                 metrics.TotalNumbersOfArrayAccesses += 2; // 1 read + 1 write
 
                 // Fire event for visualization
-                Sorting.SendIndices(j, k);
+                Sorting.SendIndices(j, k, sender);
                 metrics.TotalNumbersOfSwaps++;
 
                 j++;
@@ -172,5 +174,4 @@ namespace Algorithms_Unit.Utils
             metrics.TotalNumbersOfSteps++; // For returning from function
         }
     }
-
 }

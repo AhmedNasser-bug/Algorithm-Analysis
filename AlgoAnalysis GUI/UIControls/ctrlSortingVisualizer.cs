@@ -140,6 +140,9 @@ namespace MainGUIcsproj.Controls
             AnimationSpeed = new TimeSpan((long)BASE_ANIMATION_SPEED / Factor);
         }
 
+        /// <summary>
+        /// Hides the options for customizing
+        /// </summary>
         public void HideExtraControls()
         {
             btnFullScreen.Visible = false;

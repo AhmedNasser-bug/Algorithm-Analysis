@@ -17,11 +17,11 @@ namespace Algorithms_Unit
         /// <summary>
         /// Call on each iteration of each algorithm with the exact state of all tracked variables
         /// </summary>
-        public static void OnSearchChange(int ProcessedIdx, Dictionary<string, object>? problemSpecificArgs)
+        public static void OnSearchChange(int ProcessedIdx, Dictionary<string, object>? problemSpecificArgs, object sender = null)
         {
-            OnSearchIndexChange?.Invoke(null, new SearchingStateDictionary(ProcessedIdx, problemSpecificArgs));
+            OnSearchIndexChange?.Invoke(sender, new SearchingStateDictionary(ProcessedIdx, problemSpecificArgs));
         }
-        
+
         /*
          TODO: 
         public satitc LinearSearch(List<int> inputList, int target):
@@ -36,12 +36,12 @@ namespace Algorithms_Unit
          */
 
 
-        public static bool LinearSearch(List<Int16> values, Int128 target)
+        public static bool LinearSearch(List<Int16> values, Int128 target, object sender = null)
         {
             for (int i = 0; i < values.Count; i++)
             {
                 // Highlight the current index
-                OnSearchChange(i, null);
+                OnSearchChange(i, null, sender);
                 if (values[i] == target)
                 {
                     return true;
@@ -49,29 +49,21 @@ namespace Algorithms_Unit
             }
             return false;
         }
-        
-<<<<<<< Updated upstream
 
-        public static bool BinarySearch(List<Int16> values, Int128 target)
-=======
-        public static bool BinarySearch(List<Int128> values, Int128 target)
+        public static bool BinarySearch(List<Int128> values, Int128 target, object sender = null)
         {
-
             int low = 0;
             int high = values.Count - 1;
             int mid = low + (high - low) / 2;
             while (high >= low)
             {
-
                 // Highlight the current index
                 Dictionary<string, object> bounds = new Dictionary<string, object>
                 {
                     { "Low", low },
                     { "High", high }
                 };
-                OnSearchChange(mid, bounds);
-
-
+                OnSearchChange(mid, bounds, sender);
 
                 if (values[mid] > target)
                 {
@@ -84,31 +76,27 @@ namespace Algorithms_Unit
                     mid = low + (high - low) / 2;
                 }
                 else if (values[mid] == target)
-                
+
                     return true;
-                }
-        
+            }
+
             return false;
         }
 
-        public static bool BinarySearch(List<Int16> values, Int16 target)
->>>>>>> Stashed changes
+        public static bool BinarySearch(List<Int16> values, Int16 target, object sender = null)
         {
             int low = 0;
             int high = values.Count - 1;
             int mid = low + (high - low) / 2;
             while (high >= low)
             {
-
                 // Highlight the current index
                 Dictionary<string, object> bounds = new Dictionary<string, object>
                 {
                     { "Low", low },
                     { "High", high }
                 };
-                OnSearchChange(mid, bounds);
-
-
+                OnSearchChange(mid, bounds, sender);
 
                 if (values[mid] > target)
                 {
@@ -127,6 +115,5 @@ namespace Algorithms_Unit
             }
             return false;
         }
-
     }
 }

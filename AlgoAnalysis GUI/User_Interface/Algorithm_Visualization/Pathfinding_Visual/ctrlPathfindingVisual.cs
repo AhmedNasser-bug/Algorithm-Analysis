@@ -18,8 +18,6 @@ namespace MainGUIcsproj.Algorithm_Visualization.Pathfinding_Visual
 {
     public partial class ctrlPathfindingVisual : UserControl
     {
-        bool LastCallDone = false;
-        CancellationToken cancellationToken = new CancellationToken();
         public ctrlPathfindingVisual()
         {
             InitializeComponent();
@@ -51,12 +49,12 @@ namespace MainGUIcsproj.Algorithm_Visualization.Pathfinding_Visual
 
         // ======================================================================= CUSTOM EVENTS
 
-        private void Pathfinding_OnNodeVisited(Node ProcessedNode, PathfindingStateDictionary e)
+        private void Pathfinding_OnNodeVisited(object sender, Node ProcessedNode, PathfindingStateDictionary e)
         {
             ctrlGraphVisualizer1.HighlightVertex(ProcessedNode);
         }
 
-        private void Pathfinding_OnEdgeVisited(Node edgeNode1, Node edgeNode2)
+        private void Pathfinding_OnEdgeVisited(object sender, Node edgeNode1, Node edgeNode2)
         {
             ctrlGraphVisualizer1.HighlightEdge(edgeNode1, edgeNode2);
         }
