@@ -8,12 +8,12 @@ namespace Algorithms_Unit
 {
     public class GreedyStateDictionary: EventArgs
     {
-        public int ProcessedIdx { get; set; }
+        public string StateRepr { get; set; }
         public Dictionary<string, object>? ProblemSpecificArgs { get; set; }
 
-        public GreedyStateDictionary(int processedIdx, Dictionary<string, object>? problemSpecificArgs)
+        public GreedyStateDictionary(string stateRepr, Dictionary<string, object>? problemSpecificArgs)
         {
-            ProcessedIdx = processedIdx;
+            StateRepr = stateRepr;
             ProblemSpecificArgs = problemSpecificArgs;
         }
     }

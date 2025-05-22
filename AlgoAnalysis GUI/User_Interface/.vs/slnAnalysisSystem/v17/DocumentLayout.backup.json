@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\algoanalysis gui\\user_interface\\algorithm_visualization\\sorting_visual\\ctrlsortingcomparisson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|solutionrelative:algorithm_visualization\\sorting_visual\\ctrlsortingcomparisson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\algoanalysis gui\\user_interface\\algorithm_visualization\\sorting_visual\\ctrlsortingmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|solutionrelative:algorithm_visualization\\sorting_visual\\ctrlsortingmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\algoanalysis gui\\user_interface\\algorithm_visualization\\sorting_visual\\ctrlsortingcomparisson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|solutionrelative:algorithm_visualization\\sorting_visual\\ctrlsortingcomparisson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\algoanalysis gui\\user_interface\\algorithm_visualization\\sorting_visual\\ctrlsortingmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|solutionrelative:algorithm_visualization\\sorting_visual\\ctrlsortingmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\algoanalysis gui\\user_interface\\algorithm_visualization\\pathfinding_visual\\ctrlpathfindingvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|solutionrelative:algorithm_visualization\\pathfinding_visual\\ctrlpathfindingvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|d:\\study\\programming\\projects\\algorithm-analysis\\algoanalysis gui\\user_interface\\algorithm_visualization\\pathfinding_visual\\ctrlpathfindingvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1E07B5C5-F6CB-4B4C-BDAA-2D7B95A42CE8}|MainGUIcsproj.csproj|solutionrelative:algorithm_visualization\\pathfinding_visual\\ctrlpathfindingvisual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,40 +42,52 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ctrlSortingMain.cs",
+              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Sorting_Visual\\ctrlSortingMain.cs",
+              "RelativeDocumentMoniker": "Algorithm_Visualization\\Sorting_Visual\\ctrlSortingMain.cs",
+              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Sorting_Visual\\ctrlSortingMain.cs",
+              "RelativeToolTip": "Algorithm_Visualization\\Sorting_Visual\\ctrlSortingMain.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAASwJEAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T05:05:14.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ctrlSortingMain.cs [Design]",
+              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Sorting_Visual\\ctrlSortingMain.cs",
+              "RelativeDocumentMoniker": "Algorithm_Visualization\\Sorting_Visual\\ctrlSortingMain.cs",
+              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Sorting_Visual\\ctrlSortingMain.cs [Design]",
+              "RelativeToolTip": "Algorithm_Visualization\\Sorting_Visual\\ctrlSortingMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T05:05:10.512Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "ctrlPathfindingVisual.cs",
               "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Pathfinding_Visual\\ctrlPathfindingVisual.cs",
               "RelativeDocumentMoniker": "Algorithm_Visualization\\Pathfinding_Visual\\ctrlPathfindingVisual.cs",
               "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Pathfinding_Visual\\ctrlPathfindingVisual.cs",
               "RelativeToolTip": "Algorithm_Visualization\\Pathfinding_Visual\\ctrlPathfindingVisual.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAABQAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAjwGoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T21:44:55.807Z",
+              "WhenOpened": "2025-05-22T04:53:11.332Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ctrlSortingComparisson.cs",
-              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Sorting_Visual\\ctrlSortingComparisson.cs",
-              "RelativeDocumentMoniker": "Algorithm_Visualization\\Sorting_Visual\\ctrlSortingComparisson.cs",
-              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Sorting_Visual\\ctrlSortingComparisson.cs",
-              "RelativeToolTip": "Algorithm_Visualization\\Sorting_Visual\\ctrlSortingComparisson.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAEgAAAAmAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ctrlPathfindingVisual.cs [Design]",
+              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Pathfinding_Visual\\ctrlPathfindingVisual.cs",
+              "RelativeDocumentMoniker": "Algorithm_Visualization\\Pathfinding_Visual\\ctrlPathfindingVisual.cs",
+              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Pathfinding_Visual\\ctrlPathfindingVisual.cs [Design]",
+              "RelativeToolTip": "Algorithm_Visualization\\Pathfinding_Visual\\ctrlPathfindingVisual.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T21:18:45.797Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ctrlSortingComparisson.cs [Design]",
-              "DocumentMoniker": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Sorting_Visual\\ctrlSortingComparisson.cs",
-              "RelativeDocumentMoniker": "Algorithm_Visualization\\Sorting_Visual\\ctrlSortingComparisson.cs",
-              "ToolTip": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\User_Interface\\Algorithm_Visualization\\Sorting_Visual\\ctrlSortingComparisson.cs [Design]",
-              "RelativeToolTip": "Algorithm_Visualization\\Sorting_Visual\\ctrlSortingComparisson.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T21:18:40.085Z",
+              "WhenOpened": "2025-05-22T04:52:27.469Z",
               "EditorCaption": " [Design]"
             }
           ]

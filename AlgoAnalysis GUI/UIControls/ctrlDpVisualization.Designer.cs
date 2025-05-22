@@ -28,122 +28,106 @@
         /// </summary>
         private void InitializeComponent()
         {
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            flpNotes = new FlowLayoutPanel();
+            flpState = new FlowLayoutPanel();
+            flpRuntime = new FlowLayoutPanel();
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
-            flowLayoutPanel2 = new FlowLayoutPanel();
             groupBox3 = new GroupBox();
-            flowLayoutPanel3 = new FlowLayoutPanel();
-            groupBox4 = new GroupBox();
-            flowLayoutPanel4 = new FlowLayoutPanel();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
-            groupBox4.SuspendLayout();
             SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // flpNotes
             // 
-            flowLayoutPanel1.Location = new Point(27, 35);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(597, 100);
-            flowLayoutPanel1.TabIndex = 0;
+            flpNotes.Dock = DockStyle.Fill;
+            flpNotes.FlowDirection = FlowDirection.TopDown;
+            flpNotes.Location = new Point(3, 32);
+            flpNotes.Name = "flpNotes";
+            flpNotes.Size = new Size(336, 663);
+            flpNotes.TabIndex = 0;
+            // 
+            // flpState
+            // 
+            flpState.Dock = DockStyle.Fill;
+            flpState.FlowDirection = FlowDirection.TopDown;
+            flpState.Location = new Point(3, 32);
+            flpState.Name = "flpState";
+            flpState.Size = new Size(336, 663);
+            flpState.TabIndex = 1;
+            // 
+            // flpRuntime
+            // 
+            flpRuntime.Dock = DockStyle.Fill;
+            flpRuntime.FlowDirection = FlowDirection.TopDown;
+            flpRuntime.Location = new Point(3, 32);
+            flpRuntime.Name = "flpRuntime";
+            flpRuntime.Size = new Size(336, 663);
+            flpRuntime.TabIndex = 0;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(flowLayoutPanel1);
-            groupBox1.Dock = DockStyle.Top;
+            groupBox1.Controls.Add(flpRuntime);
+            groupBox1.Dock = DockStyle.Left;
             groupBox1.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold);
+            groupBox1.ForeColor = Color.White;
             groupBox1.Location = new Point(0, 0);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(668, 170);
-            groupBox1.TabIndex = 37;
+            groupBox1.Size = new Size(342, 698);
+            groupBox1.TabIndex = 6;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Event1";
+            groupBox1.Text = "Runtime";
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(flowLayoutPanel2);
-            groupBox2.Dock = DockStyle.Top;
+            groupBox2.Controls.Add(flpState);
+            groupBox2.Dock = DockStyle.Left;
             groupBox2.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold);
-            groupBox2.Location = new Point(0, 510);
+            groupBox2.ForeColor = Color.White;
+            groupBox2.Location = new Point(342, 0);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(668, 170);
-            groupBox2.TabIndex = 38;
+            groupBox2.Size = new Size(342, 698);
+            groupBox2.TabIndex = 5;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Event4";
-            // 
-            // flowLayoutPanel2
-            // 
-            flowLayoutPanel2.Location = new Point(27, 40);
-            flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(597, 100);
-            flowLayoutPanel2.TabIndex = 0;
+            groupBox2.Text = "Memory State";
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(flowLayoutPanel3);
-            groupBox3.Dock = DockStyle.Top;
+            groupBox3.Controls.Add(flpNotes);
+            groupBox3.Dock = DockStyle.Left;
             groupBox3.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold);
-            groupBox3.Location = new Point(0, 340);
+            groupBox3.ForeColor = Color.White;
+            groupBox3.Location = new Point(684, 0);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(668, 170);
-            groupBox3.TabIndex = 38;
+            groupBox3.Size = new Size(342, 698);
+            groupBox3.TabIndex = 4;
             groupBox3.TabStop = false;
-            groupBox3.Text = "Event3";
-            // 
-            // flowLayoutPanel3
-            // 
-            flowLayoutPanel3.Location = new Point(27, 40);
-            flowLayoutPanel3.Name = "flowLayoutPanel3";
-            flowLayoutPanel3.Size = new Size(597, 100);
-            flowLayoutPanel3.TabIndex = 0;
-            // 
-            // groupBox4
-            // 
-            groupBox4.Controls.Add(flowLayoutPanel4);
-            groupBox4.Dock = DockStyle.Top;
-            groupBox4.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold);
-            groupBox4.Location = new Point(0, 170);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(668, 170);
-            groupBox4.TabIndex = 38;
-            groupBox4.TabStop = false;
-            groupBox4.Text = "Event2";
-            // 
-            // flowLayoutPanel4
-            // 
-            flowLayoutPanel4.Location = new Point(27, 40);
-            flowLayoutPanel4.Name = "flowLayoutPanel4";
-            flowLayoutPanel4.Size = new Size(597, 100);
-            flowLayoutPanel4.TabIndex = 0;
+            groupBox3.Text = "Notes";
             // 
             // ctrlDpVisualization
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(groupBox2);
+            BackColor = Color.FromArgb(34, 40, 49);
             Controls.Add(groupBox3);
-            Controls.Add(groupBox4);
+            Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "ctrlDpVisualization";
-            Size = new Size(668, 676);
+            Size = new Size(1033, 698);
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
-            groupBox4.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel flpNotes;
+        private FlowLayoutPanel flpState;
+        private FlowLayoutPanel flpRuntime;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
-        private FlowLayoutPanel flowLayoutPanel2;
         private GroupBox groupBox3;
-        private FlowLayoutPanel flowLayoutPanel3;
-        private GroupBox groupBox4;
-        private FlowLayoutPanel flowLayoutPanel4;
     }
 }

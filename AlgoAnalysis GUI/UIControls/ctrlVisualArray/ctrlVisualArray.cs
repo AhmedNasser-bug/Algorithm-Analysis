@@ -60,6 +60,10 @@ namespace MainGUIcsproj.Controls
         {
             return flowLayoutPanel1.Controls[index].Text;
         }
+        public int ArraySize()
+        {
+            return flowLayoutPanel1.Controls.Count;
+        }
         private void btnGenerateArray_Click(object sender, EventArgs e)
         {
 

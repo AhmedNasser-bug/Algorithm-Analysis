@@ -13,18 +13,19 @@ namespace Algorithms_Unit
         public delegate void ChoiceChangeEventHandler(object sender, DynamicProgrammingStateDictionary e);
         public delegate void CacheHitEventHandler(object sender, string HitState);
         public static event ChoiceChangeEventHandler? OnChoiceChange;
-        public static event CacheHitEventHandler? OnCacheHit; 
-        public static event SendIndicesEventHandler? OnCalculation;
+        public static event CacheHitEventHandler? OnCacheHit;
+        public static event SendNoteEventHandler? OnSendNote;
+
 
         /// <summary>
         /// Call on each iteration of each algorithm with the exact state of all tracked variables
         /// </summary>
-        public static void ChoiceChange((object SubProblem, object Answer) memoPair, int? ProcessedIdx, Dictionary<String, object> problemSpecificArgs, object sender = null)
+        public static void ChoiceChange(string choiceRepresentation, int? ProcessedIdx, Dictionary<String, object> problemSpecificArgs, object sender = null)
         {
-            // Call the event handler with the current state
-            DynamicProgrammingStateDictionary state = new DynamicProgrammingStateDictionary(memoPair, ProcessedIdx ?? -1, problemSpecificArgs);
+            DynamicProgrammingStateDictionary state = new DynamicProgrammingStateDictionary(choiceRepresentation, ProcessedIdx ?? -1, problemSpecificArgs);
             OnChoiceChange?.Invoke(sender, state);
         }
+
         /// <summary>
         /// Happens on accessing the memo of a memoized solution of a dynamic programming problem
         /// </summary>
@@ -33,7 +34,7 @@ namespace Algorithms_Unit
         /// <param name="sender"></param>
         public static void CacheHit<T>(T Hit, object sender = null)
         {
-            OnCacheHit?.Invoke(sender, $"{Hit?.ToString()}");
+            OnCacheHit?.Invoke(sender, $"Memo hit on: {Hit?.ToString()}");
         }
 
         /// <summary>
@@ -41,9 +42,9 @@ namespace Algorithms_Unit
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="indices"></param>
-        public static void SendIndices(object sender = null, params List<int> indices)
+        public static void SendNote(string note, object sender = null)
         {
-            OnCalculation?.Invoke(sender, indices);
+            OnSendNote?.Invoke(sender, note);
         }
 
         /*
@@ -69,8 +70,11 @@ namespace Algorithms_Unit
 
             metrics.TotalNumbersOfSteps++;
             Dictionary<int, Int128> memo = new Dictionary<int, Int128>();
-
+            SendNote($" Calculating fib[{n}]", sender);
+            
             Int128 result = FiboMemoizedHelper(n, memo, ref metrics, sender);
+            
+            SendNote($"Finished  fib[{n}] is {result}", sender);
 
             metrics.TotalRuntimeTicks = (DateTime.Now - now).Ticks;
             return metrics;
@@ -78,6 +82,7 @@ namespace Algorithms_Unit
 
         private static Int128 FiboMemoizedHelper(int n, Dictionary<int, Int128> memo, ref Metrics metrics, object sender = null)
         {
+            
             metrics.TotalNumbersOfSteps++;
             metrics.TotalNumbersOfIterations++;
             metrics.TotalNumbersOfComparisons++;
@@ -96,12 +101,16 @@ namespace Algorithms_Unit
 
             Int128 result = FiboMemoizedHelper(n - 1, memo, ref metrics, sender) + FiboMemoizedHelper(n - 2, memo, ref metrics, sender);
             memo[n] = result; metrics.TotalNumbersOfSteps++;
-            ChoiceChange((n, result), n, null, sender);
+
+            string choice = $"Fibo[{n}] = {result}";
+            ChoiceChange(choice, n, null, sender);
             return result;
         }
 
         public static Metrics FiboTabulated(int n, object sender = null)
         {
+
+            SendNote($" Calculating fib[{n}]", sender);
             Metrics metrics = new Metrics();
             DateTime begin = DateTime.Now;
 
@@ -117,10 +126,14 @@ namespace Algorithms_Unit
 
                 Int128 f_1 = fibs[fibs.Count - 2], f_2 = fibs[fibs.Count - 1];
                 fibs.Add(f_1 + f_2);
-                ChoiceChange((i, fibs[fibs.Count - 1]), i, null, sender);
+
+                string choice = $"Fib[{i}] = {fibs[fibs.Count - 1]}";
+                ChoiceChange(choice, i, null, sender);
             }
 
             metrics.TotalRuntimeTicks = (DateTime.Now - begin).Ticks;
+            SendNote($"Finished  fib[{n}] is {fibs[fibs.Count - 1]}", sender);
+
             return metrics;
         }
 
@@ -158,7 +171,8 @@ namespace Algorithms_Unit
                 metrics.TotalNumbersOfComparisons += 2;
 
                 // Sending the indices of the current element and the compared one
-                SendIndices(sender, CurIdx, itemIdx);
+                SendNote($"Stealing the{itemIdx}th item with value {values[itemIdx]} and weight {weights[itemIdx]}", sender);
+
 
                 // Choice between taking the element and not taking it
                 max = Max(max, values[itemIdx] + Knapsack_01MemoizedHelper(CurValue, CurIdx + 1, weights, values, capacity - weights[itemIdx], ref memo, ref metrics, sender));
@@ -167,6 +181,8 @@ namespace Algorithms_Unit
 
             metrics.TotalNumbersOfArrayAccesses++;
             memo[capacity] = max;
+            string choice = $"Best Value for Capacity {capacity} is {memo[capacity]}";
+            ChoiceChange(choice, CurIdx, null, sender);
             return max;
         }
 
@@ -199,6 +215,7 @@ namespace Algorithms_Unit
             metrics.TotalNumbersOfArrayAccesses++;
             if (memo.ContainsKey(capacity))
             {
+                CacheHit(capacity, sender);
                 return memo[capacity];
             }
 
@@ -212,7 +229,7 @@ namespace Algorithms_Unit
                 metrics.TotalNumbersOfArrayAccesses += 2;
                 metrics.TotalNumbersOfComparisons += 2;
 
-                SendIndices(sender, itemIdx);
+                SendNote($"Stealing the{itemIdx}th item with value {values[itemIdx]} and weight {weights[itemIdx]}", sender);
 
                 // Choice between taking the element and not taking it
                 max = Max(max, values[itemIdx] + Knapsack_InfMemoizedHelper(CurValue, weights, values, capacity - weights[itemIdx], ref memo, ref metrics, sender));
@@ -221,7 +238,8 @@ namespace Algorithms_Unit
 
             metrics.TotalNumbersOfArrayAccesses++;
             memo[capacity] = max;
-            ChoiceChange((capacity, max), (int)capacity, null, sender);
+            string choice = $"Best Value for Capacity {capacity} is {max}";
+            ChoiceChange(choice, (int)capacity, null, sender);
             return max;
         }
 

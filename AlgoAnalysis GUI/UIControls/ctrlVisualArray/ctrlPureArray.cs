@@ -19,14 +19,45 @@ namespace UIControls.ctrlVisualArray
             InitializeComponent();
             List<Int16> SortedArray = GenerateRandomArray(20, 1, 1001);
             SortedArray.Sort();
-            for (int i = 0; i < 20; i++)
+            foreach (Int16 i in SortedArray)
             {
-                flowLayoutPanel1.Controls[i].Text = SortedArray[i].ToString();
-                flowLayoutPanel1.Controls[i].Enabled = false;
+                Button curItem = new Button();
+                curItem.Text = i.ToString();
+                curItem.BackColor = SystemColors.Control;
+                curItem.MinimumSize = new Size(60, 60);
+                curItem.AutoSize = true;
+                curItem.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+
+                flowLayoutPanel1.Controls.Add(curItem);
             }
+
             CurrentSize = 20;
             CurrentArray = SortedArray;
         }
+
+        public void ChangeArray(int size)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            List<Int16> newArr = GenerateRandomArray(size, 1, 1001);
+            
+            foreach (Int16 i in newArr)
+            {
+                Button curItem = new Button();
+                curItem.Text = i.ToString();
+                curItem.BackColor = SystemColors.Control;
+                curItem.MinimumSize = new Size(40, 40);
+                curItem.MaximumSize = new Size(80, 80);
+                curItem.AutoSize = true;
+                curItem.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+
+                flowLayoutPanel1.Controls.Add(curItem);
+            }
+
+
+            CurrentSize = size;
+            CurrentArray = newArr;
+        }
+
         private static List<Int16> GenerateRandomArray(int size, int minValue, int maxValue)
         {
             Random random = new Random();

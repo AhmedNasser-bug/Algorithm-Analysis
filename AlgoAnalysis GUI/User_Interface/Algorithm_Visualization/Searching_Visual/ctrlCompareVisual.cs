@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Algorithms_Unit;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -50,6 +51,8 @@ namespace MainGUIcsproj.Algorithm_Visualization.Searching_Visual
             lblTargetFirst.Text = ctrlPureArray1.GetValue(TargetedIndex);
             lblTargetSecond.Text = ctrlPureArray2.GetValue(TargetedIndex);
 
+            Metrics lnrMetrics = Searching.LinearSearch(ctrlPureArray1.CurrentArray, TargetedIndex);
+            Metrics bnrMetrics = Searching.BinarySearch(ctrlPureArray1.CurrentArray, TargetedIndex);
 
 
         }

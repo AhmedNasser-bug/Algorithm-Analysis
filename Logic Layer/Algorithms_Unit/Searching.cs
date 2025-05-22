@@ -36,27 +36,41 @@ namespace Algorithms_Unit
          */
 
 
-        public static bool LinearSearch(List<Int16> values, Int128 target, object sender = null)
+        public static Metrics LinearSearch(List<Int16> values, Int128 target, object sender = null)
         {
+            Metrics metrics = new Metrics();
+            DateTime begin = DateTime.Now;
+            metrics.TotalNumbersOfSteps++;
+            metrics.TotalNumbersOfComparisons++;
+
+
             for (int i = 0; i < values.Count; i++)
             {
+                metrics.TotalNumbersOfComparisons += 2;
                 // Highlight the current index
                 OnSearchChange(i, null, sender);
                 if (values[i] == target)
                 {
-                    return true;
+                    OnSearchChange(i, new Dictionary<string, object> { { "found", true } });
                 }
             }
-            return false;
+            metrics.TotalRuntimeTicks = (DateTime.Now - begin).Ticks;
+            return metrics;
         }
 
-        public static bool BinarySearch(List<Int128> values, Int128 target, object sender = null)
+        public static Metrics BinarySearch(List<Int128> values, Int128 target, object sender = null)
         {
+            Metrics metrics = new Metrics();
+            DateTime begin = DateTime.Now;
+            metrics.TotalNumbersOfSteps++;
+            metrics.TotalNumbersOfComparisons++;
             int low = 0;
             int high = values.Count - 1;
             int mid = low + (high - low) / 2;
             while (high >= low)
             {
+                metrics.TotalNumbersOfComparisons += 4;
+                metrics.TotalNumbersOfIterations++;
                 // Highlight the current index
                 Dictionary<string, object> bounds = new Dictionary<string, object>
                 {
@@ -67,29 +81,40 @@ namespace Algorithms_Unit
 
                 if (values[mid] > target)
                 {
+                    metrics.TotalNumbersOfSteps += 2;
                     high = mid - 1;
                     mid = low + (high - low) / 2;
                 }
                 else if (values[mid] < target)
                 {
+                    metrics.TotalNumbersOfSteps += 2;
                     low = mid + 1;
                     mid = low + (high - low) / 2;
                 }
                 else if (values[mid] == target)
+                {
 
-                    return true;
+                    OnSearchChange(mid, new Dictionary<string, object> { { "found", true } });
+                }
             }
 
-            return false;
+            metrics.TotalRuntimeTicks = (DateTime.Now - begin).Ticks;
+            return metrics;
         }
 
-        public static bool BinarySearch(List<Int16> values, Int16 target, object sender = null)
+        public static Metrics BinarySearch(List<Int16> values, Int16 target, object sender = null)
         {
+            Metrics metrics = new Metrics();
+            DateTime begin = DateTime.Now;
+            metrics.TotalNumbersOfSteps++;
+            metrics.TotalNumbersOfComparisons++;
             int low = 0;
             int high = values.Count - 1;
             int mid = low + (high - low) / 2;
             while (high >= low)
             {
+                metrics.TotalNumbersOfComparisons += 4;
+                metrics.TotalNumbersOfIterations++;
                 // Highlight the current index
                 Dictionary<string, object> bounds = new Dictionary<string, object>
                 {
@@ -100,20 +125,25 @@ namespace Algorithms_Unit
 
                 if (values[mid] > target)
                 {
+                    metrics.TotalNumbersOfSteps += 2;
                     high = mid - 1;
                     mid = low + (high - low) / 2;
                 }
                 else if (values[mid] < target)
                 {
+                    metrics.TotalNumbersOfSteps += 2;
                     low = mid + 1;
                     mid = low + (high - low) / 2;
                 }
                 else if (values[mid] == target)
                 {
-                    return true;
+
+                    OnSearchChange(mid, new Dictionary<string, object> { { "found", true } });
                 }
             }
-            return false;
+
+            metrics.TotalRuntimeTicks = (DateTime.Now - begin).Ticks;
+            return metrics;
         }
     }
 }

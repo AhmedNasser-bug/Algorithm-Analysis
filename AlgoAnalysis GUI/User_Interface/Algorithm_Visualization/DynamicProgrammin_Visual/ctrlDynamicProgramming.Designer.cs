@@ -30,12 +30,14 @@
         {
             btnBack = new Button();
             lblTitle = new Label();
-            btnLCS = new Button();
             btnKnapsackInf = new Button();
             btnKnapsack = new Button();
             btnFiboTab = new Button();
             btnMemoFib = new Button();
             ctrlDpVisualization1 = new UIControls.ctrlDpVisualization();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            ctrlMetricsBox1 = new UIControls.ctrlMetricsBox();
+            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // btnBack
@@ -43,7 +45,7 @@
             btnBack.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnBack.BackColor = Color.FromArgb(223, 208, 184);
             btnBack.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBack.Location = new Point(888, 21);
+            btnBack.Location = new Point(1473, 21);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(231, 46);
             btnBack.TabIndex = 26;
@@ -59,67 +61,57 @@
             lblTitle.ForeColor = Color.Transparent;
             lblTitle.Location = new Point(0, 0);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(1122, 84);
+            lblTitle.Size = new Size(1707, 84);
             lblTitle.TabIndex = 25;
             lblTitle.Text = "Select Algorithm";
             // 
-            // btnLCS
-            // 
-            btnLCS.BackColor = Color.FromArgb(223, 208, 184);
-            btnLCS.Dock = DockStyle.Bottom;
-            btnLCS.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLCS.Location = new Point(0, 879);
-            btnLCS.Name = "btnLCS";
-            btnLCS.Size = new Size(1122, 115);
-            btnLCS.TabIndex = 24;
-            btnLCS.Text = "Longest Common Subsequence (LCS)";
-            btnLCS.UseVisualStyleBackColor = false;
-            // 
             // btnKnapsackInf
             // 
+            btnKnapsackInf.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnKnapsackInf.BackColor = Color.FromArgb(223, 208, 184);
-            btnKnapsackInf.Dock = DockStyle.Bottom;
             btnKnapsackInf.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnKnapsackInf.Location = new Point(0, 994);
+            btnKnapsackInf.Location = new Point(3, 48);
             btnKnapsackInf.Name = "btnKnapsackInf";
-            btnKnapsackInf.Size = new Size(1122, 115);
+            btnKnapsackInf.Size = new Size(328, 39);
             btnKnapsackInf.TabIndex = 23;
             btnKnapsackInf.Text = "Infinite Knapsack";
             btnKnapsackInf.UseVisualStyleBackColor = false;
-            btnKnapsackInf.Click += btnInsertionSort_Click;
+            btnKnapsackInf.Click += btnKnapsackInf_Click_1;
             // 
             // btnKnapsack
             // 
+            btnKnapsack.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnKnapsack.BackColor = Color.FromArgb(223, 208, 184);
-            btnKnapsack.Dock = DockStyle.Bottom;
             btnKnapsack.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnKnapsack.Location = new Point(0, 1109);
+            btnKnapsack.Location = new Point(3, 3);
             btnKnapsack.Name = "btnKnapsack";
-            btnKnapsack.Size = new Size(1122, 115);
+            btnKnapsack.Size = new Size(328, 39);
             btnKnapsack.TabIndex = 22;
             btnKnapsack.Text = "Knapsack 0/1";
             btnKnapsack.UseVisualStyleBackColor = false;
+            btnKnapsack.Click += btnKnapsack_Click;
             // 
             // btnFiboTab
             // 
+            btnFiboTab.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnFiboTab.BackColor = Color.FromArgb(223, 208, 184);
-            btnFiboTab.Dock = DockStyle.Bottom;
             btnFiboTab.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnFiboTab.Location = new Point(0, 1224);
+            btnFiboTab.Location = new Point(3, 138);
             btnFiboTab.Name = "btnFiboTab";
-            btnFiboTab.Size = new Size(1122, 115);
+            btnFiboTab.Size = new Size(328, 39);
             btnFiboTab.TabIndex = 21;
             btnFiboTab.Text = "Fibonacci Tabulated";
             btnFiboTab.UseVisualStyleBackColor = false;
+            btnFiboTab.Click += btnFiboTab_Click;
             // 
             // btnMemoFib
             // 
+            btnMemoFib.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnMemoFib.BackColor = Color.FromArgb(223, 208, 184);
-            btnMemoFib.Dock = DockStyle.Bottom;
             btnMemoFib.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMemoFib.Location = new Point(0, 1339);
+            btnMemoFib.Location = new Point(3, 93);
             btnMemoFib.Name = "btnMemoFib";
-            btnMemoFib.Size = new Size(1122, 115);
+            btnMemoFib.Size = new Size(328, 39);
             btnMemoFib.TabIndex = 20;
             btnMemoFib.Text = "Fibonacci Memoized";
             btnMemoFib.UseVisualStyleBackColor = false;
@@ -127,38 +119,58 @@
             // 
             // ctrlDpVisualization1
             // 
-            ctrlDpVisualization1.Location = new Point(123, 87);
+            ctrlDpVisualization1.BackColor = Color.FromArgb(34, 40, 49);
+            ctrlDpVisualization1.Location = new Point(3, 87);
             ctrlDpVisualization1.Name = "ctrlDpVisualization1";
-            ctrlDpVisualization1.Size = new Size(809, 646);
+            ctrlDpVisualization1.Size = new Size(1119, 646);
             ctrlDpVisualization1.TabIndex = 27;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Controls.Add(btnKnapsack);
+            flowLayoutPanel1.Controls.Add(btnKnapsackInf);
+            flowLayoutPanel1.Controls.Add(btnMemoFib);
+            flowLayoutPanel1.Controls.Add(btnFiboTab);
+            flowLayoutPanel1.Dock = DockStyle.Right;
+            flowLayoutPanel1.Location = new Point(1373, 84);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(334, 1177);
+            flowLayoutPanel1.TabIndex = 28;
+            // 
+            // ctrlMetricsBox1
+            // 
+            ctrlMetricsBox1.Location = new Point(3, 739);
+            ctrlMetricsBox1.Name = "ctrlMetricsBox1";
+            ctrlMetricsBox1.Size = new Size(585, 215);
+            ctrlMetricsBox1.TabIndex = 29;
             // 
             // ctrlDynamicProgramming
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(34, 40, 49);
+            Controls.Add(ctrlMetricsBox1);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(ctrlDpVisualization1);
             Controls.Add(btnBack);
             Controls.Add(lblTitle);
-            Controls.Add(btnLCS);
-            Controls.Add(btnKnapsackInf);
-            Controls.Add(btnKnapsack);
-            Controls.Add(btnFiboTab);
-            Controls.Add(btnMemoFib);
             Name = "ctrlDynamicProgramming";
-            Size = new Size(1122, 1454);
+            Size = new Size(1707, 1261);
+            flowLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
+
 
         #endregion
 
         private Button btnBack;
         private Label lblTitle;
-        private Button btnLCS;
         private Button btnKnapsackInf;
         private Button btnKnapsack;
         private Button btnFiboTab;
         private Button btnMemoFib;
         private UIControls.ctrlDpVisualization ctrlDpVisualization1;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private UIControls.ctrlMetricsBox ctrlMetricsBox1;
     }
 }

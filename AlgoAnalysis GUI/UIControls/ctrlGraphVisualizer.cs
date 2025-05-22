@@ -63,7 +63,7 @@ namespace UIControls
             cbChartTypes.DataSource = enumNames;
             cbChartTypes.SelectedIndex = 0; // Set default selection
         }
-        private void SetupChart()
+        private void SetupChart()   
         {
             graphSeries = chart1.Series[0];
             graphSeries.ChartType = SeriesChartType.Bubble;
@@ -119,6 +119,8 @@ namespace UIControls
 
 
         }
+
+
 
 
         /// <summary>

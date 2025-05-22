@@ -13,7 +13,16 @@
     <Compile Update="Algorithm_Visualization\DynamicProgrammin_Visual\ctrlDynamicProgramming.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Algorithm_Visualization\DynamicProgrammin_Visual\FibonacciInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Algorithm_Visualization\DynamicProgrammin_Visual\KnapSackInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Algorithm_Visualization\Greedy_Visual\ctrlGreedyVisual.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Algorithm_Visualization\Greedy_Visual\ctrlGreedyVisualization.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Algorithm_Visualization\Pathfinding_Visual\ctrlPathfindingVisual.cs">

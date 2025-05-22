@@ -2,7 +2,7 @@
 {
     public delegate void SendIndexEventHandler(object sender, int idx);
     public delegate void SendIndicesEventHandler(object sender, params List<int> indices);
-    public delegate void SendNoteEventHandler(object sender, int idx);
+    public delegate void SendNoteEventHandler(object sender, string note);
     /// <summary>
     /// This class is the return value of all algorithms written in this project
     /// Main props

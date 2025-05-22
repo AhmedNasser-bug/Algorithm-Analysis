@@ -11,6 +11,9 @@
     <Compile Update="ctrlGraphVisualizer.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="ctrlKnapsackInput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="ctrlMetricsBox.cs">
       <SubType>UserControl</SubType>
     </Compile>

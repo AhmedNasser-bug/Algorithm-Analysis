@@ -1,5 +1,6 @@
 ﻿using Algorithms_Unit;
 using Algorithms_Unit.Utils;
+using MainGUIcsproj.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,15 +44,16 @@ namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
 
             // Update Visual Arrays
             CurrentArr = Input.GenerateRandomRange(1, 40);
-            List<Int128> copy = CurrentArr.ToList();
+
             ctrlSortingVisualizer1.ChangeValues(CurrentArr.ToList());
-            ctrlSortingVisualizer2.ChangeValues(copy);
+            ctrlSortingVisualizer2.ChangeValues(CurrentArr.ToList());
 
             // Subscribe to swapping event
-            Sorting.OnSwap += Sorting_OnSwapFirst;
-            Sorting.OnSwap += Sorting_OnSwapSecond;
+            Sorting.OnSwap += Sorting_OnSwap1;
+            Sorting.OnSwap += Sorting_OnSwap2;
         }
 
+        
         private void btnBack_Click(object sender, EventArgs e)
         {
             frmMainMenu.globalForm.ChangeControl(new ctrlSortingMain());
@@ -60,31 +62,33 @@ namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
         private void cbChartTypes_SelectedIndexChanged(object sender, EventArgs e)
         {
             ctrlSortingVisualizer1.ChangeChartType((System.Windows.Forms.DataVisualization.Charting.SeriesChartType)cbChartTypes.SelectedIndex);
+            ctrlSortingVisualizer2.ChangeChartType((System.Windows.Forms.DataVisualization.Charting.SeriesChartType)cbChartTypes.SelectedIndex);
         }
 
 
-        private void Sorting_OnSwapFirst(object sender, SortingStateDictionary sortingState)
+        private void Sorting_OnSwap1(object sender, SortingStateDictionary sortingState)
         {
             if ((string)sender == firstSort)
             {
                 ctrlSortingVisualizer1.UpdateHistogram(sortingState.SwappedIndices.Value, sortingState.SwappedIndices.Key);
-               //swappedF1.Add((sortingState.SwappedIndices.Key, sortingState.SwappedIndices.Value));
             }
         }
-        private void Sorting_OnSwapSecond(object sender, SortingStateDictionary sortingState)
+        private void Sorting_OnSwap2(object sender, SortingStateDictionary sortingState)
         {
             if ((string)sender == secondSort)
             {
                 ctrlSortingVisualizer2.UpdateHistogram(sortingState.SwappedIndices.Value, sortingState.SwappedIndices.Key);
-                //swappedF2.Add((sortingState.SwappedIndices.Key, sortingState.SwappedIndices.Value));
             }
         }
+
 
 
         private void btnStartCompare_Click(object sender, EventArgs e)
         {
             Func<List<Int128>,object, Metrics>? func1 = null;
             Func<List<Int128>,object, Metrics>? func2 = null;
+            Metrics res1 = new Metrics();
+            Metrics res2 = new();
             
             // Get the first choice
             switch ((PresentSortingAlgorithms)cbFirstAlg.SelectedIndex)
@@ -110,8 +114,8 @@ namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
                 default:
                     break;
             }
-            Task.Run(() => func1?.Invoke(CurrentArr, firstSort));
-
+            
+            
             // Get the second choice
             switch ((PresentSortingAlgorithms)cbSecondAlg.SelectedIndex)
             {
@@ -136,26 +140,41 @@ namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
                 default:
                     break;
             }
-            Task.Run(() => func2?.Invoke(CurrentArr, secondSort));
+
+            List<Int128> inp1 = CurrentArr.ToList();
+            List<Int128> inp2 = CurrentArr.ToList();
+
+            Task.Run(() => {
+                res1 = func1?.Invoke(inp1, firstSort);
+            });
+            Task.Run(() => {
+                res2 = func2?.Invoke(inp2, secondSort);
+                });
+
+
+            
+
 
         }
+
 
         private void btnNewValues_Click(object sender, EventArgs e)
         {
             int range = (int)nupRandomArrayRange.Value;
-            List<Int128> nums = Input.GenerateRandomRange(1, range);
+            CurrentArr = Input.GenerateRandomRange(1, range);
 
-            ctrlSortingVisualizer1.ChangeValues(nums);
-            ctrlSortingVisualizer2.ChangeValues(nums);
+            
+            ctrlSortingVisualizer1.ChangeValues(CurrentArr.ToList());
+            ctrlSortingVisualizer2.ChangeValues(CurrentArr.ToList());
         }
 
         private void btnDescending_Click(object sender, EventArgs e)
         {
             int range = (int)nupRandomArrayRange.Value;
-            List<Int128> nums = Input.GenerateReverseSortedArray(1, range);
+            CurrentArr = Input.GenerateReverseSortedArray(1, range);
 
-            ctrlSortingVisualizer1.ChangeValues(nums);
-            ctrlSortingVisualizer2.ChangeValues(nums);
+            ctrlSortingVisualizer1.ChangeValues(CurrentArr.ToList());
+            ctrlSortingVisualizer2.ChangeValues(CurrentArr.ToList());
         }
     }
 }

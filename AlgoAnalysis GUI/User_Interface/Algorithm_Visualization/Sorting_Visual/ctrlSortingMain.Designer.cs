@@ -37,7 +37,7 @@
             btnBubbleSort = new Button();
             btnInsertionSort = new Button();
             btnHeapSort = new Button();
-            button2 = new Button();
+            btnSelectionsort = new Button();
             lbl = new Label();
             lblTotalSwaps = new Label();
             lblTotalNumberOfComprs = new Label();
@@ -107,7 +107,7 @@
             flpSortingAlgorithms.Controls.Add(btnBubbleSort);
             flpSortingAlgorithms.Controls.Add(btnInsertionSort);
             flpSortingAlgorithms.Controls.Add(btnHeapSort);
-            flpSortingAlgorithms.Controls.Add(button2);
+            flpSortingAlgorithms.Controls.Add(btnSelectionsort);
             flpSortingAlgorithms.Dock = DockStyle.Right;
             flpSortingAlgorithms.Location = new Point(1333, 0);
             flpSortingAlgorithms.Name = "flpSortingAlgorithms";
@@ -126,6 +126,7 @@
             btnMergeSort.Tag = "1";
             btnMergeSort.Text = "Merge Sort";
             btnMergeSort.UseVisualStyleBackColor = false;
+            btnMergeSort.Click += btnMergeSort_Click;
             // 
             // btnQuickSort
             // 
@@ -167,6 +168,7 @@
             btnInsertionSort.Tag = "4";
             btnInsertionSort.Text = "Insertion Sort";
             btnInsertionSort.UseVisualStyleBackColor = false;
+            btnInsertionSort.Click += btnInsertionSort_Click;
             // 
             // btnHeapSort
             // 
@@ -180,19 +182,21 @@
             btnHeapSort.Tag = "5";
             btnHeapSort.Text = "Heap Sort";
             btnHeapSort.UseVisualStyleBackColor = false;
+            btnHeapSort.Click += btnHeapSort_Click;
             // 
-            // button2
+            // btnSelectionsort
             // 
-            button2.Anchor = AnchorStyles.None;
-            button2.BackColor = Color.FromArgb(223, 208, 184);
-            button2.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(3, 468);
-            button2.Name = "button2";
-            button2.Size = new Size(319, 87);
-            button2.TabIndex = 26;
-            button2.Tag = "5";
-            button2.Text = "Heap Sort";
-            button2.UseVisualStyleBackColor = false;
+            btnSelectionsort.Anchor = AnchorStyles.None;
+            btnSelectionsort.BackColor = Color.FromArgb(223, 208, 184);
+            btnSelectionsort.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSelectionsort.Location = new Point(3, 468);
+            btnSelectionsort.Name = "btnSelectionsort";
+            btnSelectionsort.Size = new Size(319, 87);
+            btnSelectionsort.TabIndex = 26;
+            btnSelectionsort.Tag = "5";
+            btnSelectionsort.Text = "Selection sort";
+            btnSelectionsort.UseVisualStyleBackColor = false;
+            btnSelectionsort.Click += btnSelectionsort_Click;
             // 
             // lbl
             // 
@@ -427,7 +431,7 @@
         private Button btnBack;
         private Label label1;
         private NumericUpDown nupRandomArrayRange;
-        private Button button2;
+        private Button btnSelectionsort;
         private Button btnAnalyzePerformance;
         private Controls.ctrlSortingVisualizer sortingVisualizer;
         private Button btnCompare;

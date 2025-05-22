@@ -125,5 +125,25 @@ namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
         {
             frmMainMenu.globalForm.ChangeControl(new ctrlSortingComparisson());
         }
+
+        private void btnMergeSort_Click(object sender, EventArgs e)
+        {
+            StartSorting((values) => { return Sorting.MergeSort(values); }, values);
+        }
+
+        private void btnInsertionSort_Click(object sender, EventArgs e)
+        {
+            StartSorting((values) => Sorting.InsertionSort(values), values);
+        }
+
+        private void btnSelectionsort_Click(object sender, EventArgs e)
+        {
+            StartSorting((values) => Sorting.selectionsort(values), values);
+        }
+
+        private void btnHeapSort_Click(object sender, EventArgs e)
+        {
+            StartSorting((values) => Sorting.HeapSort(values), values);
+        }
     }
 }

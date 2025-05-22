@@ -36,6 +36,8 @@
             flowLayoutPanel1 = new FlowLayoutPanel();
             button1 = new Button();
             btnCancel = new Button();
+            ctrlDpVisualization1 = new UIControls.ctrlDpVisualization();
+            ctrlMetricsBox1 = new UIControls.ctrlMetricsBox();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -75,6 +77,7 @@
             btnFloydWarshall.TabIndex = 22;
             btnFloydWarshall.Text = "Floyd-Warshall";
             btnFloydWarshall.UseVisualStyleBackColor = false;
+            btnFloydWarshall.Click += btnFloydWarshall_Click;
             // 
             // btnDijkstra
             // 
@@ -91,10 +94,9 @@
             // 
             // ctrlGraphVisualizer1
             // 
-            ctrlGraphVisualizer1.Dock = DockStyle.Top;
-            ctrlGraphVisualizer1.Location = new Point(0, 84);
+            ctrlGraphVisualizer1.Location = new Point(1042, 59);
             ctrlGraphVisualizer1.Name = "ctrlGraphVisualizer1";
-            ctrlGraphVisualizer1.Size = new Size(1933, 480);
+            ctrlGraphVisualizer1.Size = new Size(891, 698);
             ctrlGraphVisualizer1.TabIndex = 27;
             // 
             // flowLayoutPanel1
@@ -104,7 +106,7 @@
             flowLayoutPanel1.Controls.Add(btnFloydWarshall);
             flowLayoutPanel1.Controls.Add(button1);
             flowLayoutPanel1.FlowDirection = FlowDirection.RightToLeft;
-            flowLayoutPanel1.Location = new Point(1073, 962);
+            flowLayoutPanel1.Location = new Point(1073, 1212);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(860, 97);
             flowLayoutPanel1.TabIndex = 29;
@@ -120,6 +122,7 @@
             button1.TabIndex = 23;
             button1.Text = "Bellman Ford";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // btnCancel
             // 
@@ -134,18 +137,35 @@
             btnCancel.UseVisualStyleBackColor = false;
             btnCancel.Click += btnCancel_Click;
             // 
+            // ctrlDpVisualization1
+            // 
+            ctrlDpVisualization1.BackColor = Color.FromArgb(34, 40, 49);
+            ctrlDpVisualization1.Location = new Point(3, 59);
+            ctrlDpVisualization1.Name = "ctrlDpVisualization1";
+            ctrlDpVisualization1.Size = new Size(1033, 698);
+            ctrlDpVisualization1.TabIndex = 31;
+            // 
+            // ctrlMetricsBox1
+            // 
+            ctrlMetricsBox1.Location = new Point(3, 763);
+            ctrlMetricsBox1.Name = "ctrlMetricsBox1";
+            ctrlMetricsBox1.Size = new Size(585, 215);
+            ctrlMetricsBox1.TabIndex = 32;
+            // 
             // ctrlPathfindingVisual
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(34, 40, 49);
+            Controls.Add(ctrlMetricsBox1);
+            Controls.Add(ctrlDpVisualization1);
             Controls.Add(btnCancel);
             Controls.Add(btnBack);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(ctrlGraphVisualizer1);
             Controls.Add(lblTitle);
             Name = "ctrlPathfindingVisual";
-            Size = new Size(1933, 1059);
+            Size = new Size(1933, 1309);
             flowLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -160,5 +180,7 @@
         private FlowLayoutPanel flowLayoutPanel1;
         private Button button1;
         private Button btnCancel;
+        private UIControls.ctrlDpVisualization ctrlDpVisualization1;
+        private UIControls.ctrlMetricsBox ctrlMetricsBox1;
     }
 }

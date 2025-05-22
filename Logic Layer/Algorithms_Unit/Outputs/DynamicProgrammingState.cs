@@ -8,11 +8,11 @@ namespace Algorithms_Unit
 {
     public class DynamicProgrammingStateDictionary : EventArgs
     {
-        public (object SubProblem, object Answer)  MemoPair { get; set; }
+        public string  MemoPair { get; set; }
         public int ProcessedIdx { get; set; }
         public Dictionary<String, object>? ProblemSpecificArgs { get; set; }
 
-        public DynamicProgrammingStateDictionary((object SubProblem, object Answer) memoPair, int processedIdx, Dictionary<String, object>? problemSpecificArgs)
+        public DynamicProgrammingStateDictionary(string memoPair, int processedIdx, Dictionary<String, object>? problemSpecificArgs)
         {
             MemoPair = memoPair;
             ProcessedIdx = processedIdx;

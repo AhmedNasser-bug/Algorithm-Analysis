@@ -46,6 +46,7 @@ namespace Algorithms_Unit
                         // To send by the array to the function by refence
                         Swap(ref arr, j, j + 1);
                         SendIndices(j, j + 1, sender);
+
                         metrics.TotalNumbersOfSwaps++;
                         metrics.TotalNumbersOfArrayAccesses += 4;
                     }
@@ -228,8 +229,11 @@ namespace Algorithms_Unit
             return metrics;
         }
 
-        private static int nextGap(int gap)
+        private static int nextGap(int gap, ref Metrics metrics)
         {
+            metrics.TotalNumbersOfSteps++;
+            metrics.TotalNumbersOfComparisons++;
+
             if (gap <= 1)
             {
                 return 0;
@@ -239,14 +243,22 @@ namespace Algorithms_Unit
 
         private static void inPlaceMerge(List<Int128> arr, int start, int end, ref Metrics metrics, object sender = null)
         {
+            metrics.TotalNumbersOfSteps++;
+            metrics.TotalNumbersOfComparisons++;
             var gap = end - start + 1;
-            for (gap = nextGap(gap); gap > 0; gap = nextGap(gap))
+            for (gap = nextGap(gap, ref metrics); gap > 0; gap = nextGap(gap, ref metrics))
             {
+                metrics.TotalNumbersOfIterations++;
+                metrics.TotalNumbersOfComparisons += 2;
                 for (int i = start; i + gap <= end; i++)
                 {
+                    metrics.TotalNumbersOfSteps++;
+                    metrics.TotalNumbersOfIterations++;
+                    metrics.TotalNumbersOfComparisons += 2;
                     var j = i + gap;
                     if (arr[i] > arr[j])
                     {
+                        metrics.TotalNumbersOfSteps += 3;
                         Swap(ref arr, i, j);
                         SendIndices(i, j, sender);
                     }
@@ -255,12 +267,16 @@ namespace Algorithms_Unit
         }
 
         private static void mergeSorth(List<Int128> arr, int s, int e, ref Metrics metrics, object sender = null)
+
         {
+            metrics.TotalNumbersOfIterations++;
+            metrics.TotalNumbersOfSteps++;
+            metrics.TotalNumbersOfComparisons++;
             if (s == e)
             {
                 return;
             }
-
+            metrics.TotalNumbersOfSteps++;
             // Calculating mid to slice the array in two halves
             var mid = (int)((s + e) / 2);
 
@@ -274,6 +290,8 @@ namespace Algorithms_Unit
         {
             Metrics metrics = new Metrics();
             DateTime begin = DateTime.Now;
+            metrics.TotalNumbersOfSteps += 2;
+
             int s = 0;
             int e = arr.Count - 1;
             mergeSorth(arr, s, e, ref metrics, sender);
