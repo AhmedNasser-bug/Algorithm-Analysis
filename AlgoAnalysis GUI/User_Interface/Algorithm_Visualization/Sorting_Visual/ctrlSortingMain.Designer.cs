@@ -52,7 +52,7 @@
             btnBack = new Button();
             label1 = new Label();
             nupRandomArrayRange = new NumericUpDown();
-            sortingVisualizer = new Controls.ctrlSortingVisualizer();
+            sortingVisualizer = new MainGUIcsproj.Controls.ctrlSortingVisualizer();
             flpSortingAlgorithms.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nupRandomArrayRange).BeginInit();
@@ -382,6 +382,7 @@
             sortingVisualizer.Name = "sortingVisualizer";
             sortingVisualizer.Size = new Size(1327, 537);
             sortingVisualizer.TabIndex = 38;
+            sortingVisualizer.Load += sortingVisualizer_Load;
             // 
             // ctrlSortingMain
             // 

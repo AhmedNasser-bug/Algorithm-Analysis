@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using Algorithms_Unit.Utils;
+using System.Data;
 using System.Diagnostics;
 using static Algorithms_Unit.Utils.SortingUtils;
 namespace Algorithms_Unit
@@ -9,7 +10,7 @@ namespace Algorithms_Unit
     public class Sorting
     {
         public delegate void SortingEventHandler(object sender, SortingStateDictionary sortingState);
-        public static event SortingEventHandler? OnSwap;
+        public  static event SortingEventHandler? OnSwap;
 
         /// <summary>
         /// Call on each iteration of each algorithm with the swapped indices for the sorting algorithm
@@ -67,29 +68,12 @@ namespace Algorithms_Unit
             DateTime begin = DateTime.Now; // To track the runtime of the algorithm
 
             // Call the recursive QuickSort function
-            QuickSortRecursive(arr, 0, arr.Count - 1, metrics, sender);
+           QuickSortRecursive(arr, 0, arr.Count - 1, metrics, sender);
 
             metrics.TotalRuntimeTicks = (DateTime.Now - begin).Ticks; // Calculate the total runtime
             metrics.TotalNumbersOfSteps += 2; // Computing runtime and returning
 
             return metrics;
-        }
-
-        /// <summary>
-        /// Recursive helper method for QuickSort
-        /// </summary>
-        static private void QuickSortRecursive(List<Int128> arr, int low, int high, Metrics metrics, object sender = null)
-        {
-            metrics.TotalNumbersOfSteps++; // One step for calling the function
-            metrics.TotalNumbersOfComparisons++;
-            if (low < high)
-            {
-                int pivotIndex = Partition(arr, low, high, metrics, sender);
-
-                // Recursively sort elements before and after the pivot
-                QuickSortRecursive(arr, low, pivotIndex - 1, metrics, sender);
-                QuickSortRecursive(arr, pivotIndex + 1, high, metrics, sender);
-            }
         }
 
         public static Metrics HeapSort(List<Int128> arr, object sender = null)
@@ -123,41 +107,8 @@ namespace Algorithms_Unit
             return metrics;
         }
 
-        static void Heapify(List<Int128> arr, int n, int i, ref Metrics metrics, object sender = null)
-        {
-            metrics.TotalNumbersOfIterations++;
-            metrics.TotalNumbersOfSteps += 3;
-            int largest = i;
-            int l = 2 * i + 1;
-            int r = 2 * i + 2;
-            metrics.TotalNumbersOfArrayAccesses += 2;
-            metrics.TotalNumbersOfComparisons += 2;
-            if (l < n && arr[l] > arr[largest])
-            {
-                metrics.TotalNumbersOfSteps++;
-                largest = l;
-            }
-            metrics.TotalNumbersOfArrayAccesses += 2;
-            metrics.TotalNumbersOfComparisons += 2;
-            if (r < n && arr[r] > arr[largest])
-            {
-                metrics.TotalNumbersOfSteps++;
-                largest = r;
-            }
-            metrics.TotalNumbersOfComparisons++;
-            if (largest != i)
-            {
-                metrics.TotalNumbersOfArrayAccesses += 4;
-                Int128 temp = arr[i];
-                arr[i] = arr[largest];
-                arr[largest] = temp;
-                metrics.TotalNumbersOfSwaps++;
-                SendIndices(i, largest, sender);
-                Heapify(arr, n, largest, ref metrics, sender);
-            }
-        }
 
-        public static Metrics selectionsort(List<Int128> arr, object sender = null)
+        public static Metrics SelectionSort(List<Int128> arr, object sender = null)
         {
             Metrics metrics = new Metrics();
             DateTime begin = DateTime.Now;
@@ -182,6 +133,7 @@ namespace Algorithms_Unit
                     {
                         metrics.TotalNumbersOfSteps++;
                         min_idx = j;
+                        SendIndices(j, j, sender);
                     }
                 }
 
@@ -227,63 +179,6 @@ namespace Algorithms_Unit
             }
             metrics.TotalRuntimeTicks = (DateTime.Now - begin).Ticks;
             return metrics;
-        }
-
-        private static int nextGap(int gap, ref Metrics metrics)
-        {
-            metrics.TotalNumbersOfSteps++;
-            metrics.TotalNumbersOfComparisons++;
-
-            if (gap <= 1)
-            {
-                return 0;
-            }
-            return (int)Math.Ceiling(gap / 2.0);
-        }
-
-        private static void inPlaceMerge(List<Int128> arr, int start, int end, ref Metrics metrics, object sender = null)
-        {
-            metrics.TotalNumbersOfSteps++;
-            metrics.TotalNumbersOfComparisons++;
-            var gap = end - start + 1;
-            for (gap = nextGap(gap, ref metrics); gap > 0; gap = nextGap(gap, ref metrics))
-            {
-                metrics.TotalNumbersOfIterations++;
-                metrics.TotalNumbersOfComparisons += 2;
-                for (int i = start; i + gap <= end; i++)
-                {
-                    metrics.TotalNumbersOfSteps++;
-                    metrics.TotalNumbersOfIterations++;
-                    metrics.TotalNumbersOfComparisons += 2;
-                    var j = i + gap;
-                    if (arr[i] > arr[j])
-                    {
-                        metrics.TotalNumbersOfSteps += 3;
-                        Swap(ref arr, i, j);
-                        SendIndices(i, j, sender);
-                    }
-                }
-            }
-        }
-
-        private static void mergeSorth(List<Int128> arr, int s, int e, ref Metrics metrics, object sender = null)
-
-        {
-            metrics.TotalNumbersOfIterations++;
-            metrics.TotalNumbersOfSteps++;
-            metrics.TotalNumbersOfComparisons++;
-            if (s == e)
-            {
-                return;
-            }
-            metrics.TotalNumbersOfSteps++;
-            // Calculating mid to slice the array in two halves
-            var mid = (int)((s + e) / 2);
-
-            // Recursive calls to sort left and right subarrays
-            mergeSorth(arr, s, mid, ref metrics, sender);
-            mergeSorth(arr, mid + 1, e, ref metrics, sender);
-            inPlaceMerge(arr, s, e, ref metrics, sender);
         }
 
         public static Metrics MergeSort(List<Int128> arr, object sender = null)

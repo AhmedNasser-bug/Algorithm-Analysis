@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -131,6 +132,7 @@ namespace Algorithms_Unit
             SendRuntimeNote("Sorting activities by finish time", new Dictionary<string, object>(), sender);
             SendMemoryNote("Rearranging arrays in sorted order", sender);
             Array.Sort(finish, start);
+            metrics.TotalNumbersOfSteps += (Int128)(finish.Length * Math.Log2(finish.Length));
 
             int finishtime = -1;
             SendRuntimeNote("Starting activity selection with initial finish time = -1", new Dictionary<string, object>(), sender);
@@ -375,10 +377,7 @@ namespace Algorithms_Unit
             Array.Sort(edges, (e1, e2) => {
                 metrics.TotalNumbersOfComparisons++;
                 metrics.TotalNumbersOfArrayAccesses += 2;
-                SendRuntimeNote($"Comparing edges", new Dictionary<string, object> {
-            { "Edge1", $"{e1[0]}-{e1[1]} (weight: {e1[2]})" },
-            { "Edge2", $"{e2[0]}-{e2[1]} (weight: {e2[2]})" }
-        }, sender);
+                SendRuntimeNote($"Comparing edges", null, sender);
                 return e1[2].CompareTo(e2[2]);
             });
             SendMemoryNote("Edges sorted by weight", sender);

@@ -29,12 +29,16 @@
         private void InitializeComponent()
         {
             splitContainer1 = new SplitContainer();
-            ctrlSortingVisualizer1 = new Controls.ctrlSortingVisualizer();
-            ctrlSortingVisualizer2 = new Controls.ctrlSortingVisualizer();
+            ctrlSortingVisualizer1 = new MainGUIcsproj.Controls.ctrlSortingVisualizer();
+            ctrlSortingVisualizer2 = new MainGUIcsproj.Controls.ctrlSortingVisualizer();
             btnBack = new Button();
             groupBox1 = new GroupBox();
+            btnDescending = new Button();
+            nupRandomArrayRange = new NumericUpDown();
             label3 = new Label();
+            label4 = new Label();
             label1 = new Label();
+            btnNewValues = new Button();
             nupAnimationSpeed = new NumericUpDown();
             cbChartTypes = new ComboBox();
             btnStartCompare = new Button();
@@ -47,17 +51,13 @@
             label2 = new Label();
             lbl = new Label();
             lblTotalSwaps = new Label();
-            nupRandomArrayRange = new NumericUpDown();
-            label4 = new Label();
-            btnNewValues = new Button();
-            btnDescending = new Button();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)nupAnimationSpeed).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nupRandomArrayRange).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nupAnimationSpeed).BeginInit();
             SuspendLayout();
             // 
             // splitContainer1
@@ -94,6 +94,7 @@
             ctrlSortingVisualizer2.Name = "ctrlSortingVisualizer2";
             ctrlSortingVisualizer2.Size = new Size(1405, 660);
             ctrlSortingVisualizer2.TabIndex = 1;
+            ctrlSortingVisualizer2.Load += ctrlSortingVisualizer2_Load;
             // 
             // btnBack
             // 
@@ -141,6 +142,31 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Compare Sorting Algorithms";
             // 
+            // btnDescending
+            // 
+            btnDescending.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnDescending.BackColor = Color.FromArgb(223, 208, 184);
+            btnDescending.Font = new Font("SimSun-ExtB", 14.25F, FontStyle.Bold);
+            btnDescending.ForeColor = SystemColors.ControlText;
+            btnDescending.Location = new Point(394, 156);
+            btnDescending.Name = "btnDescending";
+            btnDescending.Size = new Size(132, 35);
+            btnDescending.TabIndex = 49;
+            btnDescending.Text = "Descending";
+            btnDescending.UseVisualStyleBackColor = false;
+            btnDescending.Click += btnDescending_Click;
+            // 
+            // nupRandomArrayRange
+            // 
+            nupRandomArrayRange.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            nupRandomArrayRange.Location = new Point(121, 165);
+            nupRandomArrayRange.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            nupRandomArrayRange.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            nupRandomArrayRange.Name = "nupRandomArrayRange";
+            nupRandomArrayRange.Size = new Size(122, 23);
+            nupRandomArrayRange.TabIndex = 32;
+            nupRandomArrayRange.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -152,6 +178,18 @@
             label3.TabIndex = 48;
             label3.Text = "Chart Type:";
             // 
+            // label4
+            // 
+            label4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label4.AutoSize = true;
+            label4.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(6, 156);
+            label4.Name = "label4";
+            label4.Size = new Size(109, 29);
+            label4.TabIndex = 36;
+            label4.Text = "Range:";
+            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -162,6 +200,20 @@
             label1.Size = new Size(269, 29);
             label1.TabIndex = 47;
             label1.Text = "Animation Speed:";
+            // 
+            // btnNewValues
+            // 
+            btnNewValues.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnNewValues.BackColor = Color.FromArgb(223, 208, 184);
+            btnNewValues.Font = new Font("SimSun-ExtB", 14.25F, FontStyle.Bold);
+            btnNewValues.ForeColor = SystemColors.ControlText;
+            btnNewValues.Location = new Point(256, 156);
+            btnNewValues.Name = "btnNewValues";
+            btnNewValues.Size = new Size(132, 35);
+            btnNewValues.TabIndex = 34;
+            btnNewValues.Text = "New Values";
+            btnNewValues.UseVisualStyleBackColor = false;
+            btnNewValues.Click += btnNewValues_Click;
             // 
             // nupAnimationSpeed
             // 
@@ -294,57 +346,6 @@
             lblTotalSwaps.Size = new Size(0, 29);
             lblTotalSwaps.TabIndex = 24;
             // 
-            // nupRandomArrayRange
-            // 
-            nupRandomArrayRange.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            nupRandomArrayRange.Location = new Point(121, 165);
-            nupRandomArrayRange.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
-            nupRandomArrayRange.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            nupRandomArrayRange.Name = "nupRandomArrayRange";
-            nupRandomArrayRange.Size = new Size(122, 23);
-            nupRandomArrayRange.TabIndex = 32;
-            nupRandomArrayRange.Value = new decimal(new int[] { 1, 0, 0, 0 });
-            // 
-            // label4
-            // 
-            label4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            label4.AutoSize = true;
-            label4.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(6, 156);
-            label4.Name = "label4";
-            label4.Size = new Size(109, 29);
-            label4.TabIndex = 36;
-            label4.Text = "Range:";
-            // 
-            // btnNewValues
-            // 
-            btnNewValues.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnNewValues.BackColor = Color.FromArgb(223, 208, 184);
-            btnNewValues.Font = new Font("SimSun-ExtB", 14.25F, FontStyle.Bold);
-            btnNewValues.ForeColor = SystemColors.ControlText;
-            btnNewValues.Location = new Point(256, 156);
-            btnNewValues.Name = "btnNewValues";
-            btnNewValues.Size = new Size(132, 35);
-            btnNewValues.TabIndex = 34;
-            btnNewValues.Text = "New Values";
-            btnNewValues.UseVisualStyleBackColor = false;
-            btnNewValues.Click += btnNewValues_Click;
-            // 
-            // btnDescending
-            // 
-            btnDescending.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnDescending.BackColor = Color.FromArgb(223, 208, 184);
-            btnDescending.Font = new Font("SimSun-ExtB", 14.25F, FontStyle.Bold);
-            btnDescending.ForeColor = SystemColors.ControlText;
-            btnDescending.Location = new Point(394, 156);
-            btnDescending.Name = "btnDescending";
-            btnDescending.Size = new Size(132, 35);
-            btnDescending.TabIndex = 49;
-            btnDescending.Text = "Descending";
-            btnDescending.UseVisualStyleBackColor = false;
-            btnDescending.Click += btnDescending_Click;
-            // 
             // ctrlSortingComparisson
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -360,8 +361,8 @@
             splitContainer1.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)nupAnimationSpeed).EndInit();
             ((System.ComponentModel.ISupportInitialize)nupRandomArrayRange).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nupAnimationSpeed).EndInit();
             ResumeLayout(false);
         }
 

@@ -32,7 +32,7 @@
       "Algorithms_Unit/1.0.0": {
         "runtime": {
           "Algorithms_Unit.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -43,7 +43,7 @@
         },
         "runtime": {
           "Analysis_Unit.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -56,7 +56,7 @@
         },
         "runtime": {
           "UIControls.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }

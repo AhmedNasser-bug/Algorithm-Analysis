@@ -43,7 +43,7 @@
             btnBack.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnBack.BackColor = Color.FromArgb(223, 208, 184);
             btnBack.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBack.Location = new Point(1296, 21);
+            btnBack.Location = new Point(2229, 21);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(231, 46);
             btnBack.TabIndex = 26;
@@ -59,7 +59,7 @@
             lblTitle.ForeColor = Color.Transparent;
             lblTitle.Location = new Point(0, 0);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(1530, 118);
+            lblTitle.Size = new Size(2463, 118);
             lblTitle.TabIndex = 29;
             lblTitle.Text = "Select Algorithm";
             lblTitle.TextAlign = ContentAlignment.MiddleLeft;
@@ -70,7 +70,7 @@
             btnBinarySEarch.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnBinarySEarch.BackColor = Color.FromArgb(223, 208, 184);
             btnBinarySEarch.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBinarySEarch.Location = new Point(748, 505);
+            btnBinarySEarch.Location = new Point(1213, 665);
             btnBinarySEarch.Name = "btnBinarySEarch";
             btnBinarySEarch.Size = new Size(298, 175);
             btnBinarySEarch.TabIndex = 28;
@@ -84,7 +84,7 @@
             btnLinearSearch.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnLinearSearch.BackColor = Color.FromArgb(223, 208, 184);
             btnLinearSearch.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLinearSearch.Location = new Point(365, 505);
+            btnLinearSearch.Location = new Point(830, 665);
             btnLinearSearch.Name = "btnLinearSearch";
             btnLinearSearch.Size = new Size(298, 175);
             btnLinearSearch.TabIndex = 27;
@@ -97,7 +97,7 @@
             ctrlVisualArray1.Dock = DockStyle.Top;
             ctrlVisualArray1.Location = new Point(0, 118);
             ctrlVisualArray1.Name = "ctrlVisualArray1";
-            ctrlVisualArray1.Size = new Size(1530, 362);
+            ctrlVisualArray1.Size = new Size(2463, 362);
             ctrlVisualArray1.TabIndex = 30;
             // 
             // maskedTextBox1
@@ -127,7 +127,7 @@
             btnCompare.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnCompare.BackColor = Color.FromArgb(223, 208, 184);
             btnCompare.Font = new Font("SimSun-ExtB", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCompare.Location = new Point(1131, 505);
+            btnCompare.Location = new Point(1596, 665);
             btnCompare.Name = "btnCompare";
             btnCompare.Size = new Size(298, 175);
             btnCompare.TabIndex = 33;
@@ -149,7 +149,7 @@
             Controls.Add(btnBack);
             Controls.Add(lblTitle);
             Name = "ctrlSearchingVisual";
-            Size = new Size(1530, 840);
+            Size = new Size(2463, 840);
             ResumeLayout(false);
             PerformLayout();
         }

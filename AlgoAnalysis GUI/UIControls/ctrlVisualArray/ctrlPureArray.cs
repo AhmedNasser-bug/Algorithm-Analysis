@@ -69,6 +69,13 @@ namespace UIControls.ctrlVisualArray
             return array;
         }
 
+        public void Highlightidx(int idx1)
+        {
+             flowLayoutPanel1.Controls[idx1].BackColor = Color.Green;
+            Task.Delay(500).Wait();
+            flowLayoutPanel1.Controls[idx1].BackColor = Color.White;
+        }
+
         public string GetValue(int index)
         {
             /*

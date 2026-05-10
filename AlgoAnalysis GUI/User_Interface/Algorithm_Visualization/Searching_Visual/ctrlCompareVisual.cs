@@ -13,9 +13,28 @@ namespace MainGUIcsproj.Algorithm_Visualization.Searching_Visual
 {
     public partial class ctrlCompareVisual : UserControl
     {
+        public List<Int128> linearIndices = new List<Int128>();
+        public List<Int128> binaryIndices = new List<Int128>();
         public ctrlCompareVisual()
         {
             InitializeComponent();
+            ctrlPureArray1 = new UIControls.ctrlVisualArray.ctrlPureArray();
+            ctrlPureArray2 = new UIControls.ctrlVisualArray.ctrlPureArray();
+            Searching.OnSearchIndexChange += Searching_OnSearchIndexChange;
+
+
+        }
+
+        private void Searching_OnSearchIndexChange(object sender, SearchingStateDictionary processedIndices)
+        {
+            if(sender == "l")
+            {
+                ctrlPureArray1.Highlightidx(processedIndices.ProcessedIdx);
+            }
+            else
+            {
+                ctrlPureArray2.Highlightidx(processedIndices.ProcessedIdx);
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -24,20 +43,7 @@ namespace MainGUIcsproj.Algorithm_Visualization.Searching_Visual
             frmMainMenu.globalForm?.ChangeControl(searchingVisual);
         }
 
-        private void ctrlVisualArray1_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void ctrlPureArray1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ctrlPureArray2_Load(object sender, EventArgs e)
-        {
-
-        }
         private Random random = new Random();
         private short GenerateRandomNumber()
         {
@@ -50,9 +56,11 @@ namespace MainGUIcsproj.Algorithm_Visualization.Searching_Visual
 
             lblTargetFirst.Text = ctrlPureArray1.GetValue(TargetedIndex);
             lblTargetSecond.Text = ctrlPureArray2.GetValue(TargetedIndex);
+            Metrics lnrMetrics;
+            Metrics bnrMetrics;
 
-            Metrics lnrMetrics = Searching.LinearSearch(ctrlPureArray1.CurrentArray, TargetedIndex);
-            Metrics bnrMetrics = Searching.BinarySearch(ctrlPureArray1.CurrentArray, TargetedIndex);
+            Task.Run(() => { lnrMetrics = Searching.LinearSearch(ctrlPureArray1.CurrentArray, TargetedIndex, "l"); });
+            Task.Run(() => { bnrMetrics = Searching.BinarySearch(ctrlPureArray2.CurrentArray, TargetedIndex, "bn"); });
 
 
         }

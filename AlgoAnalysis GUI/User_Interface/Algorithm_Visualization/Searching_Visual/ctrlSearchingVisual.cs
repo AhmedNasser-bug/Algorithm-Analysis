@@ -25,9 +25,11 @@ namespace MainGUIcsproj.Algorithm_Visualization.Searching_Visual
 
         private void onSearchIndexChange(object sender, SearchingStateDictionary searchingStateDictionary)
         {
-            ctrlVisualArray1.HighlightCurrentIndex(searchingStateDictionary.ProcessedIdx, Color.Green);
-
-            _found = _found || Convert.ToBoolean(searchingStateDictionary.ProblemSpecificArgs["found"]);
+            if (!_found)
+            {
+                ctrlVisualArray1.HighlightCurrentIndex(searchingStateDictionary.ProcessedIdx, Color.Green);
+                _found = _found || Convert.ToBoolean(searchingStateDictionary.ProblemSpecificArgs["found"]);
+            }
            
         }
 
@@ -40,7 +42,7 @@ namespace MainGUIcsproj.Algorithm_Visualization.Searching_Visual
 
         private void btnBinarySEarch_Click(object sender, EventArgs e)
         {
-            Searching.BinarySearch(ctrlVisualArray1.CurrentArray, Convert.ToInt16(maskedTextBox1.Text));
+            Metrics metrics = Searching.BinarySearch(ctrlVisualArray1.CurrentArray, Convert.ToInt16(maskedTextBox1.Text));
 
             if (_found)
             {
@@ -56,12 +58,21 @@ namespace MainGUIcsproj.Algorithm_Visualization.Searching_Visual
 
         private void btnCompare_Click(object sender, EventArgs e)
         {
+            Searching.OnSearchIndexChange -= onSearchIndexChange;
             frmMainMenu.globalForm.ChangeControl(new ctrlCompareVisual());
         }
 
         private void btnLinearSearch_Click(object sender, EventArgs e)
         {
-            Searching.LinearSearch(ctrlVisualArray1.CurrentArray, Convert.ToInt16(maskedTextBox1.Text));
+            if (maskedTextBox1.Text.Length > 0)
+            {
+
+                Metrics metrics = Searching.LinearSearch(ctrlVisualArray1.CurrentArray, Convert.ToInt16(maskedTextBox1.Text));
+            }
+            else
+            {
+                MessageBox.Show("Enter input size");
+            }
 
             if (_found)
             {

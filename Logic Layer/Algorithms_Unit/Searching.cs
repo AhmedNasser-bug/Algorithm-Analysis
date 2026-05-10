@@ -48,7 +48,7 @@ namespace Algorithms_Unit
             {
                 metrics.TotalNumbersOfComparisons += 2;
                 // Highlight the current index
-                OnSearchChange(i, null, sender);
+                OnSearchChange(i, new Dictionary<string, object> { { "found", false } }, sender);
                 if (values[i] == target)
                 {
                     OnSearchChange(i, new Dictionary<string, object> { { "found", true } });
@@ -74,6 +74,7 @@ namespace Algorithms_Unit
                 // Highlight the current index
                 Dictionary<string, object> bounds = new Dictionary<string, object>
                 {
+                    { "found", true },
                     { "Low", low },
                     { "High", high }
                 };
@@ -118,6 +119,7 @@ namespace Algorithms_Unit
                 // Highlight the current index
                 Dictionary<string, object> bounds = new Dictionary<string, object>
                 {
+                    { "found", false },
                     { "Low", low },
                     { "High", high }
                 };
@@ -139,6 +141,7 @@ namespace Algorithms_Unit
                 {
 
                     OnSearchChange(mid, new Dictionary<string, object> { { "found", true } });
+                    break;
                 }
             }
 

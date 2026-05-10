@@ -26,8 +26,7 @@ namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
         {
             InitializeComponent();
 
-            // Subscribe to animation events
-            Sorting.OnSwap += Sorting_OnSwap;
+           
 
             // Initialize Graph
             values = Input.GenerateRandomRange(1, 100);
@@ -41,12 +40,16 @@ namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
         /// <param name="algorithm"></param>
         private Metrics StartSorting(Func<List<Int128>, Metrics> algorithm, List<Int128> Input)
         {
+            // Subscribe to animation events
+            Sorting.OnSwap += Sorting_OnSwap;
+           
             FormsUtils.DisableAllButtons(this, btnBack.Tag, sortingVisualizer.btnFullScreen.Tag);
 
             Metrics PerformanceMetrics = new Metrics();
             // Start the sorting algorithm in a new thread to avoid blocking the UI
 
             PerformanceMetrics = algorithm(Input);
+            Sorting.OnSwap -= Sorting_OnSwap;
 
             // After the sorting is done, enable the buttons again
             FormsUtils.EnableAllButtons(this, "Stop", "Back");
@@ -138,12 +141,17 @@ namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
 
         private void btnSelectionsort_Click(object sender, EventArgs e)
         {
-            StartSorting((values) => Sorting.selectionsort(values), values);
+            StartSorting((values) => Sorting.SelectionSort(values), values);
         }
 
         private void btnHeapSort_Click(object sender, EventArgs e)
         {
             StartSorting((values) => Sorting.HeapSort(values), values);
+        }
+
+        private void sortingVisualizer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

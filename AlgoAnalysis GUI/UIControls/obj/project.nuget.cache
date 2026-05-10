@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "nfgr7EO4cec=",
+  "dgSpecHash": "xUPYhm+SaHw=",
   "success": true,
   "projectFilePath": "D:\\Study\\Programming\\Projects\\Algorithm-Analysis\\AlgoAnalysis GUI\\UIControls\\UIControls.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\orginal\\.nuget\\packages\\winforms.datavisualization\\1.10.0\\winforms.datavisualization.1.10.0.nupkg.sha512"
+    "C:\\Users\\enjoy\\.nuget\\packages\\winforms.datavisualization\\1.10.0\\winforms.datavisualization.1.10.0.nupkg.sha512"
   ],
   "logs": []
 }

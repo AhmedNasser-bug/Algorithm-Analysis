@@ -23,7 +23,7 @@ namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
     {
 
 
-        List<Int128> CurrentArr { get;set;}
+        List<Int128> CurrentArr { get; set; }
         public const string firstSort = "f1";
         public const string secondSort = "f2";
         List<(int i, int j)> swappedF1 = new List<(int i, int j)>();
@@ -48,15 +48,12 @@ namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
             ctrlSortingVisualizer1.ChangeValues(CurrentArr.ToList());
             ctrlSortingVisualizer2.ChangeValues(CurrentArr.ToList());
 
-            // Subscribe to swapping event
-            Sorting.OnSwap += Sorting_OnSwap1;
-            Sorting.OnSwap += Sorting_OnSwap2;
         }
 
-        
+
         private void btnBack_Click(object sender, EventArgs e)
         {
-            frmMainMenu.globalForm.ChangeControl(new ctrlSortingMain());
+            frmMainMenu.globalForm?.ChangeControl(new ctrlSortingMain());
         }
 
         private void cbChartTypes_SelectedIndexChanged(object sender, EventArgs e)
@@ -85,11 +82,15 @@ namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
 
         private void btnStartCompare_Click(object sender, EventArgs e)
         {
-            Func<List<Int128>,object, Metrics>? func1 = null;
-            Func<List<Int128>,object, Metrics>? func2 = null;
+
+            Func<List<Int128>, object, Metrics>? func1 = null;
+            Func<List<Int128>, object, Metrics>? func2 = null;
             Metrics res1 = new Metrics();
             Metrics res2 = new();
-            
+
+            // Disable critical buttons
+            FormsUtils.DisableAllButtons(this, btnBack.Tag);
+
             // Get the first choice
             switch ((PresentSortingAlgorithms)cbFirstAlg.SelectedIndex)
             {
@@ -106,7 +107,7 @@ namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
                     func1 = Sorting.InsertionSort;
                     break;
                 case PresentSortingAlgorithms.SelectionSort:
-                    func1 = Sorting.selectionsort;
+                    func1 = Sorting.SelectionSort;
                     break;
                 case PresentSortingAlgorithms.HeapSort:
                     func1 = Sorting.HeapSort;
@@ -114,8 +115,8 @@ namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
                 default:
                     break;
             }
-            
-            
+
+
             // Get the second choice
             switch ((PresentSortingAlgorithms)cbSecondAlg.SelectedIndex)
             {
@@ -132,7 +133,7 @@ namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
                     func2 = Sorting.InsertionSort;
                     break;
                 case PresentSortingAlgorithms.SelectionSort:
-                    func2 = Sorting.selectionsort;
+                    func2 = Sorting.SelectionSort;
                     break;
                 case PresentSortingAlgorithms.HeapSort:
                     func2 = Sorting.HeapSort;
@@ -144,26 +145,35 @@ namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
             List<Int128> inp1 = CurrentArr.ToList();
             List<Int128> inp2 = CurrentArr.ToList();
 
-            Task.Run(() => {
+            Task.Run(() =>
+            {
+                // Subscribe to swapping event
+                Sorting.OnSwap += Sorting_OnSwap1;
                 res1 = func1?.Invoke(inp1, firstSort);
+                Sorting.OnSwap -= Sorting_OnSwap1;
             });
-            Task.Run(() => {
+            Task.Run(() =>
+            {
+                Sorting.OnSwap += Sorting_OnSwap2;
                 res2 = func2?.Invoke(inp2, secondSort);
-                });
+                Sorting.OnSwap -= Sorting_OnSwap2;
+            });
 
 
-            
-
-
+            FormsUtils.EnableAllButtons(this);
         }
 
+        private void Sorting_OnSwap(object sender, SortingStateDictionary sortingState)
+        {
+            throw new NotImplementedException();
+        }
 
         private void btnNewValues_Click(object sender, EventArgs e)
         {
             int range = (int)nupRandomArrayRange.Value;
             CurrentArr = Input.GenerateRandomRange(1, range);
 
-            
+
             ctrlSortingVisualizer1.ChangeValues(CurrentArr.ToList());
             ctrlSortingVisualizer2.ChangeValues(CurrentArr.ToList());
         }
@@ -175,6 +185,11 @@ namespace MainGUIcsproj.Algorithm_Visualization.Sorting_Visual
 
             ctrlSortingVisualizer1.ChangeValues(CurrentArr.ToList());
             ctrlSortingVisualizer2.ChangeValues(CurrentArr.ToList());
+        }
+
+        private void ctrlSortingVisualizer2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

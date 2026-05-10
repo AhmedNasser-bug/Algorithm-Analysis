@@ -82,6 +82,24 @@ namespace Algorithms_Unit.Utils
             return i + 1;
         }
 
+        /// <summary>
+        /// Recursive helper method for QuickSort
+        /// </summary>
+        static internal void QuickSortRecursive(List<Int128> arr, int low, int high, Metrics metrics, object sender = null)
+        {
+            metrics.TotalNumbersOfSteps++; // One step for calling the function
+            metrics.TotalNumbersOfComparisons++;
+            if (low < high)
+            {
+                int pivotIndex = Partition(arr, low, high, metrics, sender);
+
+                // Recursively sort elements before and after the pivot
+                QuickSortRecursive(arr, low, pivotIndex - 1, metrics, sender);
+                QuickSortRecursive(arr, pivotIndex + 1, high, metrics, sender);
+            }
+        }
+
+
         internal static void Merge(List<Int128> arr, List<Int128> temp, int left, int mid, int right, Metrics metrics, object sender = null)
         {
             metrics.TotalNumbersOfSteps++; // One step for function call
@@ -173,5 +191,98 @@ namespace Algorithms_Unit.Utils
 
             metrics.TotalNumbersOfSteps++; // For returning from function
         }
+
+        internal static void Heapify(List<Int128> arr, int n, int i, ref Metrics metrics, object sender = null)
+        {
+            metrics.TotalNumbersOfIterations++;
+            metrics.TotalNumbersOfSteps += 3;
+            int largest = i;
+            int l = 2 * i + 1;
+            int r = 2 * i + 2;
+            metrics.TotalNumbersOfArrayAccesses += 2;
+            metrics.TotalNumbersOfComparisons += 2;
+            if (l < n && arr[l] > arr[largest])
+            {
+                metrics.TotalNumbersOfSteps++;
+                largest = l;
+            }
+            metrics.TotalNumbersOfArrayAccesses += 2;
+            metrics.TotalNumbersOfComparisons += 2;
+            if (r < n && arr[r] > arr[largest])
+            {
+                metrics.TotalNumbersOfSteps++;
+                largest = r;
+            }
+            metrics.TotalNumbersOfComparisons++;
+            if (largest != i)
+            {
+                metrics.TotalNumbersOfArrayAccesses += 4;
+                Int128 temp = arr[i];
+                arr[i] = arr[largest];
+                arr[largest] = temp;
+                metrics.TotalNumbersOfSwaps++;
+                SendIndices(i, largest, sender);
+                Heapify(arr, n, largest, ref metrics, sender);
+            }
+        }
+
+        internal static int nextGap(int gap, ref Metrics metrics)
+        {
+            metrics.TotalNumbersOfSteps++;
+            metrics.TotalNumbersOfComparisons++;
+
+            if (gap <= 1)
+            {
+                return 0;
+            }
+            return (int)Math.Ceiling(gap / 2.0);
+        }
+
+        internal static void inPlaceMerge(List<Int128> arr, int start, int end, ref Metrics metrics, object sender = null)
+        {
+            metrics.TotalNumbersOfSteps++;
+            metrics.TotalNumbersOfComparisons++;
+            var gap = end - start + 1;
+            for (gap = nextGap(gap, ref metrics); gap > 0; gap = nextGap(gap, ref metrics))
+            {
+                metrics.TotalNumbersOfIterations++;
+                metrics.TotalNumbersOfComparisons += 2;
+                for (int i = start; i + gap <= end; i++)
+                {
+                    metrics.TotalNumbersOfSteps++;
+                    metrics.TotalNumbersOfIterations++;
+                    metrics.TotalNumbersOfComparisons += 2;
+                    var j = i + gap;
+                    if (arr[i] > arr[j])
+                    {
+                        metrics.TotalNumbersOfSteps += 3;
+                        Swap(ref arr, i, j);
+                        SendIndices(i, j, sender);
+                    }
+                }
+            }
+        }
+
+        internal static void mergeSorth(List<Int128> arr, int s, int e, ref Metrics metrics, object sender = null)
+
+        {
+            metrics.TotalNumbersOfIterations++;
+            metrics.TotalNumbersOfSteps++;
+            metrics.TotalNumbersOfComparisons++;
+            if (s == e)
+            {
+                return;
+            }
+            metrics.TotalNumbersOfSteps++;
+            // Calculating mid to slice the array in two halves
+            var mid = (int)((s + e) / 2);
+
+            // Recursive calls to sort left and right subarrays
+            mergeSorth(arr, s, mid, ref metrics, sender);
+            mergeSorth(arr, mid + 1, e, ref metrics, sender);
+            inPlaceMerge(arr, s, e, ref metrics, sender);
+        }
+
+
     }
 }
